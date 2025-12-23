@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Feedback - NotesNest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-feather-alt"></i></span>
+                <span class="logo-text">NotesNest</span>
+            </a>
+            <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="delete.html">Account Deletion</a></li>
+                    <li><a href="bug-report.html">Bug Report</a></li>
+                    <li><a href="feedback.html" class="active">Send Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-content">
+            <div class="container">
+                <h1>Send Feedback</h1>
+                
+                <div class="content-block">
+                    <p>We love hearing from our users! Whether you have a suggestion, compliment, or general feedback, we're all ears.</p>
+                </div>
+                
+                <div class="form-container">
+                    <div id="feedback-message" class="form-message"></div>
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label class="form-label" for="feedback-type">Feedback Type *</label>
+                            <select class="select-control" id="feedback-type" required>
+                                <option value="">Select type</option>
+                                <option value="suggestion">Feature Suggestion</option>
+                                <option value="compliment">Compliment</option>
+                                <option value="improvement">Improvement Idea</option>
+                                <option value="general">General Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="feedback-title">Title *</label>
+                            <input type="text" class="form-control" id="feedback-title" required placeholder="Brief title for your feedback">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="feedback-description">Description *</label>
+                            <textarea class="form-control" id="feedback-description" required placeholder="Please share your thoughts in detail"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="feedback-email">Your Email (optional)</label>
+                            <input type="email" class="form-control" id="feedback-email" placeholder="We might contact you about your feedback">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Would you like to be contacted about this feedback?</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="contact-permission" name="contact-permission">
+                                <label for="contact-permission">Yes, you may contact me about this feedback</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Send Feedback</button>
+                    </form>
+                </div>
+                
+                <h2>What Happens to Your Feedback</h2>
+                <p>We read every piece of feedback we receive. Here's what happens after you submit:</p>
+                <ol>
+                    <li><strong>Review:</strong> Our team reviews all feedback within 48 hours</li>
+                    <li><strong>Categorization:</strong> We categorize feedback by type and priority</li>
+                    <li><strong>Planning:</strong> Feature suggestions are considered for future updates</li>
+                    <li><strong>Implementation:</strong> Top-voted features get added to our development roadmap</li>
+                </ol>
+                
+                <div class="content-block">
+                    <h3>Recent Feedback Implemented</h3>
+                    <ul>
+                        <li><strong>Dark Mode:</strong> Added in v2.0 based on user requests</li>
+                        <li><strong>Export to PDF:</strong> Implemented in v2.1 after numerous requests</li>
+                        <li><strong>Biometric Lock:</strong> Added fingerprint/face recognition in v1.5</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>NotesNest</h3>
+                    <p>The simple, elegant note-taking solution for all your devices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="delete.html">Account Deletion</a></li>
+                        <li><a href="bug-report.html">Bug Report</a></li>
+                        <li><a href="feedback.html">Send Feedback</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Download</h3>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.notesnest.app">Google Play</a></li>
+                        <li><a href="#">App Store (Coming Soon)</a></li>
+                        <li><a href="#">Web Version</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                        <li><a href="bug-report.html">Report a Bug</a></li>
+                        <li><a href="feedback.html">Feature Request</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 NotesNest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

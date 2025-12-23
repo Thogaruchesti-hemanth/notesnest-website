@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report a Bug - NotesNest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-feather-alt"></i></span>
+                <span class="logo-text">NotesNest</span>
+            </a>
+            <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="delete.html">Account Deletion</a></li>
+                    <li><a href="bug-report.html" class="active">Bug Report</a></li>
+                    <li><a href="feedback.html">Send Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-content">
+            <div class="container">
+                <h1>Report a Bug</h1>
+                
+                <div class="content-block">
+                    <p>Found a bug in NotesNest? Please let us know! Your reports help us improve the app for everyone.</p>
+                </div>
+                
+                <div class="form-container">
+                    <div id="bug-report-message" class="form-message"></div>
+                    <form id="bugReportForm">
+                        <div class="form-group">
+                            <label class="form-label" for="bug-title">Bug Title *</label>
+                            <input type="text" class="form-control" id="bug-title" required placeholder="Brief description of the bug">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="bug-description">Bug Description *</label>
+                            <textarea class="form-control" id="bug-description" required placeholder="Please describe the bug in detail, including steps to reproduce it"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="bug-priority">Priority *</label>
+                            <select class="select-control" id="bug-priority" required>
+                                <option value="">Select priority</option>
+                                <option value="critical">Critical - App crash or data loss</option>
+                                <option value="high">High - Major feature not working</option>
+                                <option value="medium">Medium - Minor issue or inconvenience</option>
+                                <option value="low">Low - Cosmetic issue</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="device-info">Device Information</label>
+                            <input type="text" class="form-control" id="device-info" placeholder="e.g., Samsung Galaxy S23, Android 13">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="app-version">App Version</label>
+                            <input type="text" class="form-control" id="app-version" placeholder="e.g., 2.1.0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Your Email (optional)</label>
+                            <input type="email" class="form-control" id="email" placeholder="We'll contact you if we need more information">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Attachments (optional)</label>
+                            <input type="file" class="form-control" id="bug-screenshot" accept="image/*">
+                            <small>Screenshots help us understand the issue better</small>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Submit Bug Report</button>
+                    </form>
+                </div>
+                
+                <h2>Recently Reported Bugs</h2>
+                <p>Here are some bugs that have been recently reported by our users:</p>
+                
+                <ul class="bug-list">
+                    <li class="bug-item">
+                        <h3>Sync issue after app update <span class="bug-priority priority-high">High Priority</span></h3>
+                        <p>Some users report notes not syncing properly after updating to version 2.1.0.</p>
+                        <p><strong>Status:</strong> <span class="highlight">In Progress</span></p>
+                    </li>
+                    <li class="bug-item resolved">
+                        <h3>Text formatting toolbar disappearing <span class="bug-priority priority-medium">Medium Priority</span></h3>
+                        <p>Formatting toolbar disappears when editing long notes.</p>
+                        <p><strong>Status:</strong> <span class="highlight">Resolved in v2.1.1</span></p>
+                    </li>
+                    <li class="bug-item">
+                        <h3>Dark mode flickering on startup <span class="bug-priority priority-low">Low Priority</span></h3>
+                        <p>Brief flicker when opening app in dark mode on some devices.</p>
+                        <p><strong>Status:</strong> <span class="highlight">Under Investigation</span></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>NotesNest</h3>
+                    <p>The simple, elegant note-taking solution for all your devices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="delete.html">Account Deletion</a></li>
+                        <li><a href="bug-report.html">Bug Report</a></li>
+                        <li><a href="feedback.html">Send Feedback</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Download</h3>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.notesnest.app">Google Play</a></li>
+                        <li><a href="#">App Store (Coming Soon)</a></li>
+                        <li><a href="#">Web Version</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
+                        <li><a href="bug-report.html">Report a Bug</a></li>
+                        <li><a href="feedback.html">Feature Request</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 NotesNest. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
