@@ -1,0 +1,4 @@
+{
+    "prettier.experimentalTernaries": true,
+    "python.analysis.reportExtraTelemetry": true
+}

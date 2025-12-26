@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report a Bug - NotesNest</title>
+    <title>Report a Bug - NoteNest</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,19 +12,20 @@
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><i class="fas fa-feather-alt"></i></span>
-                <span class="logo-text">NotesNest</span>
+                <span class="logo-icon"> <img src="images/logo.jpeg" alt="NoteNest Logo"></span>
+                <span class="logo-text">otesNest</span>
             </a>
             <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
             <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="user-guide.html">User Guide</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="bug-report.html" class="active">Report Bug</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html">Account Deletion</a></li>
-                    <li><a href="bug-report.html" class="active">Bug Report</a></li>
-                    <li><a href="feedback.html">Send Feedback</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="delete.html">Delete Account</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,78 +38,210 @@
                 <h1>Report a Bug</h1>
                 
                 <div class="content-block">
-                    <p>Found a bug in NotesNest? Please let us know! Your reports help us improve the app for everyone.</p>
+                    <p>Found an issue in NoteNest? We appreciate you taking the time to report it! Your bug reports help us maintain app stability and improve the experience for all users. We actively monitor all reports via Firebase Crashlytics, but detailed reports from users like you help us fix issues faster.</p>
+                </div>
+
+                <div class="content-block" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1.5rem 0;">
+                    <p style="margin: 0;"><strong>Before Reporting:</strong> Check our <a href="#known-issues">Known Issues</a> section below to see if your issue is already being addressed. For general questions or support, please visit our <a href="contact.html">Contact</a> page.</p>
                 </div>
                 
                 <div class="form-container">
                     <div id="bug-report-message" class="form-message"></div>
                     <form id="bugReportForm">
                         <div class="form-group">
+                            <label class="form-label" for="bug-category">Bug Category *</label>
+                            <select class="select-control" id="bug-category" required>
+                                <option value="">Select category</option>
+                                <option value="crash">App Crash / Force Close</option>
+                                <option value="notes">Notes (Creating, Editing, Deleting)</option>
+                                <option value="reminders">Reminders / Notifications</option>
+                                <option value="backup">Backup & Restore</option>
+                                <option value="export">Export / Share Features</option>
+                                <option value="widgets">Home Screen Widgets</option>
+                                <option value="authentication">Login / Sign-In Issues</option>
+                                <option value="ui">UI / Display Issues</option>
+                                <option value="performance">Performance / Lag</option>
+                                <option value="sync">Cloud Sync (Google Drive)</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
                             <label class="form-label" for="bug-title">Bug Title *</label>
-                            <input type="text" class="form-control" id="bug-title" required placeholder="Brief description of the bug">
+                            <input type="text" class="form-control" id="bug-title" required placeholder="Brief, descriptive title (e.g., 'App crashes when exporting large notes as PDF')">
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="bug-description">Bug Description *</label>
-                            <textarea class="form-control" id="bug-description" required placeholder="Please describe the bug in detail, including steps to reproduce it"></textarea>
+                            <label class="form-label" for="bug-description">Detailed Description *</label>
+                            <textarea class="form-control" id="bug-description" required placeholder="Please describe the bug in detail. Include:&#10;1. What you were trying to do&#10;2. What happened (the bug)&#10;3. What you expected to happen&#10;4. Steps to reproduce the issue" rows="8"></textarea>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="bug-priority">Priority *</label>
-                            <select class="select-control" id="bug-priority" required>
-                                <option value="">Select priority</option>
-                                <option value="critical">Critical - App crash or data loss</option>
-                                <option value="high">High - Major feature not working</option>
-                                <option value="medium">Medium - Minor issue or inconvenience</option>
-                                <option value="low">Low - Cosmetic issue</option>
+                            <label class="form-label" for="bug-steps">Steps to Reproduce *</label>
+                            <textarea class="form-control" id="bug-steps" required placeholder="1. Open the app&#10;2. Go to...&#10;3. Click on...&#10;4. Bug occurs..." rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="bug-frequency">How Often Does This Happen? *</label>
+                            <select class="select-control" id="bug-frequency" required>
+                                <option value="">Select frequency</option>
+                                <option value="always">Always / Every time</option>
+                                <option value="often">Often (more than 50% of the time)</option>
+                                <option value="sometimes">Sometimes (less than 50% of the time)</option>
+                                <option value="once">Only happened once</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="device-info">Device Information</label>
-                            <input type="text" class="form-control" id="device-info" placeholder="e.g., Samsung Galaxy S23, Android 13">
+                            <label class="form-label" for="bug-severity">Severity *</label>
+                            <select class="select-control" id="bug-severity" required>
+                                <option value="">Select severity</option>
+                                <option value="critical">Critical - App unusable / Data loss</option>
+                                <option value="high">High - Major feature completely broken</option>
+                                <option value="medium">Medium - Feature works but with issues</option>
+                                <option value="low">Low - Minor annoyance or cosmetic issue</option>
+                            </select>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="app-version">App Version</label>
-                            <input type="text" class="form-control" id="app-version" placeholder="e.g., 2.1.0">
+                            <label class="form-label" for="device-info">Device Information *</label>
+                            <input type="text" class="form-control" id="device-info" required placeholder="e.g., Samsung Galaxy S23, Xiaomi Redmi Note 12, OnePlus 11">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="android-version">Android Version *</label>
+                            <input type="text" class="form-control" id="android-version" required placeholder="e.g., Android 14, Android 13, MIUI 14">
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label" for="email">Your Email (optional)</label>
-                            <input type="email" class="form-control" id="email" placeholder="We'll contact you if we need more information">
+                            <label class="form-label" for="app-version">NoteNest App Version *</label>
+                            <input type="text" class="form-control" id="app-version" required placeholder="e.g., 3.0.0 (found in Settings > About)">
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label">Attachments (optional)</label>
-                            <input type="file" class="form-control" id="bug-screenshot" accept="image/*">
-                            <small>Screenshots help us understand the issue better</small>
+                            <label class="form-label" for="email">Your Email *</label>
+                            <input type="email" class="form-control" id="email" required placeholder="We may need to contact you for additional information">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Attachments (Recommended)</label>
+                            <input type="file" class="form-control" id="bug-screenshot" accept="image/*,video/*" multiple>
+                            <small>Screenshots, screen recordings, or error messages help us understand and fix the issue faster. You can attach multiple files.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Additional Context (Optional)</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="battery-saver" name="battery-saver">
+                                <label for="battery-saver">Battery saver mode was enabled</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="low-storage" name="low-storage">
+                                <label for="low-storage">Device storage was low</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="background-restriction" name="background-restriction">
+                                <label for="background-restriction">Background app restrictions are enabled</label>
+                            </div>
                         </div>
                         
                         <button type="submit" class="cta-button">Submit Bug Report</button>
                     </form>
                 </div>
                 
-                <h2>Recently Reported Bugs</h2>
-                <p>Here are some bugs that have been recently reported by our users:</p>
+                <h2>What Happens After You Report?</h2>
+                <ol>
+                    <li><strong>Acknowledgment:</strong> You'll receive an automated confirmation email</li>
+                    <li><strong>Triage:</strong> Our team reviews and prioritizes the bug within 24-48 hours</li>
+                    <li><strong>Investigation:</strong> We reproduce and analyze the issue using Firebase Crashlytics data</li>
+                    <li><strong>Fix:</strong> Critical bugs are addressed in emergency patches; others in scheduled updates</li>
+                    <li><strong>Update:</strong> We notify you when the fix is released (if you provided email)</li>
+                </ol>
+
+                <h2 id="known-issues">Known Issues</h2>
+                <p>We're already aware of these issues and working on fixes:</p>
                 
                 <ul class="bug-list">
                     <li class="bug-item">
-                        <h3>Sync issue after app update <span class="bug-priority priority-high">High Priority</span></h3>
-                        <p>Some users report notes not syncing properly after updating to version 2.1.0.</p>
-                        <p><strong>Status:</strong> <span class="highlight">In Progress</span></p>
-                    </li>
-                    <li class="bug-item resolved">
-                        <h3>Text formatting toolbar disappearing <span class="bug-priority priority-medium">Medium Priority</span></h3>
-                        <p>Formatting toolbar disappears when editing long notes.</p>
-                        <p><strong>Status:</strong> <span class="highlight">Resolved in v2.1.1</span></p>
+                        <h3>Reminders not triggering on certain devices <span class="bug-priority priority-high">High Priority</span></h3>
+                        <p><strong>Affected Devices:</strong> Xiaomi (MIUI), Vivo, Oppo, Realme with aggressive battery optimization</p>
+                        <p><strong>Workaround:</strong> Go to Settings > Battery > App Battery Management > Find NoteNest > Disable battery optimization or enable "Autostart"</p>
+                        <p><strong>Status:</strong> <span class="highlight">In Progress - Working on enhanced background task handling</span></p>
                     </li>
                     <li class="bug-item">
-                        <h3>Dark mode flickering on startup <span class="bug-priority priority-low">Low Priority</span></h3>
-                        <p>Brief flicker when opening app in dark mode on some devices.</p>
+                        <h3>Widget update delays on some launchers <span class="bug-priority priority-medium">Medium Priority</span></h3>
+                        <p><strong>Affected:</strong> Some OEM launchers delay widget updates</p>
+                        <p><strong>Workaround:</strong> Remove and re-add the widget, or force-refresh by opening the app</p>
                         <p><strong>Status:</strong> <span class="highlight">Under Investigation</span></p>
                     </li>
+                    <li class="bug-item">
+                        <h3>Google Sign-In token refresh delay <span class="bug-priority priority-low">Low Priority</span></h3>
+                        <p><strong>Issue:</strong> First-time Google Sign-In may take 10-15 seconds</p>
+                        <p><strong>Workaround:</strong> Wait a moment and try again</p>
+                        <p><strong>Status:</strong> <span class="highlight">Known limitation - Google API behavior</span></p>
+                    </li>
+                    <li class="bug-item">
+                        <h3>Large image exports may freeze on low-end devices <span class="bug-priority priority-medium">Medium Priority</span></h3>
+                        <p><strong>Affected:</strong> Devices with less than 3GB RAM when exporting notes with many images</p>
+                        <p><strong>Workaround:</strong> Export as text or PDF instead of image format</p>
+                        <p><strong>Status:</strong> <span class="highlight">Planned for optimization in v3.1.0</span></p>
+                    </li>
+                    <li class="bug-item">
+                        <h3>Tablet landscape mode UI refinement needed <span class="bug-priority priority-low">Low Priority</span></h3>
+                        <p><strong>Issue:</strong> Some UI elements not fully optimized for tablet landscape orientation</p>
+                        <p><strong>Status:</strong> <span class="highlight">Scheduled for v3.1.0</span></p>
+                    </li>
                 </ul>
+
+                <h2>Recently Fixed Bugs</h2>
+                <ul class="bug-list">
+                    <li class="bug-item resolved">
+                        <h3>Fast note creation/deletion crashes <span class="bug-priority priority-critical">Critical</span></h3>
+                        <p>App would crash when rapidly creating and deleting notes</p>
+                        <p><strong>Status:</strong> <span class="highlight">Fixed in v2.0.0</span></p>
+                    </li>
+                    <li class="bug-item resolved">
+                        <h3>Theme switching inconsistency <span class="bug-priority priority-medium">Medium</span></h3>
+                        <p>Inconsistent theme application between screens</p>
+                        <p><strong>Status:</strong> <span class="highlight">Fixed in v2.0.0</span></p>
+                    </li>
+                    <li class="bug-item resolved">
+                        <h3>Navigation drawer selection highlighting <span class="bug-priority priority-low">Low</span></h3>
+                        <p>Selected item not properly highlighted in drawer menu</p>
+                        <p><strong>Status:</strong> <span class="highlight">Fixed in v2.0.0</span></p>
+                    </li>
+                    <li class="bug-item resolved">
+                        <h3>Invalid Firebase authentication crashes <span class="bug-priority priority-high">High</span></h3>
+                        <p>App crashed with invalid login credentials</p>
+                        <p><strong>Status:</strong> <span class="highlight">Fixed in v1.0.0</span></p>
+                    </li>
+                    <li class="bug-item resolved">
+                        <h3>Note editing freeze with emoji <span class="bug-priority priority-medium">Medium</span></h3>
+                        <p>App froze when editing notes with many emojis</p>
+                        <p><strong>Status:</strong> <span class="highlight">Fixed in v1.0.0</span></p>
+                    </li>
+                </ul>
+
+                <h2>Crash Reporting & Privacy</h2>
+                <p>NoteNest uses Firebase Crashlytics to automatically collect crash reports. This helps us identify and fix issues quickly. Crash reports include:</p>
+                <ul>
+                    <li>Device model and Android version</li>
+                    <li>App version and crash stack trace</li>
+                    <li>Device state at time of crash (memory, network status)</li>
+                </ul>
+                <p><strong>Privacy Note:</strong> Crash reports do NOT include your notes content, personal information, or any identifiable data. You can disable crash reporting in Settings > Privacy > Crash Reporting. For more information, see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+                <div class="content-block" style="background: #e7f3ff; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                    <h3 style="margin-top: 0;">Alternative Reporting Methods</h3>
+                    <p><strong>Email:</strong> Send bug reports to <span class="highlight">saihemanth225@gmail.com</span> with subject "NoteNest Bug Report"</p>
+                    <p><strong>Play Store Review:</strong> Report bugs in your <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" target="_blank">Google Play review</a> (though we prefer this form for detailed tracking)</p>
+                    <p style="margin-bottom: 0;"><strong>In-App:</strong> Use Settings > Support > Report Bug within NoteNest</p>
+                </div>
+
+                <div class="content-block" style="margin-top: 2rem;">
+                    <h3>Thank You for Helping Us Improve!</h3>
+                    <p>Every bug report makes NoteNest more stable and reliable for everyone. We're committed to maintaining a high-quality, crash-free experience. Thank you for your patience and for taking the time to report issues!</p>
+                </div>
             </div>
         </section>
     </main>
@@ -118,47 +251,52 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>NotesNest</h3>
-                    <p>The simple, elegant note-taking solution for all your devices.</p>
+                    <h3>NoteNest</h3>
+                    <p>Your complete productivity hub for managing notes, tasks, reminders, and goals on Android.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="bug-report.html">Report Bug</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="delete.html">Account Deletion</a></li>
-                        <li><a href="bug-report.html">Bug Report</a></li>
-                        <li><a href="feedback.html">Send Feedback</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="delete.html">Delete Account</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Download</h3>
                     <ul>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.notesnest.app">Google Play</a></li>
-                        <li><a href="#">App Store (Coming Soon)</a></li>
-                        <li><a href="#">Web Version</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">Google Play Store</a></li>
+                        <li><a href="#">Version 3.0.0 (Latest)</a></li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;">Resources</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Support</h3>
                     <ul>
                         <li><a href="contact.html">Help Center</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
+                        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
                         <li><a href="bug-report.html">Report a Bug</a></li>
-                        <li><a href="feedback.html">Feature Request</a></li>
+                        <li><a href="feedback.html">Feature Requests</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 NotesNest. All rights reserved.</p>
+                <p>&copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All rights reserved.</p>
             </div>
         </div>
     </footer>

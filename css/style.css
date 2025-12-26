@@ -1,5 +1,5 @@
 :root {
-    --primary: #FFD700; /* Golden yellow */
+    --primary: #f0c03d; /* Golden yellow */
     --secondary: #000000; /* Black */
     --background: #FFFFFF; /* White */
     --text: #333333; /* Dark gray for text */
@@ -28,7 +28,6 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -53,12 +52,12 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
+    gap: 0;
 }
 
 .logo-icon {
     color: var(--primary);
     font-size: 1.8rem;
-    margin-right: 10px;
 }
 
 .logo-text {
@@ -274,13 +273,14 @@ nav ul li a.active:after {
 
 .info-image {
     flex: 1;
-    min-width: 300px;
+    min-width: 100px;
+    max-width: 200px;
     text-align: center;
     position: relative;
 }
 
 .info-image img {
-    max-width: 100%;
+    max-width: 90%;
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
@@ -288,7 +288,6 @@ nav ul li a.active:after {
 .app-badges {
     display: flex;
     gap: 1rem;
-    justify-content: center;
     margin-top: 2rem;
 }
 
@@ -731,5 +730,218 @@ footer {
     
     .form-container {
         padding: 1.5rem;
+    }
+}
+
+/* User Guide Specific Styles */
+.guide-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.guide-section:last-of-type {
+    border-bottom: none;
+}
+
+.guide-section h2 {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.guide-section h3 {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin: 1.5rem 0 1rem;
+}
+
+.guide-section h4 {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin: 1rem 0 0.5rem;
+}
+
+.quick-nav {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--primary);
+}
+
+.quick-nav h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.quick-nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.quick-nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+.quick-nav ul li a {
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    background-color: var(--background);
+    border-radius: 4px;
+    display: block;
+    transition: var(--transition);
+    border: 1px solid var(--medium-gray);
+}
+
+.quick-nav ul li a:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--primary);
+}
+
+.step-list {
+    background-color: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 3px solid var(--primary);
+}
+
+.step-list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.step-list li:last-child {
+    margin-bottom: 0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.feature-box {
+    background-color: var(--background);
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h4 {
+    margin-top: 0;
+    color: var(--secondary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-box, .warning-box, .info-box {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+}
+
+.tip-box {
+    background-color: rgba(255, 215, 0, 0.1);
+    border-left-color: var(--primary);
+}
+
+.tip-box h4 {
+    color: var(--secondary);
+    margin-top: 0;
+}
+
+.warning-box {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left-color: #F44336;
+}
+
+.warning-box h4 {
+    color: #C62828;
+    margin-top: 0;
+}
+
+.info-box {
+    background-color: rgba(33, 150, 243, 0.1);
+    border-left-color: #2196F3;
+}
+
+.info-box h4 {
+    color: #1565C0;
+    margin-top: 0;
+}
+
+.guide-section ul:not(.quick-nav ul) {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.guide-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.guide-section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* Responsive adjustments for user guide */
+@media (max-width: 768px) {
+    .quick-nav ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .guide-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .guide-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Logo wrapper */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image constraints */
+.logo-icon img {
+    height: 36px;        /* primary control */
+    max-height: 36px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Optional: responsive scaling */
+@media (max-width: 768px) {
+    .logo-icon img {
+        height: 30px;
+        max-height: 30px;
     }
 }

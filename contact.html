@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - NotesNest</title>
+    <title>Contact Us - NoteNest</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,19 +12,20 @@
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><i class="fas fa-feather-alt"></i></span>
-                <span class="logo-text">NotesNest</span>
+                <span class="logo-icon"> <img src="images/logo.jpeg" alt="NoteNest Logo"></span>
+                <span class="logo-text">otesNest</span>
             </a>
             <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
             <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="user-guide.html">User Guide</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="bug-report.html">Report Bug</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html">Account Deletion</a></li>
-                    <li><a href="bug-report.html">Bug Report</a></li>
-                    <li><a href="feedback.html">Send Feedback</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="delete.html">Delete Account</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,33 +38,54 @@
                 <h1>Contact Us</h1>
                 
                 <div class="content-block">
-                    <p>We'd love to hear from you! Whether you have a question, feedback, or need support, our team is here to help.</p>
+                    <p>Have questions about NoteNest or need assistance? We're here to help! Whether you need technical support, want to share feedback, or have general inquiries, feel free to reach out to us.</p>
                 </div>
                 
-                <h2>Get in Touch</h2>
-                <p>Email: <span class="highlight">support@notesnest.com</span></p>
-                <p>Response time: We typically respond within 24-48 hours.</p>
+                <h2>Developer Contact</h2>
+                <p>Email: <span class="highlight">saihemanth225@gmail.com</span></p>
+                <p>Developer: Thogoruchesti Hemanth</p>
+                <p>Response time: We typically respond within 24-48 hours during business days.</p>
                 
                 <h2>Technical Support</h2>
-                <p>For technical issues, please include the following information in your email:</p>
+                <p>Experiencing issues with NoteNest? For faster resolution, please include the following details in your email:</p>
                 <ul>
-                    <li>Your device model and operating system version</li>
-                    <li>The version of NotesNest you're using</li>
-                    <li>A detailed description of the issue</li>
-                    <li>Screenshots if applicable</li>
+                    <li>Your device model and Android version</li>
+                    <li>NoteNest app version (found in Settings > About)</li>
+                    <li>Detailed description of the issue you're experiencing</li>
+                    <li>Steps to reproduce the problem</li>
+                    <li>Screenshots or error messages (if applicable)</li>
+                    <li>Whether the issue occurs with reminders, notes, backups, widgets, or other features</li>
                 </ul>
                 
-                <h2>Feedback</h2>
-                <p>We're constantly working to improve NotesNest. If you have suggestions for new features or improvements, please use our <a href="feedback.html">Feedback Form</a>.</p>
+                <h2>Common Issues</h2>
+                <p>Before contacting support, check if your issue matches these common scenarios:</p>
+                <ul>
+                    <li><strong>Reminders not working:</strong> Some devices (Xiaomi MIUI, Vivo, Oppo) have aggressive battery optimization. Disable battery optimization for NoteNest in your device settings.</li>
+                    <li><strong>Widget not updating:</strong> Some OEM launchers may delay widget updates. Try removing and re-adding the widget.</li>
+                    <li><strong>Backup issues:</strong> Ensure you have sufficient storage space and necessary permissions enabled.</li>
+                    <li><strong>Google Sign-In delays:</strong> First-time token refresh may take a moment. Wait 10-15 seconds and try again.</li>
+                </ul>
                 
-                <h2>Business Inquiries</h2>
-                <p>For business partnerships or other inquiries, please contact us at <span class="highlight">business@notesnest.com</span>.</p>
+                <h2>Feature Requests & Feedback</h2>
+                <p>Want to suggest a new feature or improvement? We love hearing from our users! Please use our <a href="feedback.html">Feedback Form</a> to share your ideas. Your input helps shape the future of NoteNest.</p>
                 
-                <h2>Address</h2>
-                <p>NotesNest Inc.<br>
-                123 App Street<br>
-                San Francisco, CA 94103<br>
-                United States</p>
+                <h2>Bug Reports</h2>
+                <p>Found a bug? Help us improve NoteNest by reporting it through our <a href="bug-report.html">Bug Report Form</a>. We actively monitor crash reports via Firebase Crashlytics, but your detailed reports help us fix issues faster.</p>
+                
+                <h2>Connect With Us</h2>
+                <p>Follow NoteNest development and stay updated:</p>
+                <ul>
+                    <li>GitHub: <a href="https://github.com/Thogaruchesti-hemanth" class="highlight">Thogaruchesti-hemanth</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/thogaruchesti-hemanth/" class="highlight">Connect with the developer</a></li>
+                </ul>
+                
+                <h2>Business & Partnership Inquiries</h2>
+                <p>For collaboration opportunities, partnership proposals, or media inquiries, please email us at <span class="highlight">saihemanth225@gmail.com</span> with subject line "Business Inquiry".</p>
+                
+                <div class="content-block" style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                    <h3 style="margin-top: 0;">Privacy & Security</h3>
+                    <p style="margin-bottom: 0;">Your privacy is important to us. When you contact us, we only use your information to respond to your inquiry. We never share your contact details with third parties. For more information, please review our <a href="privacy.html">Privacy Policy</a>.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -73,47 +95,52 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>NotesNest</h3>
-                    <p>The simple, elegant note-taking solution for all your devices.</p>
+                    <h3>NoteNest</h3>
+                    <p>Your complete productivity hub for managing notes, tasks, reminders, and goals on Android.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="user-guide.html">User Guide</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="bug-report.html">Report Bug</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="delete.html">Account Deletion</a></li>
-                        <li><a href="bug-report.html">Bug Report</a></li>
-                        <li><a href="feedback.html">Send Feedback</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="delete.html">Delete Account</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Download</h3>
                     <ul>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.notesnest.app">Google Play</a></li>
-                        <li><a href="#">App Store (Coming Soon)</a></li>
-                        <li><a href="#">Web Version</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">Google Play Store</a></li>
+                        <li><a href="#">Version 3.0.0 (Latest)</a></li>
+                    </ul>
+                    <h3 style="margin-top: 1.5rem;">Resources</h3>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#faq">FAQs</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Support</h3>
                     <ul>
                         <li><a href="contact.html">Help Center</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
+                        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
                         <li><a href="bug-report.html">Report a Bug</a></li>
-                        <li><a href="feedback.html">Feature Request</a></li>
+                        <li><a href="feedback.html">Feature Requests</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 NotesNest. All rights reserved.</p>
+                <p>&copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All rights reserved.</p>
             </div>
         </div>
     </footer>

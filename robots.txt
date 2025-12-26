@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://notesnest-app.web.app/sitemap.xml
