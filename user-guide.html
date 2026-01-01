@@ -1,703 +1,1209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Guide - NoteNest</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span class="logo-icon"> <img src="images/logo.jpeg" alt="NoteNest Logo"></span>
-                <span class="logo-text">otesNest</span>
-            </a>
-            <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="user-guide.html">User Guide</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="bug-report.html">Report Bug</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html">Delete Account</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo.jpeg" alt="NoteNest Logo"
+          /></span>
+          <span class="logo-text">otesNest</span>
+        </a>
+        <button class="mobile-menu-btn" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="user-guide.html">User Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="bug-report.html">Report Bug</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete.html">Delete Account</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section class="page-content">
-            <div class="container">
-                <h1><i class="fas fa-book"></i> NoteNest User Guide</h1>
-                <p style="font-size: 1.1rem; color: #666;">Welcome to NoteNest! This comprehensive guide will help you master all features and get the most out of your productivity companion.</p>
-                
-                <div class="content-block" style="background: #e7f3ff; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <p style="margin: 0;"><strong>Current Version:</strong> 3.0.0 | <strong>Last Updated:</strong> December 22, 2025 | <strong>Platform:</strong> Android 6.0+</p>
-                </div>
+      <section class="page-content">
+        <div class="container">
+          <h1><i class="fas fa-book"></i> NoteNest User Guide</h1>
+          <p style="font-size: 1.1rem; color: #666">
+            Welcome to NoteNest! This comprehensive guide will help you master
+            all features and get the most out of your productivity companion.
+          </p>
 
-                <!-- Quick Navigation -->
-                <div class="quick-nav">
-                    <h3><i class="fas fa-compass"></i> Quick Navigation</h3>
-                    <ul>
-                        <li><a href="#getting-started"><i class="fas fa-play-circle"></i> Getting Started</a></li>
-                        <li><a href="#notes"><i class="fas fa-file-alt"></i> Managing Notes</a></li>
-                        <li><a href="#reminders"><i class="fas fa-bell"></i> Reminders & Notifications</a></li>
-                        <li><a href="#organization"><i class="fas fa-folder"></i> Organization & Categories</a></li>
-                        <li><a href="#widgets"><i class="fas fa-th-large"></i> Home Screen Widgets</a></li>
-                        <li><a href="#backup"><i class="fas fa-cloud-upload-alt"></i> Backup & Restore</a></li>
-                        <li><a href="#export"><i class="fas fa-share-alt"></i> Export & Share</a></li>
-                        <li><a href="#settings"><i class="fas fa-cog"></i> Settings & Customization</a></li>
-                        <li><a href="#troubleshooting"><i class="fas fa-wrench"></i> Troubleshooting</a></li>
-                    </ul>
-                </div>
-
-                <!-- Getting Started -->
-                <div class="guide-section" id="getting-started">
-                    <h2><i class="fas fa-play-circle"></i> Getting Started</h2>
-                    
-                    <h3>Installation</h3>
-                    <ol class="step-list">
-                        <li><strong>Download from Google Play:</strong> Visit the <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" target="_blank">NoteNest page on Google Play Store</a> and tap "Install"</li>
-                        <li><strong>Open the App:</strong> Once installed, tap "Open" or find the NoteNest icon in your app drawer</li>
-                        <li><strong>Create Account or Sign In:</strong> Choose to create a new account with email/password or use Google Sign-In</li>
-                    </ol>
-
-                    <h3>Creating Your Account</h3>
-                    <div class="feature-grid">
-                        <div class="feature-box">
-                            <h4><i class="fas fa-envelope"></i> Email Sign-Up</h4>
-                            <p>Enter your email, create a strong password (8+ characters with uppercase, lowercase, number, and symbol), and choose a username.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fab fa-google"></i> Google Sign-In</h4>
-                            <p>Tap "Sign in with Google" for quick access using your existing Google account. Your name, email, and profile picture will be imported.</p>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-lightbulb"></i> Pro Tip</h4>
-                        <p>Use a strong, unique password for your account. NoteNest uses encrypted storage to protect your credentials—we never store passwords in plain text.</p>
-                    </div>
-
-                    <h3>First-Time Setup</h3>
-                    <ol class="step-list">
-                        <li><strong>Complete Onboarding:</strong> Swipe through the intro screens highlighting key features</li>
-                        <li><strong>Grant Permissions:</strong> Allow notifications (for reminders), storage access (for backups), and other requested permissions</li>
-                        <li><strong>Customize Your Profile:</strong> Tap the profile icon to add a display name and profile picture</li>
-                        <li><strong>Choose Your Theme:</strong> Select Light or Dark mode in Settings, or enable auto-switch based on system settings</li>
-                    </ol>
-                </div>
-
-                <!-- Managing Notes -->
-                <div class="guide-section" id="notes">
-                    <h2><i class="fas fa-file-alt"></i> Managing Notes</h2>
-                    
-                    <h3>Creating a New Note</h3>
-                    <ol class="step-list">
-                        <li><strong>Tap the "+" Button:</strong> Located at the bottom-right corner of the main screen</li>
-                        <li><strong>Add Title:</strong> Enter a descriptive title for your note</li>
-                        <li><strong>Write Content:</strong> Type your note content in the main text area</li>
-                        <li><strong>Assign Category (Optional):</strong> Tap "Category" to organize your note</li>
-                        <li><strong>Save:</strong> Tap the save icon or press back—notes auto-save as you type</li>
-                    </ol>
-
-                    <h3>Editing Notes</h3>
-                    <ul>
-                        <li>Tap any note from your list to open and edit it</li>
-                        <li>Changes are saved automatically</li>
-                        <li>Use the formatting toolbar for text styling (if available in your version)</li>
-                    </ul>
-
-                    <h3>Deleting Notes</h3>
-                    <ul>
-                        <li><strong>Swipe to Delete:</strong> Swipe left or right on a note in the list</li>
-                        <li><strong>Menu Option:</strong> Open the note and tap the delete icon</li>
-                        <li><strong>Bulk Delete:</strong> Long-press to select multiple notes, then tap delete</li>
-                    </ul>
-
-                    <div class="warning-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Important</h4>
-                        <p>Deleted notes cannot be recovered unless you have a recent backup. Always backup important data regularly!</p>
-                    </div>
-
-                    <h3>Important Notes Feature</h3>
-                    <p>Mark notes as "Important" to access them quickly in a dedicated section:</p>
-                    <ul>
-                        <li>Open a note and tap the star/flag icon to mark as important</li>
-                        <li>Access all important notes from the navigation drawer</li>
-                        <li>Perfect for frequently referenced information</li>
-                    </ul>
-
-                    <h3>View Options</h3>
-                    <div class="feature-grid">
-                        <div class="feature-box">
-                            <h4><i class="fas fa-list"></i> List View</h4>
-                            <p>Classic linear layout showing notes one below another. Ideal for detailed previews.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fas fa-th"></i> Grid View</h4>
-                            <p>2-3 column grid layout for viewing more notes at once. Great for visual organization.</p>
-                        </div>
-                    </div>
-                    <p>Toggle between views using the view switcher icon in the toolbar.</p>
-                </div>
-
-                <!-- Reminders -->
-                <div class="guide-section" id="reminders">
-                    <h2><i class="fas fa-bell"></i> Reminders & Notifications</h2>
-                    
-                    <h3>Creating a Reminder</h3>
-                    <ol class="step-list">
-                        <li><strong>Open Reminders:</strong> Tap "Reminders" from the navigation drawer</li>
-                        <li><strong>Add New Reminder:</strong> Tap the "+" button</li>
-                        <li><strong>Enter Details:</strong> Add title, description, and any additional notes</li>
-                        <li><strong>Set Date & Time:</strong> Choose when you want to be reminded</li>
-                        <li><strong>Configure Repeat (Optional):</strong> Set daily, weekly, or custom repeat patterns</li>
-                        <li><strong>Save:</strong> Tap save to schedule your reminder</li>
-                    </ol>
-
-                    <h3>Managing Reminders</h3>
-                    <ul>
-                        <li><strong>View All Reminders:</strong> Access from the navigation drawer</li>
-                        <li><strong>Edit Reminder:</strong> Tap on any reminder to modify details or timing</li>
-                        <li><strong>Complete/Dismiss:</strong> Swipe or tap checkmark when done</li>
-                        <li><strong>Delete:</strong> Swipe to remove unwanted reminders</li>
-                    </ul>
-
-                    <div class="info-box">
-                        <h4><i class="fas fa-info-circle"></i> How Reminders Work</h4>
-                        <p>NoteNest uses WorkManager and AlarmManager to ensure reliable notification delivery. Reminders display the note title and scheduled time when they trigger.</p>
-                    </div>
-
-                    <h3>Notification Settings</h3>
-                    <ul>
-                        <li>Go to Settings > Notifications to customize reminder alerts</li>
-                        <li>Adjust notification sound, vibration, and priority</li>
-                        <li>Enable/disable notification previews on lock screen</li>
-                    </ul>
-
-                    <div class="warning-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Reminders Not Working?</h4>
-                        <p><strong>For Xiaomi (MIUI), Vivo, Oppo, Realme users:</strong> These devices have aggressive battery optimization that can prevent reminders. Fix this by:</p>
-                        <ul style="margin-top: 0.5rem;">
-                            <li>Go to Settings > Battery > App Battery Management</li>
-                            <li>Find NoteNest and disable battery optimization</li>
-                            <li>Enable "Autostart" permission for NoteNest</li>
-                            <li>Lock NoteNest in recent apps (prevent closing)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Organization -->
-                <div class="guide-section" id="organization">
-                    <h2><i class="fas fa-folder"></i> Organization & Categories</h2>
-                    
-                    <h3>Using Categories</h3>
-                    <p>Categories help organize notes by topic, project, or any classification system you prefer.</p>
-                    
-                    <h4>Creating Categories</h4>
-                    <ol class="step-list">
-                        <li><strong>Open Categories:</strong> Tap "Categories" in the navigation drawer or settings</li>
-                        <li><strong>Add New Category:</strong> Tap "+" and enter a category name</li>
-                        <li><strong>Assign Colors (if available):</strong> Choose a color to visually distinguish categories</li>
-                    </ol>
-
-                    <h4>Assigning Categories to Notes</h4>
-                    <ul>
-                        <li>When creating/editing a note, tap the "Category" field</li>
-                        <li>Select from your existing categories or create a new one</li>
-                        <li>One note can have one primary category</li>
-                    </ul>
-
-                    <h3>Filtering & Searching</h3>
-                    <div class="feature-grid">
-                        <div class="feature-box">
-                            <h4><i class="fas fa-search"></i> Search</h4>
-                            <p>Use the search bar (magnifying glass icon) to find notes by title or content. Search is debounced for optimal performance.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fas fa-filter"></i> Filter by Category</h4>
-                            <p>Tap the filter icon and select a category to view only notes in that category.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fas fa-sort"></i> Sort Options</h4>
-                            <p>Sort notes by date created, last modified, title (A-Z), or category using the sort menu.</p>
-                        </div>
-                    </div>
-
-                    <h3>Drag & Drop Reordering</h3>
-                    <p>Long-press and drag notes to manually reorder them. Your custom order is saved automatically.</p>
-
-                    <h3>To-Do Lists</h3>
-                    <ol class="step-list">
-                        <li><strong>Access To-Do Lists:</strong> Open from the navigation drawer</li>
-                        <li><strong>Add Tasks:</strong> Tap "+" to create new tasks</li>
-                        <li><strong>Mark Complete:</strong> Tap checkbox when finished</li>
-                        <li><strong>Track Progress:</strong> View completion status at a glance</li>
-                    </ol>
-
-                    <h3>Wish Lists</h3>
-                    <p>Create wish lists for future goals, shopping lists, or aspirations. Works similarly to to-do lists but focused on things you want to achieve or acquire.</p>
-                </div>
-
-                <!-- Widgets -->
-                <div class="guide-section" id="widgets">
-                    <h2><i class="fas fa-th-large"></i> Home Screen Widgets</h2>
-                    
-                    <h3>Available Widgets</h3>
-                    <div class="feature-grid">
-                        <div class="feature-box">
-                            <h4><i class="fas fa-sticky-note"></i> Note Preview Widget</h4>
-                            <p>Display a selected note directly on your home screen for quick reference.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fas fa-plus-circle"></i> Quick Add Widget</h4>
-                            <p>Instantly create new notes without opening the app—perfect for capturing ideas on the go.</p>
-                        </div>
-                    </div>
-
-                    <h3>Adding Widgets to Home Screen</h3>
-                    <ol class="step-list">
-                        <li><strong>Long-Press Home Screen:</strong> Touch and hold an empty area on your Android home screen</li>
-                        <li><strong>Select Widgets:</strong> Tap "Widgets" from the options menu</li>
-                        <li><strong>Find NoteNest:</strong> Scroll through the widget list to find NoteNest</li>
-                        <li><strong>Choose Widget Type:</strong> Select either Note Preview or Quick Add widget</li>
-                        <li><strong>Drag to Place:</strong> Drag the widget to your desired location</li>
-                        <li><strong>Configure (Note Preview):</strong> If using Note Preview, select which note to display</li>
-                    </ol>
-
-                    <h3>Widget Customization</h3>
-                    <ul>
-                        <li><strong>Resize:</strong> Long-press widget and drag corners to resize</li>
-                        <li><strong>Update Content:</strong> For Note Preview, long-press and select "Configure" to change displayed note</li>
-                        <li><strong>Remove:</strong> Long-press and drag to "Remove" at the top of screen</li>
-                    </ul>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-lightbulb"></i> Widget Tips</h4>
-                        <ul style="margin: 0.5rem 0 0 0;">
-                            <li>Place Quick Add widget on your main home screen for fastest access</li>
-                            <li>Use Note Preview widget for important info you reference frequently</li>
-                            <li>If widget doesn't update, try removing and re-adding it</li>
-                        </ul>
-                    </div>
-
-                    <div class="warning-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Widget Update Delays</h4>
-                        <p>Some OEM launchers (Samsung, Xiaomi, etc.) may delay widget updates. This is a launcher limitation, not a NoteNest issue. Force-refresh by opening the app or removing/re-adding the widget.</p>
-                    </div>
-                </div>
-
-                <!-- Backup & Restore -->
-                <div class="guide-section" id="backup">
-                    <h2><i class="fas fa-cloud-upload-alt"></i> Backup & Restore</h2>
-                    
-                    <h3>Why Backup?</h3>
-                    <p>Regular backups protect your notes, reminders, and settings from:</p>
-                    <ul>
-                        <li>Device loss, theft, or damage</li>
-                        <li>Accidental app uninstallation</li>
-                        <li>Data corruption or device factory reset</li>
-                        <li>Switching to a new phone</li>
-                    </ul>
-
-                    <h3>Local Backup</h3>
-                    <h4>Creating a Local Backup</h4>
-                    <ol class="step-list">
-                        <li><strong>Open Settings:</strong> Tap the menu icon and select "Settings"</li>
-                        <li><strong>Navigate to Backup:</strong> Find "Backup & Restore" section</li>
-                        <li><strong>Create Backup:</strong> Tap "Create Local Backup"</li>
-                        <li><strong>Choose Location:</strong> Select where to save (Downloads, Documents, or custom folder)</li>
-                        <li><strong>Backup Complete:</strong> An encrypted .db file is saved to your device</li>
-                    </ol>
-
-                    <div class="info-box">
-                        <h4><i class="fas fa-info-circle"></i> About Local Backups</h4>
-                        <p>Local backups are encrypted SQLite database exports. Nobody can read your backup files without the NoteNest app—your data stays private!</p>
-                    </div>
-
-                    <h4>Restoring from Local Backup</h4>
-                    <ol class="step-list">
-                        <li><strong>Open Settings > Backup & Restore</strong></li>
-                        <li><strong>Tap "Restore from Local Backup"</strong></li>
-                        <li><strong>Select Backup File:</strong> Choose the .db backup file</li>
-                        <li><strong>Confirm Restore:</strong> Warning: This will replace current data</li>
-                        <li><strong>App Restarts:</strong> NoteNest will restart to load restored data</li>
-                    </ol>
-
-                    <h3>Cloud Backup (Google Drive)</h3>
-                    <h4>Enabling Cloud Backup</h4>
-                    <ol class="step-list">
-                        <li><strong>Open Settings > Backup & Restore</strong></li>
-                        <li><strong>Tap "Enable Cloud Backup"</strong></li>
-                        <li><strong>Sign in to Google:</strong> Authorize NoteNest to access your Google Drive</li>
-                        <li><strong>Choose Backup Frequency:</strong> Manual, daily, or weekly</li>
-                        <li><strong>Create First Backup:</strong> Tap "Backup Now"</li>
-                    </ol>
-
-                    <h4>Restoring from Cloud Backup</h4>
-                    <ol class="step-list">
-                        <li><strong>Open Settings > Backup & Restore</strong></li>
-                        <li><strong>Tap "Restore from Cloud"</strong></li>
-                        <li><strong>Sign in to Google Drive</strong></li>
-                        <li><strong>Select Backup:</strong> Choose from available backups (shows date/time)</li>
-                        <li><strong>Confirm and Restore</strong></li>
-                    </ol>
-
-                    <div class="tip-box">
-                        <h4><i class="fas fa-lightbulb"></i> Backup Best Practices</h4>
-                        <ul style="margin: 0.5rem 0 0 0;">
-                            <li>Create backups before major Android updates</li>
-                            <li>Keep at least 2-3 recent local backups on different storage locations</li>
-                            <li>Enable automatic cloud backup for peace of mind</li>
-                            <li>Test your backups occasionally by restoring on a secondary device</li>
-                        </ul>
-                    </div>
-
-                    <h3>Managing Your Backups</h3>
-                    <ul>
-                        <li><strong>View Backup History:</strong> See when last backup was created</li>
-                        <li><strong>Delete Old Cloud Backups:</strong> Manage via Google Drive app or web interface</li>
-                        <li><strong>Transfer Backups:</strong> Copy local backup files to computer or cloud storage</li>
-                    </ul>
-                </div>
-
-                <!-- Export & Share -->
-                <div class="guide-section" id="export">
-                    <h2><i class="fas fa-share-alt"></i> Export & Share</h2>
-                    
-                    <h3>Export Formats</h3>
-                    <p>NoteNest allows you to export individual notes in multiple formats:</p>
-                    
-                    <div class="feature-grid">
-                        <div class="feature-box">
-                            <h4><i class="fas fa-file-alt"></i> Plain Text (.txt)</h4>
-                            <p>Simple, universal text format. Perfect for editing in any text editor.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fas fa-file-pdf"></i> PDF Document</h4>
-                            <p>Professional format for sharing or printing. Preserves formatting and layout.</p>
-                        </div>
-                        <div class="feature-box">
-                            <h4><i class="fas fa-image"></i> Image (PNG/JPG)</h4>
-                            <p>Visual snapshot of your note. Great for social media or quick sharing.</p>
-                        </div>
-                    </div>
-
-                    <h3>How to Export a Note</h3>
-                    <ol class="step-list">
-                        <li><strong>Open the Note:</strong> Tap the note you want to export</li>
-                        <li><strong>Open Export Menu:</strong> Tap the three-dot menu icon</li>
-                        <li><strong>Select "Export"</strong></li>
-                        <li><strong>Choose Format:</strong> Select Text, PDF, or Image</li>
-                        <li><strong>Select Destination:</strong> Choose where to save the exported file</li>
-                        <li><strong>Export Complete:</strong> File is saved to your chosen location</li>
-                    </ol>
-
-                    <h3>Sharing Notes</h3>
-                    <ol class="step-list">
-                        <li><strong>Open the Note</strong></li>
-                        <li><strong>Tap Share Icon:</strong> Look for the share/send icon</li>
-                        <li><strong>Choose Export Format:</strong> Select how to share (text, PDF, or image)</li>
-                        <li><strong>Select App:</strong> Choose email, WhatsApp, Telegram, or any other sharing app</li>
-                        <li><strong>Send:</strong> Complete sharing through your chosen app</li>
-                    </ol>
-
-                    <div class="info-box">
-                        <h4><i class="fas fa-info-circle"></i> Sharing Apps Supported</h4>
-                        <p>NoteNest uses Android's native share intent, so you can share to any app installed on your device including: Email, WhatsApp, Telegram, Gmail, Drive, Dropbox, Slack, and more!</p>
-                    </div>
-
-                    <h3>Export Tips</h3>
-                    <ul>
-                        <li><strong>PDF for Professional Use:</strong> Best for work documents or formal sharing</li>
-                        <li><strong>Text for Flexibility:</strong> Easily editable and compatible everywhere</li>
-                        <li><strong>Image for Quick Sharing:</strong> Fastest way to share on social media</li>
-                    </ul>
-
-                    <div class="warning-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Large Note Performance</h4>
-                        <p>Exporting very large notes (1000+ words) or notes with many images as image format may take longer on devices with less than 3GB RAM. Use PDF or text export for better performance with large content.</p>
-                    </div>
-                </div>
-
-                <!-- Settings -->
-                <div class="guide-section" id="settings">
-                    <h2><i class="fas fa-cog"></i> Settings & Customization</h2>
-                    
-                    <h3>Accessing Settings</h3>
-                    <ul>
-                        <li>Tap the menu icon (☰) in the top-left corner</li>
-                        <li>Select "Settings" from the navigation drawer</li>
-                </ul>
-
-                <h3>Appearance Settings</h3>
-                <div class="feature-grid">
-                    <div class="feature-box">
-                        <h4><i class="fas fa-moon"></i> Theme</h4>
-                        <p><strong>Light Mode:</strong> Bright, clean interface<br>
-                        <strong>Dark Mode:</strong> Easy on eyes, saves battery on OLED screens<br>
-                        <strong>Auto:</strong> Follows system theme settings</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-text-height"></i> Text Size</h4>
-                        <p>Adjust note text size for comfortable reading. Changes apply to all notes.</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-palette"></i> Color Scheme</h4>
-                        <p>Customize accent colors and UI elements (if available in your version).</p>
-                    </div>
-                </div>
-
-                <h3>Account Settings</h3>
-                <ul>
-                    <li><strong>Profile:</strong> Edit display name and profile picture</li>
-                    <li><strong>Email:</strong> Update account email address</li>
-                    <li><strong>Password:</strong> Change your password (requires current password)</li>
-                    <li><strong>Connected Accounts:</strong> Manage Google Sign-In integration</li>
-                </ul>
-
-                <h3>Privacy Settings</h3>
-                <ul>
-                    <li><strong>Usage Analytics:</strong> Toggle Firebase Analytics data collection</li>
-                    <li><strong>Crash Reporting:</strong> Enable/disable Firebase Crashlytics</li>
-                    <li><strong>Personalization:</strong> Control data used for app improvements</li>
-                </ul>
-
-                <h3>Notification Settings</h3>
-                <ul>
-                    <li>Enable/disable reminder notifications</li>
-                    <li>Customize notification sound</li>
-                    <li>Set vibration patterns</li>
-                    <li>Control notification priority and display</li>
-                </ul>
-
-                <h3>Data & Storage</h3>
-                <ul>
-                    <li><strong>Storage Usage:</strong> View how much space NoteNest uses</li>
-                    <li><strong>Cache Management:</strong> Clear temporary files</li>
-                    <li><strong>Data Location:</strong> See where your data is stored</li>
-                </ul>
-
-                <h3>About</h3>
-                <ul>
-                    <li><strong>Version Information:</strong> Check your current app version</li>
-                    <li><strong>Developer Info:</strong> Contact and attribution details</li>
-                    <li><strong>Licenses:</strong> View open-source licenses</li>
-                    <li><strong>Release Notes:</strong> See what's new in this version</li>
-                </ul>
-
-                <div class="tip-box">
-                    <h4><i class="fas fa-lightbulb"></i> Performance Tip</h4>
-                    <p>Enable Dark Mode on OLED/AMOLED screens (Samsung, OnePlus, Pixel) to save battery and reduce eye strain.</p>
-                </div>
-            </div>
-
-            <!-- Troubleshooting -->
-            <div class="guide-section" id="troubleshooting">
-                <h2><i class="fas fa-wrench"></i> Troubleshooting & FAQs</h2>
-                
-                <h3>Common Issues & Solutions</h3>
-                
-                <h4>1. Reminders Not Triggering</h4>
-                <div class="warning-box">
-                    <p><strong>Problem:</strong> Reminders don't show up at scheduled time</p>
-                    <p><strong>Solution for Xiaomi (MIUI), Vivo, Oppo, Realme:</strong></p>
-                    <ul style="margin: 0.5rem 0 0 0;">
-                        <li>Settings > Battery > App Battery Management > NoteNest</li>
-                        <li>Disable battery optimization</li>
-                        <li>Enable "Autostart" permission</li>
-                        <li>Lock app in recent apps screen</li>
-                    </ul>
-                    <p style="margin-top: 0.5rem;"><strong>For All Devices:</strong></p>
-                    <ul style="margin: 0.5rem 0 0 0;">
-                        <li>Ensure notifications are enabled in Android Settings</li>
-                        <li>Check that NoteNest has notification permission</li>
-                        <li>Verify reminder is set for future time (not past)</li>
-                    </ul>
-                </div>
-
-                <h4>2. Widget Not Updating</h4>
-                <p><strong>Solutions:</strong></p>
-                <ul>
-                    <li>Open NoteNest app to force widget refresh</li>
-                    <li>Remove widget and re-add it to home screen</li>
-                    <li>Ensure NoteNest has sufficient battery permissions</li>
-                    <li>Some launchers (Nova, Apex) may have widget refresh settings—check launcher settings</li>
-                </ul>
-
-                <h4>3. Google Sign-In Delays or Fails</h4>
-                <p><strong>Solutions:</strong></p>
-                <ul>
-                    <li>First-time sign-in may take 10-15 seconds for token refresh—be patient</li>
-                    <li>Ensure you have active internet connection</li>
-                    <li>Check that Google Play Services is up to date</li>
-                    <li>Try signing out and back in to Google account on device</li>
-                    <li>Clear NoteNest cache: Settings > Apps > NoteNest > Clear Cache</li>
-                </ul>
-
-                <h4>4. App Crashes or Freezes</h4>
-                <p><strong>Solutions:</strong></p>
-                <ul>
-                    <li>Ensure you're running the latest version (check Play Store for updates)</li>
-                    <li>Restart your device</li>
-                    <li>Clear app cache (Settings > Apps > NoteNest > Clear Cache)</li>
-                    <li>If problem persists, report via <a href="bug-report.html">Bug Report</a> page</li>
-                    <li>As last resort: Backup data, then Clear Data and restore from backup</li>
-                </ul>
-
-                <h4>5. Export Fails or Takes Too Long</h4>
-                <p><strong>Solutions:</strong></p>
-                <ul>
-                    <li>For large notes, use Text or PDF export instead of Image format</li>
-                    <li>Ensure you have sufficient storage space</li>
-                    <li>Grant storage permissions to NoteNest</li>
-                    <li>Close other apps to free up memory</li>
-                    <li>On low-end devices, export smaller notes or reduce image quality</li>
-                </ul>
-
-                <h4>6. Backup or Restore Issues</h4>
-                <p><strong>Solutions:</strong></p>
-                <ul>
-                    <li>Ensure sufficient storage space (backup needs 2x data size)</li>
-                    <li>For cloud backup, verify Google Drive has space and you're connected to WiFi</li>
-                    <li>Check that backup file isn't corrupted (try opening with file manager)</li>
-                    <li>Ensure backup was created with same or newer app version</li>
-                </ul>
-
-                <h4>7. Slow Performance or Lag</h4>
-                <p><strong>Solutions:</strong></p>
-                <ul>
-                    <li>NoteNest is optimized for 1000s of notes, but very old devices may struggle</li>
-                    <li>Clear app cache periodically</li>
-                    <li>Reduce number of widgets (each widget uses resources)</li>
-                    <li>Close apps running in background</li>
-                    <li>Consider archiving old notes by exporting and deleting from app</li>
-                </ul>
-
-                <h3>Getting Help</h3>
-                <div class="feature-grid">
-                    <div class="feature-box">
-                        <h4><i class="fas fa-envelope"></i> Email Support</h4>
-                        <p>saihemanth225@gmail.com<br>Response within 24-48 hours</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-bug"></i> Report Bug</h4>
-                        <p>Use our <a href="bug-report.html">Bug Report</a> form for technical issues</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-comment"></i> Send Feedback</h4>
-                        <p>Share ideas via <a href="feedback.html">Feedback</a> page</p>
-                    </div>
-                </div>
-
-                <h3>System Requirements</h3>
-                <ul>
-                    <li><strong>Android Version:</strong> 6.0 (Marshmallow) or higher</li>
-                    <li><strong>Storage:</strong> Minimum 50MB free space</li>
-                    <li><strong>RAM:</strong> 1GB minimum, 2GB+ recommended</li>
-                    <li><strong>Internet:</strong> Required for Google Sign-In, cloud backup, and crash reporting</li>
-                    <li><strong>Permissions:</strong> Notifications, Storage, Internet access</li>
-                </ul>
-            </div>
-
-            <!-- Additional Resources -->
-            <div class="guide-section">
-                <h2><i class="fas fa-link"></i> Additional Resources</h2>
-                
-                <div class="feature-grid">
-                    <div class="feature-box">
-                        <h4><i class="fas fa-home"></i> Home Page</h4>
-                        <p><a href="index.html">Visit NoteNest homepage</a> for app overview and download links</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-shield-alt"></i> Privacy Policy</h4>
-                        <p><a href="privacy.html">Read our Privacy Policy</a> to understand how we protect your data</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-file-contract"></i> Terms of Service</h4>
-                        <p><a href="terms.html">Review Terms of Service</a> for usage guidelines and legal information</p>
-                    </div>
-                    <div class="feature-box">
-                        <h4><i class="fas fa-user-times"></i> Delete Account</h4>
-                        <p><a href="delete.html">Account deletion</a> information and process</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-block" style="background: #e8f5e9; border-left: 4px solid #4caf50; padding: 1.5rem; margin: 2rem 0;">
-                <h3 style="margin-top: 0; color: #2e7d32;"><i class="fas fa-heart"></i> Thank You for Using NoteNest!</h3>
-                <p style="margin-bottom: 0;">We hope this guide helps you get the most out of NoteNest. If you have questions not covered here, don't hesitate to <a href="contact.html">contact us</a>. Happy organizing!</p>
-            </div>
-
-            <p style="text-align: center; color: #666; margin-top: 2rem;">
-                <strong>Guide Version:</strong> 3.0 | <strong>Last Updated:</strong> December 26, 2025<br>
-                <strong>Developed by:</strong> Thogoruchesti Hemanth
+          <div
+            class="content-block"
+            style="
+              background: #e7f3ff;
+              padding: 1.5rem;
+              border-radius: 8px;
+              margin: 2rem 0;
+            "
+          >
+            <p style="margin: 0">
+              <strong>Current Version:</strong> 3.0.0 |
+              <strong>Last Updated:</strong> December 22, 2025 |
+              <strong>Platform:</strong> Android 6.0+
             </p>
-        </div>
-    </section>
-</main>
+          </div>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
+          <!-- Quick Navigation -->
+          <div class="quick-nav">
+            <h3><i class="fas fa-compass"></i> Quick Navigation</h3>
+            <ul>
+              <li>
+                <a href="#getting-started"
+                  ><i class="fas fa-play-circle"></i> Getting Started</a
+                >
+              </li>
+              <li>
+                <a href="#notes"
+                  ><i class="fas fa-file-alt"></i> Managing Notes</a
+                >
+              </li>
+              <li>
+                <a href="#reminders"
+                  ><i class="fas fa-bell"></i> Reminders & Notifications</a
+                >
+              </li>
+              <li>
+                <a href="#organization"
+                  ><i class="fas fa-folder"></i> Organization & Categories</a
+                >
+              </li>
+              <li>
+                <a href="#widgets"
+                  ><i class="fas fa-th-large"></i> Home Screen Widgets</a
+                >
+              </li>
+              <li>
+                <a href="#backup"
+                  ><i class="fas fa-cloud-upload-alt"></i> Backup & Restore</a
+                >
+              </li>
+              <li>
+                <a href="#export"
+                  ><i class="fas fa-share-alt"></i> Export & Share</a
+                >
+              </li>
+              <li>
+                <a href="#settings"
+                  ><i class="fas fa-cog"></i> Settings & Customization</a
+                >
+              </li>
+              <li>
+                <a href="#troubleshooting"
+                  ><i class="fas fa-wrench"></i> Troubleshooting</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Getting Started -->
+          <div class="guide-section" id="getting-started">
+            <h2><i class="fas fa-play-circle"></i> Getting Started</h2>
+
+            <h3>Installation</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Download from Google Play:</strong> Visit the
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+                  target="_blank"
+                  >NoteNest page on Google Play Store</a
+                >
+                and tap "Install"
+              </li>
+              <li>
+                <strong>Open the App:</strong> Once installed, tap "Open" or
+                find the NoteNest icon in your app drawer
+              </li>
+              <li>
+                <strong>Create Account or Sign In:</strong> Choose to create a
+                new account with email/password or use Google Sign-In
+              </li>
+            </ol>
+
+            <h3>Creating Your Account</h3>
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-envelope"></i> Email Sign-Up</h4>
+                <p>
+                  Enter your email, create a strong password (8+ characters with
+                  uppercase, lowercase, number, and symbol), and choose a
+                  username.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fab fa-google"></i> Google Sign-In</h4>
+                <p>
+                  Tap "Sign in with Google" for quick access using your existing
+                  Google account. Your name, email, and profile picture will be
+                  imported.
+                </p>
+              </div>
+            </div>
+
+            <div class="tip-box">
+              <h4><i class="fas fa-lightbulb"></i> Pro Tip</h4>
+              <p>
+                Use a strong, unique password for your account. NoteNest uses
+                encrypted storage to protect your credentials—we never store
+                passwords in plain text.
+              </p>
+            </div>
+
+            <h3>First-Time Setup</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Complete Onboarding:</strong> Swipe through the intro
+                screens highlighting key features
+              </li>
+              <li>
+                <strong>Grant Permissions:</strong> Allow notifications (for
+                reminders), storage access (for backups), and other requested
+                permissions
+              </li>
+              <li>
+                <strong>Customize Your Profile:</strong> Tap the profile icon to
+                add a display name and profile picture
+              </li>
+              <li>
+                <strong>Choose Your Theme:</strong> Select Light or Dark mode in
+                Settings, or enable auto-switch based on system settings
+              </li>
+            </ol>
+          </div>
+
+          <!-- Managing Notes -->
+          <div class="guide-section" id="notes">
+            <h2><i class="fas fa-file-alt"></i> Managing Notes</h2>
+
+            <h3>Creating a New Note</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Tap the "+" Button:</strong> Located at the bottom-right
+                corner of the main screen
+              </li>
+              <li>
+                <strong>Add Title:</strong> Enter a descriptive title for your
+                note
+              </li>
+              <li>
+                <strong>Write Content:</strong> Type your note content in the
+                main text area
+              </li>
+              <li>
+                <strong>Assign Category (Optional):</strong> Tap "Category" to
+                organize your note
+              </li>
+              <li>
+                <strong>Save:</strong> Tap the save icon or press back—notes
+                auto-save as you type
+              </li>
+            </ol>
+
+            <h3>Editing Notes</h3>
+            <ul>
+              <li>Tap any note from your list to open and edit it</li>
+              <li>Changes are saved automatically</li>
+              <li>
+                Use the formatting toolbar for text styling (if available in
+                your version)
+              </li>
+            </ul>
+
+            <h3>Deleting Notes</h3>
+            <ul>
+              <li>
+                <strong>Swipe to Delete:</strong> Swipe left or right on a note
+                in the list
+              </li>
+              <li>
+                <strong>Menu Option:</strong> Open the note and tap the delete
+                icon
+              </li>
+              <li>
+                <strong>Bulk Delete:</strong> Long-press to select multiple
+                notes, then tap delete
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4><i class="fas fa-exclamation-triangle"></i> Important</h4>
+              <p>
+                Deleted notes cannot be recovered unless you have a recent
+                backup. Always backup important data regularly!
+              </p>
+            </div>
+
+            <h3>Important Notes Feature</h3>
+            <p>
+              Mark notes as "Important" to access them quickly in a dedicated
+              section:
+            </p>
+            <ul>
+              <li>
+                Open a note and tap the star/flag icon to mark as important
+              </li>
+              <li>Access all important notes from the navigation drawer</li>
+              <li>Perfect for frequently referenced information</li>
+            </ul>
+
+            <h3>View Options</h3>
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-list"></i> List View</h4>
+                <p>
+                  Classic linear layout showing notes one below another. Ideal
+                  for detailed previews.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-th"></i> Grid View</h4>
+                <p>
+                  2-3 column grid layout for viewing more notes at once. Great
+                  for visual organization.
+                </p>
+              </div>
+            </div>
+            <p>
+              Toggle between views using the view switcher icon in the toolbar.
+            </p>
+          </div>
+
+          <!-- Reminders -->
+          <div class="guide-section" id="reminders">
+            <h2><i class="fas fa-bell"></i> Reminders & Notifications</h2>
+
+            <h3>Creating a Reminder</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Open Reminders:</strong> Tap "Reminders" from the
+                navigation drawer
+              </li>
+              <li><strong>Add New Reminder:</strong> Tap the "+" button</li>
+              <li>
+                <strong>Enter Details:</strong> Add title, description, and any
+                additional notes
+              </li>
+              <li>
+                <strong>Set Date & Time:</strong> Choose when you want to be
+                reminded
+              </li>
+              <li>
+                <strong>Configure Repeat (Optional):</strong> Set daily, weekly,
+                or custom repeat patterns
+              </li>
+              <li><strong>Save:</strong> Tap save to schedule your reminder</li>
+            </ol>
+
+            <h3>Managing Reminders</h3>
+            <ul>
+              <li>
+                <strong>View All Reminders:</strong> Access from the navigation
+                drawer
+              </li>
+              <li>
+                <strong>Edit Reminder:</strong> Tap on any reminder to modify
+                details or timing
+              </li>
+              <li>
+                <strong>Complete/Dismiss:</strong> Swipe or tap checkmark when
+                done
+              </li>
+              <li>
+                <strong>Delete:</strong> Swipe to remove unwanted reminders
+              </li>
+            </ul>
+
+            <div class="info-box">
+              <h4><i class="fas fa-info-circle"></i> How Reminders Work</h4>
+              <p>
+                NoteNest uses WorkManager and AlarmManager to ensure reliable
+                notification delivery. Reminders display the note title and
+                scheduled time when they trigger.
+              </p>
+            </div>
+
+            <h3>Notification Settings</h3>
+            <ul>
+              <li>
+                Go to Settings > Notifications to customize reminder alerts
+              </li>
+              <li>Adjust notification sound, vibration, and priority</li>
+              <li>Enable/disable notification previews on lock screen</li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fas fa-exclamation-triangle"></i> Reminders Not
+                Working?
+              </h4>
+              <p>
+                <strong>For Xiaomi (MIUI), Vivo, Oppo, Realme users:</strong>
+                These devices have aggressive battery optimization that can
+                prevent reminders. Fix this by:
+              </p>
+              <ul style="margin-top: 0.5rem">
+                <li>Go to Settings > Battery > App Battery Management</li>
+                <li>Find NoteNest and disable battery optimization</li>
+                <li>Enable "Autostart" permission for NoteNest</li>
+                <li>Lock NoteNest in recent apps (prevent closing)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Organization -->
+          <div class="guide-section" id="organization">
+            <h2><i class="fas fa-folder"></i> Organization & Categories</h2>
+
+            <h3>Using Categories</h3>
+            <p>
+              Categories help organize notes by topic, project, or any
+              classification system you prefer.
+            </p>
+
+            <h4>Creating Categories</h4>
+            <ol class="step-list">
+              <li>
+                <strong>Open Categories:</strong> Tap "Categories" in the
+                navigation drawer or settings
+              </li>
+              <li>
+                <strong>Add New Category:</strong> Tap "+" and enter a category
+                name
+              </li>
+              <li>
+                <strong>Assign Colors (if available):</strong> Choose a color to
+                visually distinguish categories
+              </li>
+            </ol>
+
+            <h4>Assigning Categories to Notes</h4>
+            <ul>
+              <li>When creating/editing a note, tap the "Category" field</li>
+              <li>Select from your existing categories or create a new one</li>
+              <li>One note can have one primary category</li>
+            </ul>
+
+            <h3>Filtering & Searching</h3>
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-search"></i> Search</h4>
+                <p>
+                  Use the search bar (magnifying glass icon) to find notes by
+                  title or content. Search is debounced for optimal performance.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-filter"></i> Filter by Category</h4>
+                <p>
+                  Tap the filter icon and select a category to view only notes
+                  in that category.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-sort"></i> Sort Options</h4>
+                <p>
+                  Sort notes by date created, last modified, title (A-Z), or
+                  category using the sort menu.
+                </p>
+              </div>
+            </div>
+
+            <h3>Drag & Drop Reordering</h3>
+            <p>
+              Long-press and drag notes to manually reorder them. Your custom
+              order is saved automatically.
+            </p>
+
+            <h3>To-Do Lists</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Access To-Do Lists:</strong> Open from the navigation
+                drawer
+              </li>
+              <li><strong>Add Tasks:</strong> Tap "+" to create new tasks</li>
+              <li>
+                <strong>Mark Complete:</strong> Tap checkbox when finished
+              </li>
+              <li>
+                <strong>Track Progress:</strong> View completion status at a
+                glance
+              </li>
+            </ol>
+
+            <h3>Wish Lists</h3>
+            <p>
+              Create wish lists for future goals, shopping lists, or
+              aspirations. Works similarly to to-do lists but focused on things
+              you want to achieve or acquire.
+            </p>
+          </div>
+
+          <!-- Widgets -->
+          <div class="guide-section" id="widgets">
+            <h2><i class="fas fa-th-large"></i> Home Screen Widgets</h2>
+
+            <h3>Available Widgets</h3>
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-sticky-note"></i> Note Preview Widget</h4>
+                <p>
+                  Display a selected note directly on your home screen for quick
+                  reference.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-plus-circle"></i> Quick Add Widget</h4>
+                <p>
+                  Instantly create new notes without opening the app—perfect for
+                  capturing ideas on the go.
+                </p>
+              </div>
+            </div>
+
+            <h3>Adding Widgets to Home Screen</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Long-Press Home Screen:</strong> Touch and hold an empty
+                area on your Android home screen
+              </li>
+              <li>
+                <strong>Select Widgets:</strong> Tap "Widgets" from the options
+                menu
+              </li>
+              <li>
+                <strong>Find NoteNest:</strong> Scroll through the widget list
+                to find NoteNest
+              </li>
+              <li>
+                <strong>Choose Widget Type:</strong> Select either Note Preview
+                or Quick Add widget
+              </li>
+              <li>
+                <strong>Drag to Place:</strong> Drag the widget to your desired
+                location
+              </li>
+              <li>
+                <strong>Configure (Note Preview):</strong> If using Note
+                Preview, select which note to display
+              </li>
+            </ol>
+
+            <h3>Widget Customization</h3>
+            <ul>
+              <li>
+                <strong>Resize:</strong> Long-press widget and drag corners to
+                resize
+              </li>
+              <li>
+                <strong>Update Content:</strong> For Note Preview, long-press
+                and select "Configure" to change displayed note
+              </li>
+              <li>
+                <strong>Remove:</strong> Long-press and drag to "Remove" at the
+                top of screen
+              </li>
+            </ul>
+
+            <div class="tip-box">
+              <h4><i class="fas fa-lightbulb"></i> Widget Tips</h4>
+              <ul style="margin: 0.5rem 0 0 0">
+                <li>
+                  Place Quick Add widget on your main home screen for fastest
+                  access
+                </li>
+                <li>
+                  Use Note Preview widget for important info you reference
+                  frequently
+                </li>
+                <li>If widget doesn't update, try removing and re-adding it</li>
+              </ul>
+            </div>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fas fa-exclamation-triangle"></i> Widget Update Delays
+              </h4>
+              <p>
+                Some OEM launchers (Samsung, Xiaomi, etc.) may delay widget
+                updates. This is a launcher limitation, not a NoteNest issue.
+                Force-refresh by opening the app or removing/re-adding the
+                widget.
+              </p>
+            </div>
+          </div>
+
+          <!-- Backup & Restore -->
+          <div class="guide-section" id="backup">
+            <h2><i class="fas fa-cloud-upload-alt"></i> Backup & Restore</h2>
+
+            <h3>Why Backup?</h3>
+            <p>
+              Regular backups protect your notes, reminders, and settings from:
+            </p>
+            <ul>
+              <li>Device loss, theft, or damage</li>
+              <li>Accidental app uninstallation</li>
+              <li>Data corruption or device factory reset</li>
+              <li>Switching to a new phone</li>
+            </ul>
+
+            <h3>Local Backup</h3>
+            <h4>Creating a Local Backup</h4>
+            <ol class="step-list">
+              <li>
+                <strong>Open Settings:</strong> Tap the menu icon and select
+                "Settings"
+              </li>
+              <li>
+                <strong>Navigate to Backup:</strong> Find "Backup & Restore"
+                section
+              </li>
+              <li><strong>Create Backup:</strong> Tap "Create Local Backup"</li>
+              <li>
+                <strong>Choose Location:</strong> Select where to save
+                (Downloads, Documents, or custom folder)
+              </li>
+              <li>
+                <strong>Backup Complete:</strong> An encrypted .db file is saved
+                to your device
+              </li>
+            </ol>
+
+            <div class="info-box">
+              <h4><i class="fas fa-info-circle"></i> About Local Backups</h4>
+              <p>
+                Local backups are encrypted SQLite database exports. Nobody can
+                read your backup files without the NoteNest app—your data stays
+                private!
+              </p>
+            </div>
+
+            <h4>Restoring from Local Backup</h4>
+            <ol class="step-list">
+              <li><strong>Open Settings > Backup & Restore</strong></li>
+              <li><strong>Tap "Restore from Local Backup"</strong></li>
+              <li>
+                <strong>Select Backup File:</strong> Choose the .db backup file
+              </li>
+              <li>
+                <strong>Confirm Restore:</strong> Warning: This will replace
+                current data
+              </li>
+              <li>
+                <strong>App Restarts:</strong> NoteNest will restart to load
+                restored data
+              </li>
+            </ol>
+
+            <h3>Cloud Backup (Google Drive)</h3>
+            <h4>Enabling Cloud Backup</h4>
+            <ol class="step-list">
+              <li><strong>Open Settings > Backup & Restore</strong></li>
+              <li><strong>Tap "Enable Cloud Backup"</strong></li>
+              <li>
+                <strong>Sign in to Google:</strong> Authorize NoteNest to access
+                your Google Drive
+              </li>
+              <li>
+                <strong>Choose Backup Frequency:</strong> Manual, daily, or
+                weekly
+              </li>
+              <li><strong>Create First Backup:</strong> Tap "Backup Now"</li>
+            </ol>
+
+            <h4>Restoring from Cloud Backup</h4>
+            <ol class="step-list">
+              <li><strong>Open Settings > Backup & Restore</strong></li>
+              <li><strong>Tap "Restore from Cloud"</strong></li>
+              <li><strong>Sign in to Google Drive</strong></li>
+              <li>
+                <strong>Select Backup:</strong> Choose from available backups
+                (shows date/time)
+              </li>
+              <li><strong>Confirm and Restore</strong></li>
+            </ol>
+
+            <div class="tip-box">
+              <h4><i class="fas fa-lightbulb"></i> Backup Best Practices</h4>
+              <ul style="margin: 0.5rem 0 0 0">
+                <li>Create backups before major Android updates</li>
+                <li>
+                  Keep at least 2-3 recent local backups on different storage
+                  locations
+                </li>
+                <li>Enable automatic cloud backup for peace of mind</li>
+                <li>
+                  Test your backups occasionally by restoring on a secondary
+                  device
+                </li>
+              </ul>
+            </div>
+
+            <h3>Managing Your Backups</h3>
+            <ul>
+              <li>
+                <strong>View Backup History:</strong> See when last backup was
+                created
+              </li>
+              <li>
+                <strong>Delete Old Cloud Backups:</strong> Manage via Google
+                Drive app or web interface
+              </li>
+              <li>
+                <strong>Transfer Backups:</strong> Copy local backup files to
+                computer or cloud storage
+              </li>
+            </ul>
+          </div>
+
+          <!-- Export & Share -->
+          <div class="guide-section" id="export">
+            <h2><i class="fas fa-share-alt"></i> Export & Share</h2>
+
+            <h3>Export Formats</h3>
+            <p>
+              NoteNest allows you to export individual notes in multiple
+              formats:
+            </p>
+
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-file-alt"></i> Plain Text (.txt)</h4>
+                <p>
+                  Simple, universal text format. Perfect for editing in any text
+                  editor.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-file-pdf"></i> PDF Document</h4>
+                <p>
+                  Professional format for sharing or printing. Preserves
+                  formatting and layout.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-image"></i> Image (PNG/JPG)</h4>
+                <p>
+                  Visual snapshot of your note. Great for social media or quick
+                  sharing.
+                </p>
+              </div>
+            </div>
+
+            <h3>How to Export a Note</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Open the Note:</strong> Tap the note you want to export
+              </li>
+              <li>
+                <strong>Open Export Menu:</strong> Tap the three-dot menu icon
+              </li>
+              <li><strong>Select "Export"</strong></li>
+              <li>
+                <strong>Choose Format:</strong> Select Text, PDF, or Image
+              </li>
+              <li>
+                <strong>Select Destination:</strong> Choose where to save the
+                exported file
+              </li>
+              <li>
+                <strong>Export Complete:</strong> File is saved to your chosen
+                location
+              </li>
+            </ol>
+
+            <h3>Sharing Notes</h3>
+            <ol class="step-list">
+              <li><strong>Open the Note</strong></li>
+              <li>
+                <strong>Tap Share Icon:</strong> Look for the share/send icon
+              </li>
+              <li>
+                <strong>Choose Export Format:</strong> Select how to share
+                (text, PDF, or image)
+              </li>
+              <li>
+                <strong>Select App:</strong> Choose email, WhatsApp, Telegram,
+                or any other sharing app
+              </li>
+              <li>
+                <strong>Send:</strong> Complete sharing through your chosen app
+              </li>
+            </ol>
+
+            <div class="info-box">
+              <h4><i class="fas fa-info-circle"></i> Sharing Apps Supported</h4>
+              <p>
+                NoteNest uses Android's native share intent, so you can share to
+                any app installed on your device including: Email, WhatsApp,
+                Telegram, Gmail, Drive, Dropbox, Slack, and more!
+              </p>
+            </div>
+
+            <h3>Export Tips</h3>
+            <ul>
+              <li>
+                <strong>PDF for Professional Use:</strong> Best for work
+                documents or formal sharing
+              </li>
+              <li>
+                <strong>Text for Flexibility:</strong> Easily editable and
+                compatible everywhere
+              </li>
+              <li>
+                <strong>Image for Quick Sharing:</strong> Fastest way to share
+                on social media
+              </li>
+            </ul>
+
+            <div class="warning-box">
+              <h4>
+                <i class="fas fa-exclamation-triangle"></i> Large Note
+                Performance
+              </h4>
+              <p>
+                Exporting very large notes (1000+ words) or notes with many
+                images as image format may take longer on devices with less than
+                3GB RAM. Use PDF or text export for better performance with
+                large content.
+              </p>
+            </div>
+          </div>
+
+          <!-- Settings -->
+          <div class="guide-section" id="settings">
+            <h2><i class="fas fa-cog"></i> Settings & Customization</h2>
+
+            <h3>Accessing Settings</h3>
+            <ul>
+              <li>Tap the menu icon (☰) in the top-left corner</li>
+              <li>Select "Settings" from the navigation drawer</li>
+            </ul>
+
+            <h3>Appearance Settings</h3>
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-moon"></i> Theme</h4>
+                <p>
+                  <strong>Light Mode:</strong> Bright, clean interface<br />
+                  <strong>Dark Mode:</strong> Easy on eyes, saves battery on
+                  OLED screens<br />
+                  <strong>Auto:</strong> Follows system theme settings
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-text-height"></i> Text Size</h4>
+                <p>
+                  Adjust note text size for comfortable reading. Changes apply
+                  to all notes.
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-palette"></i> Color Scheme</h4>
+                <p>
+                  Customize accent colors and UI elements (if available in your
+                  version).
+                </p>
+              </div>
+            </div>
+
+            <h3>Account Settings</h3>
+            <ul>
+              <li>
+                <strong>Profile:</strong> Edit display name and profile picture
+              </li>
+              <li><strong>Email:</strong> Update account email address</li>
+              <li>
+                <strong>Password:</strong> Change your password (requires
+                current password)
+              </li>
+              <li>
+                <strong>Connected Accounts:</strong> Manage Google Sign-In
+                integration
+              </li>
+            </ul>
+
+            <h3>Privacy Settings</h3>
+            <ul>
+              <li>
+                <strong>Usage Analytics:</strong> Toggle Firebase Analytics data
+                collection
+              </li>
+              <li>
+                <strong>Crash Reporting:</strong> Enable/disable Firebase
+                Crashlytics
+              </li>
+              <li>
+                <strong>Personalization:</strong> Control data used for app
+                improvements
+              </li>
+            </ul>
+
+            <h3>Notification Settings</h3>
+            <ul>
+              <li>Enable/disable reminder notifications</li>
+              <li>Customize notification sound</li>
+              <li>Set vibration patterns</li>
+              <li>Control notification priority and display</li>
+            </ul>
+
+            <h3>Data & Storage</h3>
+            <ul>
+              <li>
+                <strong>Storage Usage:</strong> View how much space NoteNest
+                uses
+              </li>
+              <li><strong>Cache Management:</strong> Clear temporary files</li>
+              <li>
+                <strong>Data Location:</strong> See where your data is stored
+              </li>
+            </ul>
+
+            <h3>About</h3>
+            <ul>
+              <li>
+                <strong>Version Information:</strong> Check your current app
+                version
+              </li>
+              <li>
+                <strong>Developer Info:</strong> Contact and attribution details
+              </li>
+              <li><strong>Licenses:</strong> View open-source licenses</li>
+              <li>
+                <strong>Release Notes:</strong> See what's new in this version
+              </li>
+            </ul>
+
+            <div class="tip-box">
+              <h4><i class="fas fa-lightbulb"></i> Performance Tip</h4>
+              <p>
+                Enable Dark Mode on OLED/AMOLED screens (Samsung, OnePlus,
+                Pixel) to save battery and reduce eye strain.
+              </p>
+            </div>
+          </div>
+
+          <!-- Troubleshooting -->
+          <div class="guide-section" id="troubleshooting">
+            <h2><i class="fas fa-wrench"></i> Troubleshooting & FAQs</h2>
+
+            <h3>Common Issues & Solutions</h3>
+
+            <h4>1. Reminders Not Triggering</h4>
+            <div class="warning-box">
+              <p>
+                <strong>Problem:</strong> Reminders don't show up at scheduled
+                time
+              </p>
+              <p>
+                <strong>Solution for Xiaomi (MIUI), Vivo, Oppo, Realme:</strong>
+              </p>
+              <ul style="margin: 0.5rem 0 0 0">
+                <li>Settings > Battery > App Battery Management > NoteNest</li>
+                <li>Disable battery optimization</li>
+                <li>Enable "Autostart" permission</li>
+                <li>Lock app in recent apps screen</li>
+              </ul>
+              <p style="margin-top: 0.5rem">
+                <strong>For All Devices:</strong>
+              </p>
+              <ul style="margin: 0.5rem 0 0 0">
+                <li>Ensure notifications are enabled in Android Settings</li>
+                <li>Check that NoteNest has notification permission</li>
+                <li>Verify reminder is set for future time (not past)</li>
+              </ul>
+            </div>
+
+            <h4>2. Widget Not Updating</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+              <li>Open NoteNest app to force widget refresh</li>
+              <li>Remove widget and re-add it to home screen</li>
+              <li>Ensure NoteNest has sufficient battery permissions</li>
+              <li>
+                Some launchers (Nova, Apex) may have widget refresh
+                settings—check launcher settings
+              </li>
+            </ul>
+
+            <h4>3. Google Sign-In Delays or Fails</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+              <li>
+                First-time sign-in may take 10-15 seconds for token refresh—be
+                patient
+              </li>
+              <li>Ensure you have active internet connection</li>
+              <li>Check that Google Play Services is up to date</li>
+              <li>Try signing out and back in to Google account on device</li>
+              <li>
+                Clear NoteNest cache: Settings > Apps > NoteNest > Clear Cache
+              </li>
+            </ul>
+
+            <h4>4. App Crashes or Freezes</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+              <li>
+                Ensure you're running the latest version (check Play Store for
+                updates)
+              </li>
+              <li>Restart your device</li>
+              <li>
+                Clear app cache (Settings > Apps > NoteNest > Clear Cache)
+              </li>
+              <li>
+                If problem persists, report via
+                <a href="bug-report.html">Bug Report</a> page
+              </li>
+              <li>
+                As last resort: Backup data, then Clear Data and restore from
+                backup
+              </li>
+            </ul>
+
+            <h4>5. Export Fails or Takes Too Long</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+              <li>
+                For large notes, use Text or PDF export instead of Image format
+              </li>
+              <li>Ensure you have sufficient storage space</li>
+              <li>Grant storage permissions to NoteNest</li>
+              <li>Close other apps to free up memory</li>
+              <li>
+                On low-end devices, export smaller notes or reduce image quality
+              </li>
+            </ul>
+
+            <h4>6. Backup or Restore Issues</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+              <li>
+                Ensure sufficient storage space (backup needs 2x data size)
+              </li>
+              <li>
+                For cloud backup, verify Google Drive has space and you're
+                connected to WiFi
+              </li>
+              <li>
+                Check that backup file isn't corrupted (try opening with file
+                manager)
+              </li>
+              <li>Ensure backup was created with same or newer app version</li>
+            </ul>
+
+            <h4>7. Slow Performance or Lag</h4>
+            <p><strong>Solutions:</strong></p>
+            <ul>
+              <li>
+                NoteNest is optimized for 1000s of notes, but very old devices
+                may struggle
+              </li>
+              <li>Clear app cache periodically</li>
+              <li>Reduce number of widgets (each widget uses resources)</li>
+              <li>Close apps running in background</li>
+              <li>
+                Consider archiving old notes by exporting and deleting from app
+              </li>
+            </ul>
+
+            <h3>Getting Help</h3>
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-envelope"></i> Email Support</h4>
+                <p>saihemanth225@gmail.com<br />Response within 24-48 hours</p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-bug"></i> Report Bug</h4>
+                <p>
+                  Use our <a href="bug-report.html">Bug Report</a> form for
+                  technical issues
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-comment"></i> Send Feedback</h4>
+                <p>Share ideas via <a href="feedback.html">Feedback</a> page</p>
+              </div>
+            </div>
+
+            <h3>System Requirements</h3>
+            <ul>
+              <li>
+                <strong>Android Version:</strong> 6.0 (Marshmallow) or higher
+              </li>
+              <li><strong>Storage:</strong> Minimum 50MB free space</li>
+              <li><strong>RAM:</strong> 1GB minimum, 2GB+ recommended</li>
+              <li>
+                <strong>Internet:</strong> Required for Google Sign-In, cloud
+                backup, and crash reporting
+              </li>
+              <li>
+                <strong>Permissions:</strong> Notifications, Storage, Internet
+                access
+              </li>
+            </ul>
+          </div>
+
+          <!-- Additional Resources -->
+          <div class="guide-section">
+            <h2><i class="fas fa-link"></i> Additional Resources</h2>
+
+            <div class="feature-grid">
+              <div class="feature-box">
+                <h4><i class="fas fa-home"></i> Home Page</h4>
+                <p>
+                  <a href="index.html">Visit NoteNest homepage</a> for app
+                  overview and download links
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-shield-alt"></i> Privacy Policy</h4>
+                <p>
+                  <a href="privacy.html">Read our Privacy Policy</a> to
+                  understand how we protect your data
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-file-contract"></i> Terms of Service</h4>
+                <p>
+                  <a href="terms.html">Review Terms of Service</a> for usage
+                  guidelines and legal information
+                </p>
+              </div>
+              <div class="feature-box">
+                <h4><i class="fas fa-user-times"></i> Delete Account</h4>
+                <p>
+                  <a href="delete.html">Account deletion</a> information and
+                  process
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="content-block"
+            style="
+              background: #e8f5e9;
+              border-left: 4px solid #4caf50;
+              padding: 1.5rem;
+              margin: 2rem 0;
+            "
+          >
+            <h3 style="margin-top: 0; color: #2e7d32">
+              <i class="fas fa-heart"></i> Thank You for Using NoteNest!
+            </h3>
+            <p style="margin-bottom: 0">
+              We hope this guide helps you get the most out of NoteNest. If you
+              have questions not covered here, don't hesitate to
+              <a href="contact.html">contact us</a>. Happy organizing!
+            </p>
+          </div>
+
+          <p style="text-align: center; color: #666; margin-top: 2rem">
+            <strong>Guide Version:</strong> 3.0 |
+            <strong>Last Updated:</strong> December 26, 2025<br />
+            <strong>Developed by:</strong> Thogoruchesti Hemanth
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
         <div class="footer-content">
-            <div class="footer-column">
-                <h3>NoteNest</h3>
-                <p>Your complete productivity hub for managing notes, tasks, reminders, and goals on Android.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+          <div class="footer-column">
+            <h3>NoteNest</h3>
+            <p>
+              Your complete productivity hub for managing notes, tasks,
+              reminders, and goals on Android.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="user-guide.html">User Guide</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="bug-report.html">Report Bug</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html">Delete Account</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Download</h3>
-                <ul>
-                    <li><a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">Google Play Store</a></li>
-                    <li><a href="#">Version 3.0.0 (Latest)</a></li>
-                </ul>
-                <h3 style="margin-top: 1.5rem;">Resources</h3>
-                <ul>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#faq">FAQs</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="contact.html">Help Center</a></li>
-                    <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-                    <li><a href="bug-report.html">Report a Bug</a></li>
-                    <li><a href="feedback.html">Feature Requests</a></li>
-                </ul>
-            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="user-guide.html">User Guide</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="bug-report.html">Report Bug</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="delete.html">Delete Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Download</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+                  >Google Play Store</a
+                >
+              </li>
+              <li><a href="#">Version 3.0.0 (Latest)</a></li>
+            </ul>
+            <h3 style="margin-top: 1.5rem">Resources</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#faq">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="contact.html">Help Center</a></li>
+              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+              <li><a href="bug-report.html">Report a Bug</a></li>
+              <li><a href="feedback.html">Feature Requests</a></li>
+            </ul>
+          </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All rights reserved.</p>
+          <p>
+            &copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All
+            rights reserved.
+          </p>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

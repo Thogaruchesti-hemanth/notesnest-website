@@ -1,383 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy - NoteNest</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container header-content">
-             <a href="index.html" class="logo">
-                <span class="logo-icon"> <img src="images/logo.jpeg" alt="NoteNest Logo"></span>
-                <span class="logo-text">otesNest</span>
-            </a>
-            <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="user-guide.html">User Guide</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="bug-report.html">Report Bug</a></li>
-                    <li><a href="privacy.html" class="active">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html">Delete Account</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo.jpeg" alt="NoteNest Logo"
+          /></span>
+          <span class="logo-text">otesNest</span>
+        </a>
+        <button class="mobile-menu-btn" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="user-guide.html">User Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="bug-report.html">Report Bug</a></li>
+            <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete.html">Delete Account</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section class="page-content">
-            <div class="container">
-                <h1>Privacy Policy</h1>
-                <p><strong>Effective Date:</strong> December 26, 2025</p>
-                <p><strong>Last Updated:</strong> December 26, 2025</p>
-                
-                <div class="content-block">
-                    <p>NoteNest ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application NoteNest (the "App"). This policy applies to the Android version of NoteNest available on Google Play Store.</p>
-                    <p><strong>Developer:</strong> Thogoruchesti Hemanth</p>
-                    <p><strong>Contact:</strong> saihemanth225@gmail.com</p>
-                </div>
+      <section class="page-content">
+        <div class="container">
+          <h1>Privacy Policy</h1>
+          <p><strong>Effective Date:</strong> December 26, 2025</p>
+          <p><strong>Last Updated:</strong> December 26, 2025</p>
 
-                <div class="content-block" style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 1rem; margin: 1.5rem 0;">
-                    <p style="margin: 0;"><strong>Important:</strong> By downloading, installing, or using NoteNest, you agree to this Privacy Policy. If you do not agree with this policy, please do not use the App.</p>
-                </div>
-                
-                <h2>1. Information We Collect</h2>
-                
-                <h3>1.1 Personal Information</h3>
-                <p>When you create an account or use NoteNest, we may collect the following personal information:</p>
-                <ul>
-                    <li><strong>Account Information:</strong> Email address, username, and password (stored securely using Firebase Authentication)</li>
-                    <li><strong>Profile Information:</strong> Display name and profile picture (optional, if provided by you)</li>
-                    <li><strong>Google Sign-In Data:</strong> If you choose to sign in with Google, we collect your name, email address, and profile picture from your Google account</li>
-                </ul>
-                
-                <h3>1.2 User-Generated Content</h3>
-                <p>NoteNest is designed to store your personal productivity data locally on your device. This includes:</p>
-                <ul>
-                    <li><strong>Notes:</strong> Text content, titles, categories, and timestamps</li>
-                    <li><strong>Reminders:</strong> Reminder titles, descriptions, scheduled times, and notification preferences</li>
-                    <li><strong>To-Do Lists:</strong> Task descriptions, completion status, and priorities</li>
-                    <li><strong>Wish Lists:</strong> Wish items and associated details</li>
-                    <li><strong>Categories/Tags:</strong> Custom categories and organizational labels you create</li>
-                </ul>
-                <p><strong>Important:</strong> All user-generated content is stored locally on your device using encrypted SQLite database. We do not have access to the content of your notes, reminders, or tasks unless you explicitly choose to use cloud backup features.</p>
-                
-                <h3>1.3 Device and Usage Information</h3>
-                <p>We automatically collect certain information about your device and app usage:</p>
-                <ul>
-                    <li><strong>Device Information:</strong> Device model, Android version, device identifiers, screen resolution</li>
-                    <li><strong>App Usage Data:</strong> Features used, session duration, app version, interaction patterns</li>
-                    <li><strong>Crash Reports:</strong> Error logs, stack traces, and device state information when the app crashes (collected via Firebase Crashlytics)</li>
-                    <li><strong>Analytics Data:</strong> Aggregated usage statistics to understand feature popularity and user behavior (collected via Firebase Analytics)</li>
-                </ul>
-                
-                <h3>1.4 Permissions</h3>
-                <p>NoteNest requests the following Android permissions to function properly:</p>
-                <ul>
-                    <li><strong>Storage Access:</strong> To save and retrieve your notes, backups, and exported files</li>
-                    <li><strong>Notifications:</strong> To send reminder alerts and important notifications</li>
-                    <li><strong>Internet Access:</strong> For optional features like Google Sign-In, cloud backup, and crash reporting</li>
-                    <li><strong>Network State:</strong> To determine connectivity for cloud features</li>
-                    <li><strong>Wake Lock:</strong> To ensure reminders trigger even when device is in sleep mode</li>
-                    <li><strong>Boot Completed:</strong> To restore scheduled reminders after device restart</li>
-                    <li><strong>Camera/Gallery Access:</strong> To update profile pictures (optional, only when you choose to add a photo)</li>
-                </ul>
-                
-                <h2>2. How We Use Your Information</h2>
-                <p>We use the collected information for the following purposes:</p>
-                
-                <h3>2.1 To Provide and Maintain the App</h3>
-                <ul>
-                    <li>Authenticate your account and maintain session security</li>
-                    <li>Store and retrieve your notes, reminders, and tasks locally on your device</li>
-                    <li>Deliver scheduled reminder notifications</li>
-                    <li>Enable widget functionality on your home screen</li>
-                    <li>Process local and cloud backups when requested</li>
-                    <li>Export your notes in various formats (PDF, text, images)</li>
-                </ul>
-                
-                <h3>2.2 To Improve and Optimize the App</h3>
-                <ul>
-                    <li>Analyze app usage patterns to improve user experience</li>
-                    <li>Identify and fix bugs, crashes, and performance issues</li>
-                    <li>Develop new features based on user needs</li>
-                    <li>Optimize app performance across different devices and Android versions</li>
-                    <li>Test new features and improvements</li>
-                </ul>
-                
-                <h3>2.3 To Communicate With You</h3>
-                <ul>
-                    <li>Send password reset emails via Firebase Authentication</li>
-                    <li>Respond to your support requests and feedback</li>
-                    <li>Notify you of important app updates or changes to this Privacy Policy</li>
-                    <li>Send important service announcements (we do not send marketing emails)</li>
-                </ul>
-                
-                <h3>2.4 To Ensure Security and Compliance</h3>
-                <ul>
-                    <li>Protect against unauthorized access and security threats</li>
-                    <li>Comply with legal obligations and enforce our Terms of Service</li>
-                    <li>Detect and prevent fraud or abuse of the App</li>
-                </ul>
-                
-                <h2>3. Data Storage and Security</h2>
-                
-                <h3>3.1 Local Storage</h3>
-                <p>NoteNest is designed with a "local-first" approach. Your notes, reminders, and personal data are primarily stored locally on your Android device using:</p>
-                <ul>
-                    <li><strong>Room Database:</strong> A secure, encrypted SQLite database for all app data</li>
-                    <li><strong>EncryptedSharedPreferences:</strong> For storing session tokens and sensitive preferences</li>
-                    <li><strong>Encrypted Local Backups:</strong> When you create local backups, they are encrypted to prevent unauthorized access</li>
-                </ul>
-                <p><strong>Security Measures:</strong></p>
-                <ul>
-                    <li>Passwords are never stored in plain text</li>
-                    <li>All credentials use industry-standard encryption</li>
-                    <li>Session tokens are encrypted and securely managed</li>
-                    <li>Local database uses Android's built-in encryption mechanisms</li>
-                </ul>
-                
-                <h3>3.2 Cloud Storage (Optional)</h3>
-                <p>NoteNest offers optional cloud backup through Google Drive API. When you enable cloud backup:</p>
-                <ul>
-                    <li>Your encrypted database is uploaded to your personal Google Drive</li>
-                    <li>You maintain full control over your Google Drive data</li>
-                    <li>We do not have access to your Google Drive content</li>
-                    <li>You can delete cloud backups at any time from your Google Drive</li>
-                </ul>
-                
-                <h3>3.3 Third-Party Services</h3>
-                <p>NoteNest integrates with the following third-party services:</p>
-                
-                <h4>Firebase (Google LLC)</h4>
-                <ul>
-                    <li><strong>Firebase Authentication:</strong> For secure user authentication and password management</li>
-                    <li><strong>Firebase Crashlytics:</strong> For crash reporting and stability monitoring</li>
-                    <li><strong>Firebase Analytics:</strong> For aggregated usage statistics (no personally identifiable information)</li>
-                    <li><strong>Firebase Remote Config:</strong> For dynamic app configuration (e.g., feature limits for free vs. premium tiers)</li>
-                </ul>
-                <p>Firebase services are governed by Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-                
-                <h4>Google Drive API</h4>
-                <ul>
-                    <li>Used only for optional cloud backup functionality</li>
-                    <li>Requires explicit user authorization</li>
-                    <li>Data stored in your personal Google Drive, not accessible by us</li>
-                </ul>
-                
-                <h2>4. Data Sharing and Disclosure</h2>
-                
-                <h3>4.1 We Do Not Sell Your Data</h3>
-                <p><strong>NoteNest does not sell, rent, or trade your personal information to third parties for marketing purposes.</strong></p>
-                
-                <h3>4.2 Limited Data Sharing</h3>
-                <p>We may share your information only in the following limited circumstances:</p>
-                <ul>
-                    <li><strong>With Your Consent:</strong> When you explicitly authorize us to share information (e.g., when sharing notes via Android share intent)</li>
-                    <li><strong>Service Providers:</strong> With trusted service providers (Firebase/Google) who assist in operating the App, subject to strict confidentiality agreements</li>
-                    <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental request</li>
-                    <li><strong>Safety and Protection:</strong> To protect the rights, property, or safety of NoteNest, our users, or the public</li>
-                    <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets (users will be notified)</li>
-                </ul>
-                
-                <h3>4.3 Export and Sharing Features</h3>
-                <p>When you use NoteNest's export or share features:</p>
-                <ul>
-                    <li>You control what content is exported (PDF, text, or image format)</li>
-                    <li>You choose which apps to share content with (email, WhatsApp, etc.)</li>
-                    <li>Exported files are stored locally on your device unless you choose to share them</li>
-                    <li>We have no access to or control over exported content once it leaves the App</li>
-                </ul>
-                
-                <h2>5. Data Retention</h2>
-                
-                <h3>5.1 Active Accounts</h3>
-                <p>We retain your account information and app data for as long as your account is active or as needed to provide you services.</p>
-                
-                <h3>5.2 Account Deletion</h3>
-                <p>When you delete your account:</p>
-                <ul>
-                    <li>Your account information is permanently deleted from our servers within 30 days</li>
-                    <li>Local data on your device is immediately deleted</li>
-                    <li>Cloud backups in your Google Drive remain under your control (you must delete them manually)</li>
-                    <li>Anonymized analytics data may be retained for statistical purposes</li>
-                    <li>Crash reports and logs are retained for up to 90 days for debugging purposes</li>
-                </ul>
-                <p>To delete your account, visit our <a href="delete.html">Account Deletion</a> page.</p>
-                
-                <h3>5.3 Inactive Accounts</h3>
-                <p>Accounts inactive for more than 3 years may be deleted after email notification to the registered email address.</p>
-                
-                <h2>6. Your Rights and Choices</h2>
-                
-                <h3>6.1 Access and Update</h3>
-                <p>You have the right to:</p>
-                <ul>
-                    <li>Access your account information through the App's settings</li>
-                    <li>Update your profile information, display name, and profile picture</li>
-                    <li>Change your email address or password</li>
-                    <li>View all your notes, reminders, and tasks stored locally</li>
-                </ul>
-                
-                <h3>6.2 Export Your Data</h3>
-                <p>You can export your data at any time using:</p>
-                <ul>
-                    <li>Individual note exports (PDF, text, image)</li>
-                    <li>Local backup (complete encrypted database export)</li>
-                    <li>Cloud backup (encrypted backup to your Google Drive)</li>
-                </ul>
-                
-                <h3>6.3 Delete Your Data</h3>
-                <p>You can delete your data by:</p>
-                <ul>
-                    <li>Deleting individual notes, reminders, or tasks within the App</li>
-                    <li>Clearing all app data through Android Settings > Apps > NoteNest > Storage > Clear Data</li>
-                    <li>Requesting account deletion through our <a href="delete.html">Account Deletion</a> page</li>
-                </ul>
-                
-                <h3>6.4 Opt-Out Options</h3>
-                <ul>
-                    <li><strong>Analytics:</strong> You can disable analytics tracking in Settings > Privacy > Usage Analytics</li>
-                    <li><strong>Crash Reports:</strong> Crash reporting can be disabled in Settings > Privacy > Crash Reporting</li>
-                    <li><strong>Cloud Backup:</strong> Cloud backup is opt-in; you control when and if to use this feature</li>
-                    <li><strong>Notifications:</strong> You can disable notifications through Android Settings or App Settings</li>
-                </ul>
-                
-                <h2>7. Children's Privacy</h2>
-                <p>NoteNest is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at saihemanth225@gmail.com, and we will delete such information from our systems.</p>
-                
-                <h2>8. International Data Transfers</h2>
-                <p>NoteNest is operated from India. If you are accessing the App from outside India, please be aware that your information may be transferred to, stored, and processed in India or other countries where our service providers operate. By using NoteNest, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection rules.</p>
-                
-                <h2>9. California Privacy Rights (CCPA)</h2>
-                <p>If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA):</p>
-                <ul>
-                    <li><strong>Right to Know:</strong> You can request information about the personal data we collect, use, and disclose</li>
-                    <li><strong>Right to Delete:</strong> You can request deletion of your personal information</li>
-                    <li><strong>Right to Opt-Out:</strong> We do not sell personal information, so opt-out is not applicable</li>
-                    <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights</li>
-                </ul>
-                <p>To exercise these rights, contact us at saihemanth225@gmail.com.</p>
-                
-                <h2>10. European Privacy Rights (GDPR)</h2>
-                <p>If you are located in the European Economic Area (EEA), you have rights under the General Data Protection Regulation (GDPR):</p>
-                <ul>
-                    <li><strong>Right to Access:</strong> Request access to your personal data</li>
-                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
-                    <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
-                    <li><strong>Right to Restrict Processing:</strong> Request limitation of how we process your data</li>
-                    <li><strong>Right to Data Portability:</strong> Request transfer of your data to another service</li>
-                    <li><strong>Right to Object:</strong> Object to processing of your personal data</li>
-                    <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time</li>
-                </ul>
-                <p>To exercise these rights, contact us at saihemanth225@gmail.com. You also have the right to lodge a complaint with your local data protection authority.</p>
-                
-                <h2>11. Security Measures</h2>
-                <p>We implement industry-standard security measures to protect your information:</p>
-                <ul>
-                    <li>End-to-end encryption for sensitive data</li>
-                    <li>Secure HTTPS connections for all network communications</li>
-                    <li>Firebase Authentication with secure token management</li>
-                    <li>EncryptedSharedPreferences for local sensitive data</li>
-                    <li>Regular security audits and updates</li>
-                    <li>Encrypted local and cloud backups</li>
-                </ul>
-                <p><strong>However, please note:</strong> No method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee absolute security.</p>
-                
-                <h2>12. Third-Party Links</h2>
-                <p>NoteNest may contain links to third-party websites or services (e.g., when sharing content). We are not responsible for the privacy practices of these third parties. We encourage you to read their privacy policies before providing any information.</p>
-                
-                <h2>13. Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes:</p>
-                <ul>
-                    <li>We will update the "Last Updated" date at the top of this policy</li>
-                    <li>Material changes will be notified through the App or via email</li>
-                    <li>Your continued use of NoteNest after changes constitutes acceptance of the updated policy</li>
-                </ul>
-                <p>We encourage you to review this Privacy Policy periodically.</p>
-                
-                <h2>14. Contact Us</h2>
-                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
-                <ul>
-                    <li><strong>Developer:</strong> Thogoruchesti Hemanth</li>
-                    <li><strong>Email:</strong> <span class="highlight">saihemanth225@gmail.com</span></li>
-                    <li><strong>Response Time:</strong> We typically respond within 24-48 hours</li>
-                </ul>
-                <p>For specific privacy-related requests (data access, deletion, or corrections), please include "Privacy Request" in your email subject line.</p>
-                
-                <div class="content-block" style="background: #e7f3ff; border-left: 4px solid #2196F3; padding: 1rem; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">Your Privacy Matters</h3>
-                    <p style="margin-bottom: 0;">At NoteNest, we believe in transparency and user control. Your notes, reminders, and tasks are yours alone. We've built NoteNest with security and privacy as core principles, not afterthoughts. Thank you for trusting us with your productivity data.</p>
-                </div>
-                
-                <p style="margin-top: 2rem;"><strong>Effective Date:</strong> December 26, 2025</p>
-            </div>
-        </section>
+          <div class="content-block">
+            <p>
+              NoteNest ("we," "our," or "us") is committed to protecting your
+              privacy. This Privacy Policy explains how we collect, use,
+              disclose, and safeguard your information when you use our mobile
+              application NoteNest (the "App"). This policy applies to the
+              Android version of NoteNest available on Google Play Store.
+            </p>
+            <p><strong>Developer:</strong> Thogoruchesti Hemanth</p>
+            <p><strong>Contact:</strong> saihemanth225@gmail.com</p>
+          </div>
+
+          <div
+            class="content-block"
+            style="
+              background: #fff3cd;
+              border-left: 4px solid #ffc107;
+              padding: 1rem;
+              margin: 1.5rem 0;
+            "
+          >
+            <p style="margin: 0">
+              <strong>Important:</strong> By downloading, installing, or using
+              NoteNest, you agree to this Privacy Policy. If you do not agree
+              with this policy, please do not use the App.
+            </p>
+          </div>
+
+          <h2>1. Information We Collect</h2>
+
+          <h3>1.1 Personal Information</h3>
+          <p>
+            When you create an account or use NoteNest, we may collect the
+            following personal information:
+          </p>
+          <ul>
+            <li>
+              <strong>Account Information:</strong> Email address, username, and
+              password (stored securely using Firebase Authentication)
+            </li>
+            <li>
+              <strong>Profile Information:</strong> Display name and profile
+              picture (optional, if provided by you)
+            </li>
+            <li>
+              <strong>Google Sign-In Data:</strong> If you choose to sign in
+              with Google, we collect your name, email address, and profile
+              picture from your Google account
+            </li>
+          </ul>
+
+          <h3>1.2 User-Generated Content</h3>
+          <p>
+            NoteNest is designed to store your personal productivity data
+            locally on your device. This includes:
+          </p>
+          <ul>
+            <li>
+              <strong>Notes:</strong> Text content, titles, categories, and
+              timestamps
+            </li>
+            <li>
+              <strong>Reminders:</strong> Reminder titles, descriptions,
+              scheduled times, and notification preferences
+            </li>
+            <li>
+              <strong>To-Do Lists:</strong> Task descriptions, completion
+              status, and priorities
+            </li>
+            <li>
+              <strong>Wish Lists:</strong> Wish items and associated details
+            </li>
+            <li>
+              <strong>Categories/Tags:</strong> Custom categories and
+              organizational labels you create
+            </li>
+          </ul>
+          <p>
+            <strong>Important:</strong> All user-generated content is stored
+            locally on your device using encrypted SQLite database. We do not
+            have access to the content of your notes, reminders, or tasks unless
+            you explicitly choose to use cloud backup features.
+          </p>
+
+          <h3>1.3 Device and Usage Information</h3>
+          <p>
+            We automatically collect certain information about your device and
+            app usage:
+          </p>
+          <ul>
+            <li>
+              <strong>Device Information:</strong> Device model, Android
+              version, device identifiers, screen resolution
+            </li>
+            <li>
+              <strong>App Usage Data:</strong> Features used, session duration,
+              app version, interaction patterns
+            </li>
+            <li>
+              <strong>Crash Reports:</strong> Error logs, stack traces, and
+              device state information when the app crashes (collected via
+              Firebase Crashlytics)
+            </li>
+            <li>
+              <strong>Analytics Data:</strong> Aggregated usage statistics to
+              understand feature popularity and user behavior (collected via
+              Firebase Analytics)
+            </li>
+          </ul>
+
+          <h3>1.4 Permissions</h3>
+          <p>
+            NoteNest requests the following Android permissions to function
+            properly:
+          </p>
+          <ul>
+            <li>
+              <strong>Storage Access:</strong> To save and retrieve your notes,
+              backups, and exported files
+            </li>
+            <li>
+              <strong>Notifications:</strong> To send reminder alerts and
+              important notifications
+            </li>
+            <li>
+              <strong>Internet Access:</strong> For optional features like
+              Google Sign-In, cloud backup, and crash reporting
+            </li>
+            <li>
+              <strong>Network State:</strong> To determine connectivity for
+              cloud features
+            </li>
+            <li>
+              <strong>Wake Lock:</strong> To ensure reminders trigger even when
+              device is in sleep mode
+            </li>
+            <li>
+              <strong>Boot Completed:</strong> To restore scheduled reminders
+              after device restart
+            </li>
+            <li>
+              <strong>Camera/Gallery Access:</strong> To update profile pictures
+              (optional, only when you choose to add a photo)
+            </li>
+          </ul>
+
+          <h2>2. How We Use Your Information</h2>
+          <p>We use the collected information for the following purposes:</p>
+
+          <h3>2.1 To Provide and Maintain the App</h3>
+          <ul>
+            <li>Authenticate your account and maintain session security</li>
+            <li>
+              Store and retrieve your notes, reminders, and tasks locally on
+              your device
+            </li>
+            <li>Deliver scheduled reminder notifications</li>
+            <li>Enable widget functionality on your home screen</li>
+            <li>Process local and cloud backups when requested</li>
+            <li>Export your notes in various formats (PDF, text, images)</li>
+          </ul>
+
+          <h3>2.2 To Improve and Optimize the App</h3>
+          <ul>
+            <li>Analyze app usage patterns to improve user experience</li>
+            <li>Identify and fix bugs, crashes, and performance issues</li>
+            <li>Develop new features based on user needs</li>
+            <li>
+              Optimize app performance across different devices and Android
+              versions
+            </li>
+            <li>Test new features and improvements</li>
+          </ul>
+
+          <h3>2.3 To Communicate With You</h3>
+          <ul>
+            <li>Send password reset emails via Firebase Authentication</li>
+            <li>Respond to your support requests and feedback</li>
+            <li>
+              Notify you of important app updates or changes to this Privacy
+              Policy
+            </li>
+            <li>
+              Send important service announcements (we do not send marketing
+              emails)
+            </li>
+          </ul>
+
+          <h3>2.4 To Ensure Security and Compliance</h3>
+          <ul>
+            <li>Protect against unauthorized access and security threats</li>
+            <li>
+              Comply with legal obligations and enforce our Terms of Service
+            </li>
+            <li>Detect and prevent fraud or abuse of the App</li>
+          </ul>
+
+          <h2>3. Data Storage and Security</h2>
+
+          <h3>3.1 Local Storage</h3>
+          <p>
+            NoteNest is designed with a "local-first" approach. Your notes,
+            reminders, and personal data are primarily stored locally on your
+            Android device using:
+          </p>
+          <ul>
+            <li>
+              <strong>Room Database:</strong> A secure, encrypted SQLite
+              database for all app data
+            </li>
+            <li>
+              <strong>EncryptedSharedPreferences:</strong> For storing session
+              tokens and sensitive preferences
+            </li>
+            <li>
+              <strong>Encrypted Local Backups:</strong> When you create local
+              backups, they are encrypted to prevent unauthorized access
+            </li>
+          </ul>
+          <p><strong>Security Measures:</strong></p>
+          <ul>
+            <li>Passwords are never stored in plain text</li>
+            <li>All credentials use industry-standard encryption</li>
+            <li>Session tokens are encrypted and securely managed</li>
+            <li>
+              Local database uses Android's built-in encryption mechanisms
+            </li>
+          </ul>
+
+          <h3>3.2 Cloud Storage (Optional)</h3>
+          <p>
+            NoteNest offers optional cloud backup through Google Drive API. When
+            you enable cloud backup:
+          </p>
+          <ul>
+            <li>
+              Your encrypted database is uploaded to your personal Google Drive
+            </li>
+            <li>You maintain full control over your Google Drive data</li>
+            <li>We do not have access to your Google Drive content</li>
+            <li>
+              You can delete cloud backups at any time from your Google Drive
+            </li>
+          </ul>
+
+          <h3>3.3 Third-Party Services</h3>
+          <p>NoteNest integrates with the following third-party services:</p>
+
+          <h4>Firebase (Google LLC)</h4>
+          <ul>
+            <li>
+              <strong>Firebase Authentication:</strong> For secure user
+              authentication and password management
+            </li>
+            <li>
+              <strong>Firebase Crashlytics:</strong> For crash reporting and
+              stability monitoring
+            </li>
+            <li>
+              <strong>Firebase Analytics:</strong> For aggregated usage
+              statistics (no personally identifiable information)
+            </li>
+            <li>
+              <strong>Firebase Remote Config:</strong> For dynamic app
+              configuration (e.g., feature limits for free vs. premium tiers)
+            </li>
+          </ul>
+          <p>
+            Firebase services are governed by Google's Privacy Policy:
+            <a href="https://policies.google.com/privacy" target="_blank"
+              >https://policies.google.com/privacy</a
+            >
+          </p>
+
+          <h4>Google Drive API</h4>
+          <ul>
+            <li>Used only for optional cloud backup functionality</li>
+            <li>Requires explicit user authorization</li>
+            <li>
+              Data stored in your personal Google Drive, not accessible by us
+            </li>
+          </ul>
+
+          <h2>4. Data Sharing and Disclosure</h2>
+
+          <h3>4.1 We Do Not Sell Your Data</h3>
+          <p>
+            <strong
+              >NoteNest does not sell, rent, or trade your personal information
+              to third parties for marketing purposes.</strong
+            >
+          </p>
+
+          <h3>4.2 Limited Data Sharing</h3>
+          <p>
+            We may share your information only in the following limited
+            circumstances:
+          </p>
+          <ul>
+            <li>
+              <strong>With Your Consent:</strong> When you explicitly authorize
+              us to share information (e.g., when sharing notes via Android
+              share intent)
+            </li>
+            <li>
+              <strong>Service Providers:</strong> With trusted service providers
+              (Firebase/Google) who assist in operating the App, subject to
+              strict confidentiality agreements
+            </li>
+            <li>
+              <strong>Legal Requirements:</strong> When required by law, court
+              order, or governmental request
+            </li>
+            <li>
+              <strong>Safety and Protection:</strong> To protect the rights,
+              property, or safety of NoteNest, our users, or the public
+            </li>
+            <li>
+              <strong>Business Transfers:</strong> In connection with a merger,
+              acquisition, or sale of assets (users will be notified)
+            </li>
+          </ul>
+
+          <h3>4.3 Export and Sharing Features</h3>
+          <p>When you use NoteNest's export or share features:</p>
+          <ul>
+            <li>
+              You control what content is exported (PDF, text, or image format)
+            </li>
+            <li>
+              You choose which apps to share content with (email, WhatsApp,
+              etc.)
+            </li>
+            <li>
+              Exported files are stored locally on your device unless you choose
+              to share them
+            </li>
+            <li>
+              We have no access to or control over exported content once it
+              leaves the App
+            </li>
+          </ul>
+
+          <h2>5. Data Retention</h2>
+
+          <h3>5.1 Active Accounts</h3>
+          <p>
+            We retain your account information and app data for as long as your
+            account is active or as needed to provide you services.
+          </p>
+
+          <h3>5.2 Account Deletion</h3>
+          <p>When you delete your account:</p>
+          <ul>
+            <li>
+              Your account information is permanently deleted from our servers
+              within 30 days
+            </li>
+            <li>Local data on your device is immediately deleted</li>
+            <li>
+              Cloud backups in your Google Drive remain under your control (you
+              must delete them manually)
+            </li>
+            <li>
+              Anonymized analytics data may be retained for statistical purposes
+            </li>
+            <li>
+              Crash reports and logs are retained for up to 90 days for
+              debugging purposes
+            </li>
+          </ul>
+          <p>
+            To delete your account, visit our
+            <a href="delete.html">Account Deletion</a> page.
+          </p>
+
+          <h3>5.3 Inactive Accounts</h3>
+          <p>
+            Accounts inactive for more than 3 years may be deleted after email
+            notification to the registered email address.
+          </p>
+
+          <h2>6. Your Rights and Choices</h2>
+
+          <h3>6.1 Access and Update</h3>
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access your account information through the App's settings</li>
+            <li>
+              Update your profile information, display name, and profile picture
+            </li>
+            <li>Change your email address or password</li>
+            <li>View all your notes, reminders, and tasks stored locally</li>
+          </ul>
+
+          <h3>6.2 Export Your Data</h3>
+          <p>You can export your data at any time using:</p>
+          <ul>
+            <li>Individual note exports (PDF, text, image)</li>
+            <li>Local backup (complete encrypted database export)</li>
+            <li>Cloud backup (encrypted backup to your Google Drive)</li>
+          </ul>
+
+          <h3>6.3 Delete Your Data</h3>
+          <p>You can delete your data by:</p>
+          <ul>
+            <li>
+              Deleting individual notes, reminders, or tasks within the App
+            </li>
+            <li>
+              Clearing all app data through Android Settings > Apps > NoteNest >
+              Storage > Clear Data
+            </li>
+            <li>
+              Requesting account deletion through our
+              <a href="delete.html">Account Deletion</a> page
+            </li>
+          </ul>
+
+          <h3>6.4 Opt-Out Options</h3>
+          <ul>
+            <li>
+              <strong>Analytics:</strong> You can disable analytics tracking in
+              Settings > Privacy > Usage Analytics
+            </li>
+            <li>
+              <strong>Crash Reports:</strong> Crash reporting can be disabled in
+              Settings > Privacy > Crash Reporting
+            </li>
+            <li>
+              <strong>Cloud Backup:</strong> Cloud backup is opt-in; you control
+              when and if to use this feature
+            </li>
+            <li>
+              <strong>Notifications:</strong> You can disable notifications
+              through Android Settings or App Settings
+            </li>
+          </ul>
+
+          <h2>7. Children's Privacy</h2>
+          <p>
+            NoteNest is not intended for use by children under the age of 13. We
+            do not knowingly collect personal information from children under
+            13. If you are a parent or guardian and believe your child has
+            provided us with personal information, please contact us at
+            saihemanth225@gmail.com, and we will delete such information from
+            our systems.
+          </p>
+
+          <h2>8. International Data Transfers</h2>
+          <p>
+            NoteNest is operated from India. If you are accessing the App from
+            outside India, please be aware that your information may be
+            transferred to, stored, and processed in India or other countries
+            where our service providers operate. By using NoteNest, you consent
+            to the transfer of your information to countries outside your
+            country of residence, which may have different data protection
+            rules.
+          </p>
+
+          <h2>9. California Privacy Rights (CCPA)</h2>
+          <p>
+            If you are a California resident, you have specific rights under the
+            California Consumer Privacy Act (CCPA):
+          </p>
+          <ul>
+            <li>
+              <strong>Right to Know:</strong> You can request information about
+              the personal data we collect, use, and disclose
+            </li>
+            <li>
+              <strong>Right to Delete:</strong> You can request deletion of your
+              personal information
+            </li>
+            <li>
+              <strong>Right to Opt-Out:</strong> We do not sell personal
+              information, so opt-out is not applicable
+            </li>
+            <li>
+              <strong>Right to Non-Discrimination:</strong> We will not
+              discriminate against you for exercising your privacy rights
+            </li>
+          </ul>
+          <p>
+            To exercise these rights, contact us at saihemanth225@gmail.com.
+          </p>
+
+          <h2>10. European Privacy Rights (GDPR)</h2>
+          <p>
+            If you are located in the European Economic Area (EEA), you have
+            rights under the General Data Protection Regulation (GDPR):
+          </p>
+          <ul>
+            <li>
+              <strong>Right to Access:</strong> Request access to your personal
+              data
+            </li>
+            <li>
+              <strong>Right to Rectification:</strong> Request correction of
+              inaccurate data
+            </li>
+            <li>
+              <strong>Right to Erasure:</strong> Request deletion of your
+              personal data
+            </li>
+            <li>
+              <strong>Right to Restrict Processing:</strong> Request limitation
+              of how we process your data
+            </li>
+            <li>
+              <strong>Right to Data Portability:</strong> Request transfer of
+              your data to another service
+            </li>
+            <li>
+              <strong>Right to Object:</strong> Object to processing of your
+              personal data
+            </li>
+            <li>
+              <strong>Right to Withdraw Consent:</strong> Withdraw consent at
+              any time
+            </li>
+          </ul>
+          <p>
+            To exercise these rights, contact us at saihemanth225@gmail.com. You
+            also have the right to lodge a complaint with your local data
+            protection authority.
+          </p>
+
+          <h2>11. Security Measures</h2>
+          <p>
+            We implement industry-standard security measures to protect your
+            information:
+          </p>
+          <ul>
+            <li>End-to-end encryption for sensitive data</li>
+            <li>Secure HTTPS connections for all network communications</li>
+            <li>Firebase Authentication with secure token management</li>
+            <li>EncryptedSharedPreferences for local sensitive data</li>
+            <li>Regular security audits and updates</li>
+            <li>Encrypted local and cloud backups</li>
+          </ul>
+          <p>
+            <strong>However, please note:</strong> No method of transmission
+            over the internet or electronic storage is 100% secure. While we
+            strive to use commercially acceptable means to protect your personal
+            information, we cannot guarantee absolute security.
+          </p>
+
+          <h2>12. Third-Party Links</h2>
+          <p>
+            NoteNest may contain links to third-party websites or services
+            (e.g., when sharing content). We are not responsible for the privacy
+            practices of these third parties. We encourage you to read their
+            privacy policies before providing any information.
+          </p>
+
+          <h2>13. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes in our practices, technology, legal requirements, or other
+            factors. When we make changes:
+          </p>
+          <ul>
+            <li>
+              We will update the "Last Updated" date at the top of this policy
+            </li>
+            <li>
+              Material changes will be notified through the App or via email
+            </li>
+            <li>
+              Your continued use of NoteNest after changes constitutes
+              acceptance of the updated policy
+            </li>
+          </ul>
+          <p>We encourage you to review this Privacy Policy periodically.</p>
+
+          <h2>14. Contact Us</h2>
+          <p>
+            If you have any questions, concerns, or requests regarding this
+            Privacy Policy or our data practices, please contact us:
+          </p>
+          <ul>
+            <li><strong>Developer:</strong> Thogoruchesti Hemanth</li>
+            <li>
+              <strong>Email:</strong>
+              <span class="highlight">saihemanth225@gmail.com</span>
+            </li>
+            <li>
+              <strong>Response Time:</strong> We typically respond within 24-48
+              hours
+            </li>
+          </ul>
+          <p>
+            For specific privacy-related requests (data access, deletion, or
+            corrections), please include "Privacy Request" in your email subject
+            line.
+          </p>
+
+          <div
+            class="content-block"
+            style="
+              background: #e7f3ff;
+              border-left: 4px solid #2196f3;
+              padding: 1rem;
+              margin: 2rem 0;
+            "
+          >
+            <h3 style="margin-top: 0">Your Privacy Matters</h3>
+            <p style="margin-bottom: 0">
+              At NoteNest, we believe in transparency and user control. Your
+              notes, reminders, and tasks are yours alone. We've built NoteNest
+              with security and privacy as core principles, not afterthoughts.
+              Thank you for trusting us with your productivity data.
+            </p>
+          </div>
+
+          <p style="margin-top: 2rem">
+            <strong>Effective Date:</strong> December 26, 2025
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NoteNest</h3>
-                    <p>Your complete productivity hub for managing notes, tasks, reminders, and goals on Android.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="user-guide.html">User Guide</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                        <li><a href="bug-report.html">Report Bug</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="delete.html">Delete Account</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Download</h3>
-                    <ul>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">Google Play Store</a></li>
-                        <li><a href="#">Version 3.0.0 (Latest)</a></li>
-                    </ul>
-                    <h3 style="margin-top: 1.5rem;">Resources</h3>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="contact.html">Help Center</a></li>
-                        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-                        <li><a href="bug-report.html">Report a Bug</a></li>
-                        <li><a href="feedback.html">Feature Requests</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>NoteNest</h3>
+            <p>
+              Your complete productivity hub for managing notes, tasks,
+              reminders, and goals on Android.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="user-guide.html">User Guide</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="bug-report.html">Report Bug</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="delete.html">Delete Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Download</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+                  >Google Play Store</a
+                >
+              </li>
+              <li><a href="#">Version 3.0.0 (Latest)</a></li>
+            </ul>
+            <h3 style="margin-top: 1.5rem">Resources</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#faq">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="contact.html">Help Center</a></li>
+              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+              <li><a href="bug-report.html">Report a Bug</a></li>
+              <li><a href="feedback.html">Feature Requests</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="copyright">
+          <p>
+            &copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

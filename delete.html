@@ -1,361 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account Deletion - NoteNest</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        .warning-banner {
-            background: #ffebee;
-            border-left: 4px solid #f44336;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-        .warning-banner h3 {
-            color: #c62828;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .info-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-        .checklist {
-            list-style: none;
-            padding: 0;
-        }
-        .checklist li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-        .checklist li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #4caf50;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        .deletion-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .method-card {
-            background: #fff;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-        .method-card:hover {
-            border-color: #000000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .method-card h3 {
-            color: #f0c03d;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+      .warning-banner {
+        background: #ffebee;
+        border-left: 4px solid #f44336;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 4px;
+      }
+      .warning-banner h3 {
+        color: #c62828;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .info-card {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .checklist {
+        list-style: none;
+        padding: 0;
+      }
+      .checklist li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+      }
+      .checklist li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #4caf50;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .deletion-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .method-card {
+        background: #fff;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: all 0.3s;
+      }
+      .method-card:hover {
+        border-color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .method-card h3 {
+        color: #f0c03d;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span class="logo-icon"> <img src="images/logo.jpeg" alt="NoteNest Logo"></span>
-                <span class="logo-text">otesNest</span>
-            </a>
-            <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="user-guide.html">User Guide</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="bug-report.html">Report Bug</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html" class="active">Delete Account</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo.jpeg" alt="NoteNest Logo"
+          /></span>
+          <span class="logo-text">otesNest</span>
+        </a>
+        <button class="mobile-menu-btn" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="user-guide.html">User Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="bug-report.html">Report Bug</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete.html" class="active">Delete Account</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <section class="page-content">
-            <div class="container">
-                <h1><i class="fas fa-user-times"></i> Account Deletion</h1>
-                
-                <div class="content-block">
-                    <p>We're sorry to see you go! This page explains how to permanently delete your NoteNest account and what happens to your data when you do. We respect your right to control your personal information and make the deletion process straightforward and transparent.</p>
-                </div>
+      <section class="page-content">
+        <div class="container">
+          <h1><i class="fas fa-user-times"></i> Account Deletion</h1>
 
-                <div class="warning-banner">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Important: Account Deletion is Permanent</h3>
-                    <p><strong>Once your account is deleted, this action cannot be undone or reversed.</strong> All your data will be permanently removed from our servers within 30 days. Please read this page carefully before proceeding.</p>
-                </div>
+          <div class="content-block">
+            <p>
+              We're sorry to see you go! This page explains how to permanently
+              delete your NoteNest account and what happens to your data when
+              you do. We respect your right to control your personal information
+              and make the deletion process straightforward and transparent.
+            </p>
+          </div>
 
-                <h2>Before You Delete Your Account</h2>
-                <p>Before permanently deleting your NoteNest account, please consider the following:</p>
-                
-                <div class="info-card">
-                    <h3><i class="fas fa-clipboard-check"></i> Pre-Deletion Checklist</h3>
-                    <ul class="checklist">
-                        <li><strong>Backup Your Data:</strong> Create a local or cloud backup of all your notes, reminders, and tasks</li>
-                        <li><strong>Export Important Notes:</strong> Export any critical notes as PDF, text, or image files</li>
-                        <li><strong>Save Cloud Backups:</strong> If using Google Drive backup, ensure you have a recent backup saved</li>
-                        <li><strong>Cancel Subscriptions:</strong> If you have premium features (future), cancel any active subscriptions</li>
-                        <li><strong>Remove Widgets:</strong> Delete NoteNest widgets from your home screen</li>
-                        <li><strong>Consider Alternatives:</strong> Explore if there's a way to resolve your concerns without deletion</li>
-                    </ul>
-                </div>
+          <div class="warning-banner">
+            <h3>
+              <i class="fas fa-exclamation-triangle"></i> Important: Account
+              Deletion is Permanent
+            </h3>
+            <p>
+              <strong
+                >Once your account is deleted, this action cannot be undone or
+                reversed.</strong
+              >
+              All your data will be permanently removed from our servers within
+              30 days. Please read this page carefully before proceeding.
+            </p>
+          </div>
 
-                <h2>What Will Be Deleted</h2>
-                <p>When you delete your NoteNest account, the following data will be permanently removed:</p>
-                <ul>
-                    <li><strong>Account Information:</strong> Email address, username, password, and profile details</li>
-                    <li><strong>All Notes:</strong> Every note you've created, including titles, content, and timestamps</li>
-                    <li><strong>Reminders:</strong> All scheduled and past reminders</li>
-                    <li><strong>To-Do Lists:</strong> All tasks and their completion status</li>
-                    <li><strong>Wish Lists:</strong> All wish items you've saved</li>
-                    <li><strong>Categories & Tags:</strong> All organizational structures you've created</li>
-                    <li><strong>Important Notes:</strong> Notes marked as important</li>
-                    <li><strong>Settings & Preferences:</strong> Theme choices, notification settings, and customizations</li>
-                    <li><strong>Authentication Tokens:</strong> All session data and login credentials</li>
-                </ul>
+          <h2>Before You Delete Your Account</h2>
+          <p>
+            Before permanently deleting your NoteNest account, please consider
+            the following:
+          </p>
 
-                <h2>What Happens to Your Data</h2>
-                <div class="deletion-methods">
-                    <div class="method-card">
-                        <h3><i class="fas fa-mobile-alt"></i> Local Device Data</h3>
-                        <p>All data stored locally on your Android device (Room Database, encrypted preferences) will be immediately deleted when you confirm account deletion.</p>
-                    </div>
-                    <div class="method-card">
-                        <h3><i class="fas fa-server"></i> Server Data</h3>
-                        <p>Your account information stored on Firebase Authentication servers will be permanently deleted within 30 days of your deletion request.</p>
-                    </div>
-                    <div class="method-card">
-                        <h3><i class="fas fa-cloud"></i> Cloud Backups</h3>
-                        <p>Backups stored in your personal Google Drive remain under your control. You must manually delete them from your Google Drive if desired.</p>
-                    </div>
-                    <div class="method-card">
-                        <h3><i class="fas fa-chart-line"></i> Analytics Data</h3>
-                        <p>Anonymized usage data (Firebase Analytics) may be retained for up to 90 days for statistical purposes but will no longer be linked to your identity.</p>
-                    </div>
-                </div>
+          <div class="info-card">
+            <h3>
+              <i class="fas fa-clipboard-check"></i> Pre-Deletion Checklist
+            </h3>
+            <ul class="checklist">
+              <li>
+                <strong>Backup Your Data:</strong> Create a local or cloud
+                backup of all your notes, reminders, and tasks
+              </li>
+              <li>
+                <strong>Export Important Notes:</strong> Export any critical
+                notes as PDF, text, or image files
+              </li>
+              <li>
+                <strong>Save Cloud Backups:</strong> If using Google Drive
+                backup, ensure you have a recent backup saved
+              </li>
+              <li>
+                <strong>Cancel Subscriptions:</strong> If you have premium
+                features (future), cancel any active subscriptions
+              </li>
+              <li>
+                <strong>Remove Widgets:</strong> Delete NoteNest widgets from
+                your home screen
+              </li>
+              <li>
+                <strong>Consider Alternatives:</strong> Explore if there's a way
+                to resolve your concerns without deletion
+              </li>
+            </ul>
+          </div>
 
-                <h2>How to Delete Your Account</h2>
-                <p>You have three methods to permanently delete your NoteNest account:</p>
+          <h2>What Will Be Deleted</h2>
+          <p>
+            When you delete your NoteNest account, the following data will be
+            permanently removed:
+          </p>
+          <ul>
+            <li>
+              <strong>Account Information:</strong> Email address, username,
+              password, and profile details
+            </li>
+            <li>
+              <strong>All Notes:</strong> Every note you've created, including
+              titles, content, and timestamps
+            </li>
+            <li>
+              <strong>Reminders:</strong> All scheduled and past reminders
+            </li>
+            <li>
+              <strong>To-Do Lists:</strong> All tasks and their completion
+              status
+            </li>
+            <li><strong>Wish Lists:</strong> All wish items you've saved</li>
+            <li>
+              <strong>Categories & Tags:</strong> All organizational structures
+              you've created
+            </li>
+            <li><strong>Important Notes:</strong> Notes marked as important</li>
+            <li>
+              <strong>Settings & Preferences:</strong> Theme choices,
+              notification settings, and customizations
+            </li>
+            <li>
+              <strong>Authentication Tokens:</strong> All session data and login
+              credentials
+            </li>
+          </ul>
 
-                <h3>Method 1: Delete Through the App (Recommended)</h3>
-                <ol>
-                    <li>Open <strong>NoteNest</strong> on your Android device</li>
-                    <li>Tap the <strong>menu icon (☰)</strong> in the top-left corner</li>
-                    <li>Select <strong>Settings</strong></li>
-                    <li>Scroll down to the <strong>Account</strong> section</li>
-                    <li>Tap <strong>"Delete Account"</strong></li>
-                    <li>Read the warning message carefully</li>
-                    <li>Enter your <strong>password</strong> to confirm your identity</li>
-                    <li>Tap <strong>"Permanently Delete Account"</strong></li>
-                    <li>Confirm one final time by tapping <strong>"Yes, Delete My Account"</strong></li>
-                </ol>
-
-                <div class="info-card">
-                    <p style="margin: 0;"><strong><i class="fas fa-info-circle"></i> Note:</strong> You will be immediately logged out, and the app will clear all local data. This action takes effect immediately.</p>
-                </div>
-
-                <h3>Method 2: Request Deletion via Email</h3>
-                <p>If you cannot access the app, you can request account deletion by email:</p>
-                <ol>
-                    <li>Send an email to <strong><span class="highlight">saihemanth225@gmail.com</span></strong></li>
-                    <li>Use the email address associated with your NoteNest account</li>
-                    <li>Subject line: <strong>"Account Deletion Request"</strong></li>
-                    <li>In the email body, include:
-                        <ul>
-                            <li>Your NoteNest account email</li>
-                            <li>Your username (if you remember it)</li>
-                            <li>Reason for deletion (optional but helpful)</li>
-                            <li>Confirmation statement: "I request permanent deletion of my NoteNest account"</li>
-                        </ul>
-                    </li>
-                    <li>We will process your request within <strong>48 hours</strong> and send confirmation</li>
-                </ol>
-
-                <h3>Method 3: Contact Support</h3>
-                <p>For assistance with account deletion or if you have questions:</p>
-                <ul>
-                    <li>Visit our <a href="contact.html">Contact page</a></li>
-                    <li>Email: <strong><span class="highlight">saihemanth225@gmail.com</span></strong></li>
-                    <li>Response time: 24-48 hours</li>
-                </ul>
-
-                <h2>Data Retention Policy</h2>
-                <p>After you delete your account, NoteNest follows these data retention practices:</p>
-                
-                <div class="info-card">
-                    <h3><i class="fas fa-clock"></i> Retention Timeline</h3>
-                    <ul style="margin-bottom: 0;">
-                        <li><strong>Immediate (0 days):</strong> Local device data deleted, access to account terminated</li>
-                        <li><strong>Within 7 days:</strong> Active sessions invalidated, authentication tokens revoked</li>
-                        <li><strong>Within 30 days:</strong> All personal data permanently deleted from our systems</li>
-                        <li><strong>Up to 90 days:</strong> Anonymized analytics data may be retained (crash reports, usage statistics) without any personal identifiers</li>
-                        <li><strong>Legal Retention:</strong> In rare cases, we may retain certain information if required by law, court order, or for legitimate legal purposes, but this data will be anonymized when possible</li>
-                    </ul>
-                </div>
-
-                <h2>What We Do NOT Delete</h2>
-                <p>The following items are not controlled by NoteNest and will not be automatically deleted:</p>
-                <ul>
-                    <li><strong>Google Drive Backups:</strong> Backups stored in your personal Google Drive remain there. You must delete them manually if desired</li>
-                    <li><strong>Exported Files:</strong> Any notes you've exported as PDF, text, or images remain on your device or wherever you saved them</li>
-                    <li><strong>Shared Content:</strong> Notes you've shared with others via email, WhatsApp, etc., remain with the recipients</li>
-                    <li><strong>App Store Reviews:</strong> Reviews you've left on Google Play Store (you must delete these separately through Google Play)</li>
-                </ul>
-
-                <h2>Alternative to Account Deletion</h2>
-                <p>If you're considering account deletion due to a specific issue, we may be able to help:</p>
-                
-                <div class="deletion-methods">
-                    <div class="method-card">
-                        <h3><i class="fas fa-pause-circle"></i> Take a Break</h3>
-                        <p>Simply uninstall the app without deleting your account. Your data will remain safe, and you can reinstall anytime.</p>
-                    </div>
-                    <div class="method-card">
-                        <h3><i class="fas fa-cog"></i> Adjust Settings</h3>
-                        <p>Issues with notifications, theme, or features? Check Settings—you might find a solution without deletion.</p>
-                    </div>
-                    <div class="method-card">
-                        <h3><i class="fas fa-trash-alt"></i> Clear Data</h3>
-                        <p>Want a fresh start? Clear app data through Android Settings while keeping your account for future use.</p>
-                    </div>
-                    <div class="method-card">
-                        <h3><i class="fas fa-comments"></i> Contact Support</h3>
-                        <p>Having issues? <a href="contact.html">Contact us</a>—we're happy to help resolve problems before you decide to leave.</p>
-                    </div>
-                </div>
-
-                <h2>Reactivation Policy</h2>
-                <div class="warning-banner">
-                    <h3><i class="fas fa-ban"></i> No Reactivation Available</h3>
-                    <p><strong>Once your account is deleted, it cannot be recovered or reactivated.</strong> If you want to use NoteNest again after deletion, you will need to:</p>
-                    <ul style="margin-bottom: 0;">
-                        <li>Create a new account with a new email address</li>
-                        <li>Start fresh with no access to your previous data</li>
-                        <li>Restore from backup if you saved one before deletion</li>
-                    </ul>
-                </div>
-
-                <h2>Your Rights Under Privacy Laws</h2>
-                <p>Account deletion is your right under various privacy regulations:</p>
-                <ul>
-                    <li><strong>GDPR (EU):</strong> Right to erasure ("right to be forgotten")</li>
-                    <li><strong>CCPA (California):</strong> Right to deletion of personal information</li>
-                    <li><strong>Indian Data Protection:</strong> Right to data deletion and portability</li>
-                </ul>
-                <p>For more information about your privacy rights, please review our <a href="privacy.html">Privacy Policy</a>.</p>
-
-                <h2>Feedback Before You Go</h2>
-                <p>We're constantly working to improve NoteNest. If you're leaving because of an issue or missing feature, we'd love to hear from you:</p>
-                <ul>
-                    <li><strong>Share Feedback:</strong> Use our <a href="feedback.html">Feedback Form</a> to tell us what went wrong</li>
-                    <li><strong>Report Bugs:</strong> Technical issues? <a href="bug-report.html">Report them here</a></li>
-                    <li><strong>Feature Requests:</strong> Missing something? Let us know—we might add it in future updates</li>
-                </ul>
-                <p>Your feedback helps us build a better app for everyone, even if you've decided to leave.</p>
-
-                <div class="content-block" style="background: #e3f2fd; border-left: 4px solid #2196F3; padding: 1.5rem; margin: 2rem 0;">
-                    <h3 style="margin-top: 0; color: #1565c0;"><i class="fas fa-heart"></i> We're Sorry to See You Go</h3>
-                    <p style="margin-bottom: 0;">Thank you for giving NoteNest a try. We understand that different apps work for different people. If you ever change your mind, we'd be happy to welcome you back. We wish you all the best in your productivity journey!</p>
-                </div>
-
-                <h2>Need Help?</h2>
-                <p>If you have questions about account deletion or need assistance with the process:</p>
-                <ul>
-                    <li><strong>Email:</strong> <span class="highlight">saihemanth225@gmail.com</span></li>
-                    <li><strong>Subject:</strong> "Account Deletion Help"</li>
-                    <li><strong>Response Time:</strong> 24-48 hours</li>
-                    <li><strong>Contact Page:</strong> <a href="contact.html">Visit our Contact page</a></li>
-                </ul>
-
-                <div class="content-block" style="margin-top: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
-                    <p style="margin: 0; text-align: center; color: #666;">
-                        <strong>Last Updated:</strong> December 26, 2025 | 
-                        <strong>Policy Version:</strong> 1.0
-                    </p>
-                </div>
+          <h2>What Happens to Your Data</h2>
+          <div class="deletion-methods">
+            <div class="method-card">
+              <h3><i class="fas fa-mobile-alt"></i> Local Device Data</h3>
+              <p>
+                All data stored locally on your Android device (Room Database,
+                encrypted preferences) will be immediately deleted when you
+                confirm account deletion.
+              </p>
             </div>
-        </section>
+            <div class="method-card">
+              <h3><i class="fas fa-server"></i> Server Data</h3>
+              <p>
+                Your account information stored on Firebase Authentication
+                servers will be permanently deleted within 30 days of your
+                deletion request.
+              </p>
+            </div>
+            <div class="method-card">
+              <h3><i class="fas fa-cloud"></i> Cloud Backups</h3>
+              <p>
+                Backups stored in your personal Google Drive remain under your
+                control. You must manually delete them from your Google Drive if
+                desired.
+              </p>
+            </div>
+            <div class="method-card">
+              <h3><i class="fas fa-chart-line"></i> Analytics Data</h3>
+              <p>
+                Anonymized usage data (Firebase Analytics) may be retained for
+                up to 90 days for statistical purposes but will no longer be
+                linked to your identity.
+              </p>
+            </div>
+          </div>
+
+          <h2>How to Delete Your Account</h2>
+          <p>
+            You have three methods to permanently delete your NoteNest account:
+          </p>
+
+          <h3>Method 1: Delete Through the App (Recommended)</h3>
+          <ol>
+            <li>Open <strong>NoteNest</strong> on your Android device</li>
+            <li>
+              Tap the <strong>menu icon (☰)</strong> in the top-left corner
+            </li>
+            <li>Select <strong>Settings</strong></li>
+            <li>Scroll down to the <strong>Account</strong> section</li>
+            <li>Tap <strong>"Delete Account"</strong></li>
+            <li>Read the warning message carefully</li>
+            <li>
+              Enter your <strong>password</strong> to confirm your identity
+            </li>
+            <li>Tap <strong>"Permanently Delete Account"</strong></li>
+            <li>
+              Confirm one final time by tapping
+              <strong>"Yes, Delete My Account"</strong>
+            </li>
+          </ol>
+
+          <div class="info-card">
+            <p style="margin: 0">
+              <strong><i class="fas fa-info-circle"></i> Note:</strong> You will
+              be immediately logged out, and the app will clear all local data.
+              This action takes effect immediately.
+            </p>
+          </div>
+
+          <h3>Method 2: Request Deletion via Email</h3>
+          <p>
+            If you cannot access the app, you can request account deletion by
+            email:
+          </p>
+          <ol>
+            <li>
+              Send an email to
+              <strong
+                ><span class="highlight">saihemanth225@gmail.com</span></strong
+              >
+            </li>
+            <li>Use the email address associated with your NoteNest account</li>
+            <li>Subject line: <strong>"Account Deletion Request"</strong></li>
+            <li>
+              In the email body, include:
+              <ul>
+                <li>Your NoteNest account email</li>
+                <li>Your username (if you remember it)</li>
+                <li>Reason for deletion (optional but helpful)</li>
+                <li>
+                  Confirmation statement: "I request permanent deletion of my
+                  NoteNest account"
+                </li>
+              </ul>
+            </li>
+            <li>
+              We will process your request within <strong>48 hours</strong> and
+              send confirmation
+            </li>
+          </ol>
+
+          <h3>Method 3: Contact Support</h3>
+          <p>For assistance with account deletion or if you have questions:</p>
+          <ul>
+            <li>Visit our <a href="contact.html">Contact page</a></li>
+            <li>
+              Email:
+              <strong
+                ><span class="highlight">saihemanth225@gmail.com</span></strong
+              >
+            </li>
+            <li>Response time: 24-48 hours</li>
+          </ul>
+
+          <h2>Data Retention Policy</h2>
+          <p>
+            After you delete your account, NoteNest follows these data retention
+            practices:
+          </p>
+
+          <div class="info-card">
+            <h3><i class="fas fa-clock"></i> Retention Timeline</h3>
+            <ul style="margin-bottom: 0">
+              <li>
+                <strong>Immediate (0 days):</strong> Local device data deleted,
+                access to account terminated
+              </li>
+              <li>
+                <strong>Within 7 days:</strong> Active sessions invalidated,
+                authentication tokens revoked
+              </li>
+              <li>
+                <strong>Within 30 days:</strong> All personal data permanently
+                deleted from our systems
+              </li>
+              <li>
+                <strong>Up to 90 days:</strong> Anonymized analytics data may be
+                retained (crash reports, usage statistics) without any personal
+                identifiers
+              </li>
+              <li>
+                <strong>Legal Retention:</strong> In rare cases, we may retain
+                certain information if required by law, court order, or for
+                legitimate legal purposes, but this data will be anonymized when
+                possible
+              </li>
+            </ul>
+          </div>
+
+          <h2>What We Do NOT Delete</h2>
+          <p>
+            The following items are not controlled by NoteNest and will not be
+            automatically deleted:
+          </p>
+          <ul>
+            <li>
+              <strong>Google Drive Backups:</strong> Backups stored in your
+              personal Google Drive remain there. You must delete them manually
+              if desired
+            </li>
+            <li>
+              <strong>Exported Files:</strong> Any notes you've exported as PDF,
+              text, or images remain on your device or wherever you saved them
+            </li>
+            <li>
+              <strong>Shared Content:</strong> Notes you've shared with others
+              via email, WhatsApp, etc., remain with the recipients
+            </li>
+            <li>
+              <strong>App Store Reviews:</strong> Reviews you've left on Google
+              Play Store (you must delete these separately through Google Play)
+            </li>
+          </ul>
+
+          <h2>Alternative to Account Deletion</h2>
+          <p>
+            If you're considering account deletion due to a specific issue, we
+            may be able to help:
+          </p>
+
+          <div class="deletion-methods">
+            <div class="method-card">
+              <h3><i class="fas fa-pause-circle"></i> Take a Break</h3>
+              <p>
+                Simply uninstall the app without deleting your account. Your
+                data will remain safe, and you can reinstall anytime.
+              </p>
+            </div>
+            <div class="method-card">
+              <h3><i class="fas fa-cog"></i> Adjust Settings</h3>
+              <p>
+                Issues with notifications, theme, or features? Check
+                Settings—you might find a solution without deletion.
+              </p>
+            </div>
+            <div class="method-card">
+              <h3><i class="fas fa-trash-alt"></i> Clear Data</h3>
+              <p>
+                Want a fresh start? Clear app data through Android Settings
+                while keeping your account for future use.
+              </p>
+            </div>
+            <div class="method-card">
+              <h3><i class="fas fa-comments"></i> Contact Support</h3>
+              <p>
+                Having issues? <a href="contact.html">Contact us</a>—we're happy
+                to help resolve problems before you decide to leave.
+              </p>
+            </div>
+          </div>
+
+          <h2>Reactivation Policy</h2>
+          <div class="warning-banner">
+            <h3><i class="fas fa-ban"></i> No Reactivation Available</h3>
+            <p>
+              <strong
+                >Once your account is deleted, it cannot be recovered or
+                reactivated.</strong
+              >
+              If you want to use NoteNest again after deletion, you will need
+              to:
+            </p>
+            <ul style="margin-bottom: 0">
+              <li>Create a new account with a new email address</li>
+              <li>Start fresh with no access to your previous data</li>
+              <li>Restore from backup if you saved one before deletion</li>
+            </ul>
+          </div>
+
+          <h2>Your Rights Under Privacy Laws</h2>
+          <p>
+            Account deletion is your right under various privacy regulations:
+          </p>
+          <ul>
+            <li>
+              <strong>GDPR (EU):</strong> Right to erasure ("right to be
+              forgotten")
+            </li>
+            <li>
+              <strong>CCPA (California):</strong> Right to deletion of personal
+              information
+            </li>
+            <li>
+              <strong>Indian Data Protection:</strong> Right to data deletion
+              and portability
+            </li>
+          </ul>
+          <p>
+            For more information about your privacy rights, please review our
+            <a href="privacy.html">Privacy Policy</a>.
+          </p>
+
+          <h2>Feedback Before You Go</h2>
+          <p>
+            We're constantly working to improve NoteNest. If you're leaving
+            because of an issue or missing feature, we'd love to hear from you:
+          </p>
+          <ul>
+            <li>
+              <strong>Share Feedback:</strong> Use our
+              <a href="feedback.html">Feedback Form</a> to tell us what went
+              wrong
+            </li>
+            <li>
+              <strong>Report Bugs:</strong> Technical issues?
+              <a href="bug-report.html">Report them here</a>
+            </li>
+            <li>
+              <strong>Feature Requests:</strong> Missing something? Let us
+              know—we might add it in future updates
+            </li>
+          </ul>
+          <p>
+            Your feedback helps us build a better app for everyone, even if
+            you've decided to leave.
+          </p>
+
+          <div
+            class="content-block"
+            style="
+              background: #e3f2fd;
+              border-left: 4px solid #2196f3;
+              padding: 1.5rem;
+              margin: 2rem 0;
+            "
+          >
+            <h3 style="margin-top: 0; color: #1565c0">
+              <i class="fas fa-heart"></i> We're Sorry to See You Go
+            </h3>
+            <p style="margin-bottom: 0">
+              Thank you for giving NoteNest a try. We understand that different
+              apps work for different people. If you ever change your mind, we'd
+              be happy to welcome you back. We wish you all the best in your
+              productivity journey!
+            </p>
+          </div>
+
+          <h2>Need Help?</h2>
+          <p>
+            If you have questions about account deletion or need assistance with
+            the process:
+          </p>
+          <ul>
+            <li>
+              <strong>Email:</strong>
+              <span class="highlight">saihemanth225@gmail.com</span>
+            </li>
+            <li><strong>Subject:</strong> "Account Deletion Help"</li>
+            <li><strong>Response Time:</strong> 24-48 hours</li>
+            <li>
+              <strong>Contact Page:</strong>
+              <a href="contact.html">Visit our Contact page</a>
+            </li>
+          </ul>
+
+          <div
+            class="content-block"
+            style="
+              margin-top: 2rem;
+              padding: 1rem;
+              background: #f8f9fa;
+              border-radius: 8px;
+            "
+          >
+            <p style="margin: 0; text-align: center; color: #666">
+              <strong>Last Updated:</strong> December 26, 2025 |
+              <strong>Policy Version:</strong> 1.0
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NoteNest</h3>
-                    <p>Your complete productivity hub for managing notes, tasks, reminders, and goals on Android.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="user-guide.html">User Guide</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                        <li><a href="bug-report.html">Report Bug</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="delete.html">Delete Account</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Download</h3>
-                    <ul>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">Google Play Store</a></li>
-                        <li><a href="#">Version 3.0.0 (Latest)</a></li>
-                    </ul>
-                    <h3 style="margin-top: 1.5rem;">Resources</h3>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="contact.html">Help Center</a></li>
-                        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-                        <li><a href="bug-report.html">Report a Bug</a></li>
-                        <li><a href="feedback.html">Feature Requests</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>NoteNest</h3>
+            <p>
+              Your complete productivity hub for managing notes, tasks,
+              reminders, and goals on Android.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="user-guide.html">User Guide</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="bug-report.html">Report Bug</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="delete.html">Delete Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Download</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+                  >Google Play Store</a
+                >
+              </li>
+              <li><a href="#">Version 3.0.0 (Latest)</a></li>
+            </ul>
+            <h3 style="margin-top: 1.5rem">Resources</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#faq">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="contact.html">Help Center</a></li>
+              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+              <li><a href="bug-report.html">Report a Bug</a></li>
+              <li><a href="feedback.html">Feature Requests</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="copyright">
+          <p>
+            &copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

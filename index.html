@@ -1,268 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="xU-C06w4Rp1T3YMJXjEtvuI5zMn9n8f6A7fE6v8v0g0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="xU-C06w4Rp1T3YMJXjEtvuI5zMn9n8f6A7fE6v8v0g0"
+    />
     <title>NotesNest - Organize Your Thoughts</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="/sitemap.xml"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <span class="logo-icon"> <img src="images/logo.jpeg" alt="NoteNest Logo"></span>
-                <span class="logo-text">otesNest</span>
-            </a>
-            <button class="mobile-menu-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="user-guide.html">User Guide</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="bug-report.html">Report Bug</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="delete.html">Delete Account</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo.jpeg" alt="NoteNest Logo"
+          /></span>
+          <span class="logo-text">otesNest</span>
+        </a>
+        <button class="mobile-menu-btn" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="user-guide.html">User Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="bug-report.html">Report Bug</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete.html">Delete Account</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-     <section class="hero">
-            <div class="container hero-content">
-                <h1>Your Complete Productivity Hub</h1>
-                <p>Manage notes, tasks, reminders, and goals in one powerful Android app. Built with security, stability, and simplicity in mind.</p>
-                <div>
-                    <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" class="cta-button">Download on Google Play</a>
-                    <a href="#features" class="cta-button secondary">Learn More</a>
-                </div>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Your Complete Productivity Hub</h1>
+          <p>
+            Manage notes, tasks, reminders, and goals in one powerful Android
+            app. Built with security, stability, and simplicity in mind.
+          </p>
+          <div>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+              class="cta-button"
+              >Download on Google Play</a
+            >
+            <a href="#features" class="cta-button secondary">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section -->
+      <section class="features" id="features">
+        <div class="container">
+          <div class="section-title">
+            <h2>Powerful Features</h2>
+            <p>
+              Everything you need to manage notes, tasks, and reminders in one
+              unified platform
+            </p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Secure & Private</h3>
+              <p>
+                Your data is protected with encrypted storage and secure
+                authentication - no plain text credentials ever stored
+              </p>
             </div>
-        </section>
-        <!-- Features Section -->
-       <section class="features" id="features">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Powerful Features</h2>
-                    <p>Everything you need to manage notes, tasks, and reminders in one unified platform</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Secure & Private</h3>
-                        <p>Your data is protected with encrypted storage and secure authentication - no plain text credentials ever stored</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                        <h3>Smart Organization</h3>
-                        <p>Organize notes with categories, tags, and filters. Switch between list and grid views for optimal viewing</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-bell"></i></div>
-                        <h3>Reminders & Tasks</h3>
-                        <p>Never miss important tasks with local notifications, to-do lists, and repeat reminder support</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                        <h3>Backup & Export</h3>
-                        <p>Export notes as PDF, text, or images. Local and cloud backup options keep your data safe</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h3>Home Screen Widgets</h3>
-                        <p>Quick access with note preview and quick-add widgets directly on your home screen</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-moon"></i></div>
-                        <h3>Beautiful Design</h3>
-                        <p>Material Design 3 with smooth animations, adaptive layouts, and automatic dark/light theme switching</p>
-                    </div>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+              <h3>Smart Organization</h3>
+              <p>
+                Organize notes with categories, tags, and filters. Switch
+                between list and grid views for optimal viewing
+              </p>
             </div>
-        </section>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-bell"></i></div>
+              <h3>Reminders & Tasks</h3>
+              <p>
+                Never miss important tasks with local notifications, to-do
+                lists, and repeat reminder support
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+              <h3>Backup & Export</h3>
+              <p>
+                Export notes as PDF, text, or images. Local and cloud backup
+                options keep your data safe
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+              <h3>Home Screen Widgets</h3>
+              <p>
+                Quick access with note preview and quick-add widgets directly on
+                your home screen
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-moon"></i></div>
+              <h3>Beautiful Design</h3>
+              <p>
+                Material Design 3 with smooth animations, adaptive layouts, and
+                automatic dark/light theme switching
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- App Info Section -->
-        <section class="app-info">
-            <div class="container info-content">
-                <div class="info-text">
-                    <h2>Why Choose NoteNest?</h2>
-                    <p>NoteNest is built on three core principles: user-first experience, rock-solid reliability, and security by design. We've created a clean, intuitive interface that requires no learning curve, while providing powerful tools like categories, smart search, reminders, and widgets for advanced productivity.</p>
-                    <p>Your data is protected with encrypted storage and secure authentication - we never store credentials in plain form. With optimized database performance, NoteNest handles everything from a few notes to thousands without lag or crashes, ensuring smooth performance on any Android device.</p>
-                    <p>Whether you're a student managing assignments, a professional tracking projects, or simply organizing personal goals, NoteNest adapts to your workflow with features like to-do lists, wish lists, export options (PDF, text, images), and backup capabilities.</p>
-                    <div class="app-badges">
-                        <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">
-                            <img src="images/google-play-badge.png" alt="Get it on Google Play" class="badge">
-                        </a>
-                    </div>
-                </div>
-                <div class="info-image">
-                    <img src="images/screenshot.jpeg" alt="NoteNest Screenshot">
-                </div>
+      <section class="app-info">
+        <div class="container info-content">
+          <div class="info-text">
+            <h2>Why Choose NoteNest?</h2>
+            <p>
+              NoteNest is built on three core principles: user-first experience,
+              rock-solid reliability, and security by design. We've created a
+              clean, intuitive interface that requires no learning curve, while
+              providing powerful tools like categories, smart search, reminders,
+              and widgets for advanced productivity.
+            </p>
+            <p>
+              Your data is protected with encrypted storage and secure
+              authentication - we never store credentials in plain form. With
+              optimized database performance, NoteNest handles everything from a
+              few notes to thousands without lag or crashes, ensuring smooth
+              performance on any Android device.
+            </p>
+            <p>
+              Whether you're a student managing assignments, a professional
+              tracking projects, or simply organizing personal goals, NoteNest
+              adapts to your workflow with features like to-do lists, wish
+              lists, export options (PDF, text, images), and backup
+              capabilities.
+            </p>
+            <div class="app-badges">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+              >
+                <img
+                  src="images/google-play-badge.png"
+                  alt="Get it on Google Play"
+                  class="badge"
+                />
+              </a>
             </div>
-        </section>
+          </div>
+          <div class="info-image">
+            <img src="images/screenshot.jpeg" alt="NoteNest Screenshot" />
+          </div>
+        </div>
+      </section>
 
-        <!-- Testimonials -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="section-title">
-                    <h2>What Our Users Say</h2>
-                    <p>Join users who trust NoteNest to organize their daily tasks and ideas</p>
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <div class="section-title">
+            <h2>What Our Users Say</h2>
+            <p>
+              Join users who trust NoteNest to organize their daily tasks and
+              ideas
+            </p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                NoteNest handles all my notes, reminders, and to-dos in one
+                place. The home screen widgets are a game-changer for quick
+                access!
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AK</div>
+                <div>
+                  <h4>Anand Krishna</h4>
+                  <p>Software Engineer</p>
                 </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-text">
-                            NoteNest handles all my notes, reminders, and to-dos in one place. The home screen widgets are a game-changer for quick access!
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">AK</div>
-                            <div>
-                                <h4>Anand Krishna</h4>
-                                <p>Software Engineer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-text">
-                            I've tried many note apps, but NoteNest strikes the perfect balance between simplicity and powerful features. The category system keeps everything organized!
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">AP</div>
-                            <div>
-                                <h4>AnanthPruthvi</h4>
-                                <p>College Student</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-text">
-                            The encrypted storage and backup options give me peace of mind. Plus, exporting notes as PDFs for sharing is incredibly useful!
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">VK</div>
-                            <div>
-                                <h4>Vinay Kumar</h4>
-                                <p>Business Owner</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                I've tried many note apps, but NoteNest strikes the perfect
+                balance between simplicity and powerful features. The category
+                system keeps everything organized!
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">AP</div>
+                <div>
+                  <h4>AnanthPruthvi</h4>
+                  <p>College Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                The encrypted storage and backup options give me peace of mind.
+                Plus, exporting notes as PDFs for sharing is incredibly useful!
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">VK</div>
+                <div>
+                  <h4>Vinay Kumar</h4>
+                  <p>Business Owner</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-     <!-- FAQ Section -->
-        <section class="faq">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Find answers to common questions about NoteNest</p>
-                </div>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            Is NoteNest free to use? <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Yes, NoteNest is free to download and use with all core features including notes, reminders, to-do lists, categories, widgets, and local backups. Premium features with additional storage limits and cloud sync are planned for future releases.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            How can I backup my notes? <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <p>NoteNest offers two backup options: Local Backup (encrypted SQLite export saved on your device) and Cloud Backup (via Google Drive API). You can access backup options in the Settings menu to ensure your data is always safe.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            Is my data secure with NoteNest? <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Absolutely. NoteNest uses encrypted storage for all sensitive data and secure authentication methods. Your credentials are never stored in plain form, and we use EncryptedSharedPreferences for session tokens. Security is built into the app's architecture from the ground up.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            Can I export my notes to share with others? <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Yes! NoteNest allows you to export individual notes in multiple formats including Plain Text (.txt), PDF, and Image. You can then share exported notes via email, WhatsApp, or any other app using Android's share functionality.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            Why aren't my reminders working on my device? <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-content">
-                            <p>Some Android manufacturers (like Xiaomi MIUI, Vivo) have aggressive battery optimization that can prevent reminders from triggering. To fix this, go to your device's Settings > Battery > App Battery Management, find NoteNest, and disable battery optimization or enable "Autostart" for the app.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- FAQ Section -->
+      <section class="faq">
+        <div class="container">
+          <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about NoteNest</p>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Is NoteNest free to use? <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes, NoteNest is free to download and use with all core
+                  features including notes, reminders, to-do lists, categories,
+                  widgets, and local backups. Premium features with additional
+                  storage limits and cloud sync are planned for future releases.
+                </p>
+              </div>
             </div>
-        </section>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                How can I backup my notes? <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  NoteNest offers two backup options: Local Backup (encrypted
+                  SQLite export saved on your device) and Cloud Backup (via
+                  Google Drive API). You can access backup options in the
+                  Settings menu to ensure your data is always safe.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Is my data secure with NoteNest?
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Absolutely. NoteNest uses encrypted storage for all sensitive
+                  data and secure authentication methods. Your credentials are
+                  never stored in plain form, and we use
+                  EncryptedSharedPreferences for session tokens. Security is
+                  built into the app's architecture from the ground up.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Can I export my notes to share with others?
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Yes! NoteNest allows you to export individual notes in
+                  multiple formats including Plain Text (.txt), PDF, and Image.
+                  You can then share exported notes via email, WhatsApp, or any
+                  other app using Android's share functionality.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                Why aren't my reminders working on my device?
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Some Android manufacturers (like Xiaomi MIUI, Vivo) have
+                  aggressive battery optimization that can prevent reminders
+                  from triggering. To fix this, go to your device's Settings >
+                  Battery > App Battery Management, find NoteNest, and disable
+                  battery optimization or enable "Autostart" for the app.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>NoteNest</h3>
-                    <p>Your complete productivity hub for managing notes, tasks, reminders, and goals on Android.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="user-guide.html">User Guide</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                        <li><a href="bug-report.html">Report Bug</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="delete.html">Delete Account</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Download</h3>
-                    <ul>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">Google Play Store</a></li>
-                        <li><a href="#">Version 3.0.0 (Latest)</a></li>
-                    </ul>
-                    <h3 style="margin-top: 1.5rem;">Resources</h3>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#faq">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="contact.html">Help Center</a></li>
-                        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-                        <li><a href="bug-report.html">Report a Bug</a></li>
-                        <li><a href="feedback.html">Feature Requests</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>NoteNest</h3>
+            <p>
+              Your complete productivity hub for managing notes, tasks,
+              reminders, and goals on Android.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="user-guide.html">User Guide</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="bug-report.html">Report Bug</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="delete.html">Delete Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Download</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+                  >Google Play Store</a
+                >
+              </li>
+              <li><a href="#">Version 3.0.0 (Latest)</a></li>
+            </ul>
+            <h3 style="margin-top: 1.5rem">Resources</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#faq">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="contact.html">Help Center</a></li>
+              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+              <li><a href="bug-report.html">Report a Bug</a></li>
+              <li><a href="feedback.html">Feature Requests</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="copyright">
+          <p>
+            &copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
