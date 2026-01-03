@@ -2,7 +2,9 @@
 
 <div align="center">
 
-![NoteNest Banner](images/banner.png)
+<img src="https://github.com/user-attachments/assets/c7c5a72b-6a97-4e57-9970-bde9f61d174a" width="1920" height="500" alt="NoteNest Banner" />
+
+
 
 **Official website and documentation for NoteNest - Your Complete Productivity Hub**
 
