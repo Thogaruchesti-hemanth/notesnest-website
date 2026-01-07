@@ -1,24 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Primary Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      NotesNest - Smart Note-Taking & Productivity App for Android | Organize
+      Tasks, Reminders & Notes
+    </title>
+    <meta
+      name="description"
+      content="NotesNest is a powerful Android productivity app for managing notes, tasks, reminders, and goals. Features include encrypted backups, PDF export, widgets, and Material Design 3. Download free on Google Play." />
+    <meta
+      name="keywords"
+      content="note taking app, productivity app, android notes, task manager, reminder app, to-do list, note organizer, encrypted notes, backup notes, android productivity, material design app, free notes app" />
+    <meta name="author" content="Thogaruchesti Hemanth" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://notesnest-app.web.app/" />
+
+    <!-- Google Site Verification -->
     <meta
       name="google-site-verification"
-      content="xU-C06w4Rp1T3YMJXjEtvuI5zMn9n8f6A7fE6v8v0g0"
-    />
-    <title>NotesNest - Organize Your Thoughts</title>
+      content="xU-C06w4Rp1T3YMJXjEtvuI5zMn9n8f6A7fE6v8v0g0" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notesnest-app.web.app/" />
+    <meta
+      property="og:title"
+      content="NotesNest - Smart Note-Taking & Productivity App for Android" />
+    <meta
+      property="og:description"
+      content="Organize your thoughts with NotesNest. Manage notes, tasks, reminders, and goals with encrypted backups, PDF export, and beautiful Material Design 3 interface." />
+    <meta
+      property="og:image"
+      content="https://notesnest-app.web.app/images/og-image.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NotesNest App Preview" />
+    <meta property="og:site_name" content="NotesNest" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://notesnest-app.web.app/" />
+    <meta
+      name="twitter:title"
+      content="NotesNest - Smart Note-Taking & Productivity App for Android" />
+    <meta
+      name="twitter:description"
+      content="Organize your thoughts with NotesNest. Manage notes, tasks, reminders, and goals with encrypted backups, PDF export, and beautiful Material Design 3 interface." />
+    <meta
+      name="twitter:image"
+      content="https://notesnest-app.web.app/images/twitter-card.jpg" />
+    <meta name="twitter:image:alt" content="NotesNest App Preview" />
+    <meta name="twitter:creator" content="@yourhandle" />
+    <meta name="twitter:site" content="@yourhandle" />
+
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NotesNest" />
+    <meta name="application-name" content="NotesNest" />
+    <meta name="theme-color" content="#2196F3" />
+    <meta name="msapplication-TileColor" content="#2196F3" />
+    <meta name="msapplication-navbutton-color" content="#2196F3" />
+
+    <!-- Favicon - Multiple Sizes for All Devices -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="/images/favicon-48x48.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/images/android-chrome-192x192.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/images/android-chrome-512x512.jpeg" />
+
+    <!-- Apple Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/images/apple-touch-icon-57x57.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/images/apple-touch-icon-60x60.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/images/apple-touch-icon-72x72.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/images/apple-touch-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/images/apple-touch-icon-114x114.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/images/apple-touch-icon-120x120.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/images/apple-touch-icon-144x144.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/images/apple-touch-icon-152x152.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon-180x180.png" />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Stylesheets -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Sitemap -->
     <link
       rel="sitemap"
       type="application/xml"
       title="Sitemap"
-      href="/sitemap.xml"
-    />
+      href="/sitemap.xml" />
+
+    <!-- Alternate Languages (if you have multiple language versions) -->
+    <link rel="alternate" hreflang="en" href="https://notesnest-app.web.app/" />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://notesnest-app.web.app/" />
+
+    <!-- JSON-LD Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NotesNest",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "1250"
+        },
+        "description": "A comprehensive Android productivity app for managing notes, tasks, reminders, and goals. Features secure authentication, encrypted backups, smart widgets, and export options.",
+        "image": "https://notesnest-app.web.app/images/app-icon.png",
+        "author": {
+          "@type": "Person",
+          "name": "Thogaruchesti Hemanth",
+          "email": "saihemanth225@gmail.com",
+          "url": "https://github.com/Thogaruchesti-hemanth"
+        },
+        "screenshot": "https://notesnest-app.web.app/screenshot.jpeg",
+        "softwareVersion": "3.0.0",
+        "datePublished": "2025-04-14",
+        "dateModified": "2025-12-22"
+      }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NotesNest",
+        "url": "https://notesnest-app.web.app/",
+        "logo": "https://notesnest-app.web.app/images/logo.jpeg",
+        "sameAs": [
+          "https://github.com/Thogaruchesti-hemanth",
+          "https://www.linkedin.com/in/thogaruchesti-hemanth/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "saihemanth225@gmail.com",
+          "contactType": "Customer Support"
+        }
+      }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "NotesNest - Smart Note-Taking & Productivity App",
+        "description": "Organize your thoughts with NotesNest. Manage notes, tasks, reminders, and goals with encrypted backups, PDF export, and beautiful Material Design 3 interface.",
+        "url": "https://notesnest-app.web.app/",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "NotesNest",
+          "url": "https://notesnest-app.web.app"
+        }
+      }
+    </script>
+
+    <!-- Google Analytics (Replace with your GA4 ID) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()" />
   </head>
   <body>
     <!-- Header -->
@@ -161,13 +424,11 @@
             </p>
             <div class="app-badges">
               <a
-                href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
-              >
+                href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest">
                 <img
                   src="images/google-play-badge.png"
                   alt="Get it on Google Play"
-                  class="badge"
-                />
+                  class="badge" />
               </a>
             </div>
           </div>
