@@ -4,8 +4,6 @@
 
 <img src="https://github.com/user-attachments/assets/c7c5a72b-6a97-4e57-9970-bde9f61d174a" width="1920" height="500" alt="NoteNest Banner" />
 
-
-
 **Official website and documentation for NoteNest - Your Complete Productivity Hub**
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fyour-website-url.com)](https://your-website-url.com)
@@ -82,6 +80,7 @@ This website is built using modern web technologies:
 ---
 
 ## 📂 Project Structure
+
 ```
 notesnest-website/
 ├── index.html              # Homepage
@@ -115,16 +114,19 @@ No special prerequisites needed! This is a static website that runs on any moder
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
    git clone https://github.com/Thogaruchesti-hemanth/notesnest-website.git
 ```
 
 2. **Navigate to the project directory**
+
 ```bash
    cd notesnest-website
 ```
 
 3. **Open in browser**
+
 ```bash
    # Simply open index.html in your preferred browser
    open index.html  # macOS
@@ -132,19 +134,21 @@ No special prerequisites needed! This is a static website that runs on any moder
    xdg-open index.html # Linux
 ```
 
-   Or use a local development server:
+Or use a local development server:
+
 ```bash
    # Using Python 3
    python -m http.server 8000
-   
+
    # Using Node.js (http-server)
    npx http-server
-   
+
    # Using PHP
    php -S localhost:8000
 ```
 
 4. **View the website**
+
 ```
    Open http://localhost:8000 in your browser
 ```
@@ -169,6 +173,7 @@ This static website can be deployed on various platforms:
 4. Deploy!
 
 ### Vercel
+
 ```bash
 npm i -g vercel
 vercel
@@ -194,7 +199,7 @@ NoteNest is a comprehensive Android productivity application that offers:
 - 🔒 **Security** - Encrypted storage and authentication
 - 🌙 **Themes** - Light, dark, and auto modes
 
-**Current Version:** 3.0.3  
+**Current Version:** 3.0.5  
 **Platform:** Android 10.0+  
 **Developer:** Thogoruchesti Hemanth
 
@@ -236,8 +241,7 @@ Found a bug or have a feature suggestion? We'd love to hear from you!
 
 ## 📝 License
 
-Distributed under the MIT License. See `LICENSE` file for more information.
----
+## Distributed under the MIT License. See `LICENSE` file for more information.
 
 ## 📞 Contact & Support
 
@@ -246,7 +250,8 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 **GitHub:** [@yourusername](https://github.com/yourusername)  
 **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourprofile)
 
-**App Support:**  
+**App Support:**
+
 - Website: [NoteNest Website](https://notesnest-app.web.app/)
 - Email: saihemanth225@gmail.com
 - Response Time: 24-48 hours

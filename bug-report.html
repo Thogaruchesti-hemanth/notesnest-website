@@ -16,8 +16,8 @@
       <div class="container header-content">
         <a href="index.html" class="logo">
           <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NoteNest Logo"
-          /></span>
+            <img src="images/logo.jpeg" alt="NoteNest Logo" />
+          </span>
           <span class="logo-text">otesNest</span>
         </a>
         <button class="mobile-menu-btn" id="menu-toggle">
@@ -74,11 +74,16 @@
           <div class="form-container">
             <div id="bug-report-message" class="form-message"></div>
             <form id="bugReportForm">
+              <!-- Web3Forms Hidden Fields -->
+              <input type="hidden" name="access_key" value="c86f13a9-35c2-4847-ac79-2a8b6fc44be3">
+              <input type="hidden" name="subject" value="NoteNest - New Bug Report">
+              <input type="hidden" name="from_name" value="NoteNest Bug Report">
+              <input type="checkbox" name="botcheck" style="display: none;">
               <div class="form-group">
                 <label class="form-label" for="bug-category"
                   >Bug Category *</label
                 >
-                <select class="select-control" id="bug-category" required>
+                <select class="select-control" id="bug-category" name="Bug Category" required>
                   <option value="">Select category</option>
                   <option value="crash">App Crash / Force Close</option>
                   <option value="notes">
@@ -102,6 +107,7 @@
                   type="text"
                   class="form-control"
                   id="bug-title"
+                  name="Bug Title"
                   required
                   placeholder="Brief, descriptive title (e.g., 'App crashes when exporting large notes as PDF')"
                 />
@@ -114,6 +120,7 @@
                 <textarea
                   class="form-control"
                   id="bug-description"
+                  name="Bug Description"
                   required
                   placeholder="Please describe the bug in detail. Include:&#10;1. What you were trying to do&#10;2. What happened (the bug)&#10;3. What you expected to happen&#10;4. Steps to reproduce the issue"
                   rows="8"
@@ -127,6 +134,7 @@
                 <textarea
                   class="form-control"
                   id="bug-steps"
+                  name="Steps to Reproduce"
                   required
                   placeholder="1. Open the app&#10;2. Go to...&#10;3. Click on...&#10;4. Bug occurs..."
                   rows="5"
@@ -137,7 +145,7 @@
                 <label class="form-label" for="bug-frequency"
                   >How Often Does This Happen? *</label
                 >
-                <select class="select-control" id="bug-frequency" required>
+                <select class="select-control" id="bug-frequency" name="Frequency" required>
                   <option value="">Select frequency</option>
                   <option value="always">Always / Every time</option>
                   <option value="often">
@@ -152,7 +160,7 @@
 
               <div class="form-group">
                 <label class="form-label" for="bug-severity">Severity *</label>
-                <select class="select-control" id="bug-severity" required>
+                <select class="select-control" id="bug-severity" name="Severity" required>
                   <option value="">Select severity</option>
                   <option value="critical">
                     Critical - App unusable / Data loss
@@ -177,6 +185,7 @@
                   type="text"
                   class="form-control"
                   id="device-info"
+                  name="Device Info"
                   required
                   placeholder="e.g., Samsung Galaxy S23, Xiaomi Redmi Note 12, OnePlus 11"
                 />
@@ -190,6 +199,7 @@
                   type="text"
                   class="form-control"
                   id="android-version"
+                  name="Android Version"
                   required
                   placeholder="e.g., Android 14, Android 13, MIUI 14"
                 />
@@ -203,8 +213,9 @@
                   type="text"
                   class="form-control"
                   id="app-version"
+                  name="App Version"
                   required
-                  placeholder="e.g., 3.0.0 (found in Settings > About)"
+                  placeholder="e.g., 3.0.5 (found in Settings > About)"
                 />
               </div>
 
@@ -214,6 +225,7 @@
                   type="email"
                   class="form-control"
                   id="email"
+                  name="Email"
                   required
                   placeholder="We may need to contact you for additional information"
                 />
@@ -225,6 +237,7 @@
                   type="file"
                   class="form-control"
                   id="bug-screenshot"
+                  name="attachment"
                   accept="image/*,video/*"
                   multiple
                 />
@@ -562,7 +575,7 @@
                   >Google Play Store</a
                 >
               </li>
-              <li><a href="#">Version 3.0.0 (Latest)</a></li>
+              <li><a href="#">Version 3.0.5 (Latest)</a></li>
             </ul>
             <h3 style="margin-top: 1.5rem">Resources</h3>
             <ul>
@@ -582,7 +595,7 @@
         </div>
         <div class="copyright">
           <p>
-            &copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All
+            &copy; <span id="copyright-year">2025</span> NoteNest - Developed by Thogoruchesti Hemanth. All
             rights reserved.
           </p>
         </div>

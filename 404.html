@@ -1,94 +1,389 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Page Not Found</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - NoteNest</title>
+    <meta
+      name="description"
+      content="The page you're looking for doesn't exist. Navigate back to NoteNest to explore our productivity app features, user guide, and more." />
+    <meta name="robots" content="noindex, follow" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* 404 Page Specific Styles */
+      .error-section {
+        min-height: calc(100vh - 180px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 0;
+        background: linear-gradient(
+          135deg,
+          var(--secondary) 0%,
+          #1a1a1a 50%,
+          var(--secondary) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
 
-    <style media="screen">
-      body {
-        background: #eceff1;
-        color: rgba(0, 0, 0, 0.87);
-        font-family: Roboto, Helvetica, Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+      .error-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(240, 192, 61, 0.03) 0%,
+          transparent 50%
+        );
+        animation: pulse-bg 8s ease-in-out infinite;
       }
-      #message {
-        background: white;
-        max-width: 360px;
-        margin: 100px auto 16px;
-        padding: 32px 24px 16px;
-        border-radius: 3px;
-      }
-      #message h3 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-        margin: 16px 0 12px;
-      }
-      #message h2 {
-        color: #ffa100;
-        font-weight: bold;
-        font-size: 16px;
-        margin: 0 0 8px;
-      }
-      #message h1 {
-        font-size: 22px;
-        font-weight: 300;
-        color: rgba(0, 0, 0, 0.6);
-        margin: 0 0 16px;
-      }
-      #message p {
-        line-height: 140%;
-        margin: 16px 0 24px;
-        font-size: 14px;
-      }
-      #message a {
-        display: block;
-        text-align: center;
-        background: #039be5;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        padding: 16px;
-        border-radius: 4px;
-      }
-      #message,
-      #message a {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      }
-      #load {
-        color: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        font-size: 13px;
-      }
-      @media (max-width: 600px) {
-        body,
-        #message {
-          margin-top: 0;
-          background: white;
-          box-shadow: none;
+
+      @keyframes pulse-bg {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
         }
-        body {
-          border-top: 16px solid #ffa100;
+        50% {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+      }
+
+      .error-container {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        max-width: 650px;
+        width: 90%;
+      }
+
+      .error-code {
+        font-size: 10rem;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          #f5d06e,
+          var(--primary)
+        );
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-shift 4s ease infinite;
+        position: relative;
+        display: inline-block;
+      }
+
+      .error-code::after {
+        content: "404";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        -webkit-text-fill-color: rgba(240, 192, 61, 0.08);
+        z-index: -1;
+      }
+
+      @keyframes gradient-shift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .error-icon {
+        font-size: 3rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        animation: float 3s ease-in-out infinite;
+        display: inline-block;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+
+      .error-title {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .error-message {
+        color: #aaa;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+      }
+
+      .error-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+
+      .error-actions .cta-button {
+        padding: 0.9rem 2.2rem;
+        font-size: 1rem;
+      }
+
+      .error-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .error-link-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(240, 192, 61, 0.15);
+        border-radius: 12px;
+        padding: 1.2rem 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+
+      .error-link-card:hover {
+        background: rgba(240, 192, 61, 0.1);
+        border-color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(240, 192, 61, 0.15);
+      }
+
+      .error-link-card i {
+        font-size: 1.3rem;
+        color: var(--primary);
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(240, 192, 61, 0.1);
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+
+      .error-link-card span {
+        color: #ddd;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .error-link-card:hover span {
+        color: #fff;
+      }
+
+      .error-divider {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        margin: 0 auto 2rem;
+        border-radius: 2px;
+      }
+
+      @media (max-width: 768px) {
+        .error-code {
+          font-size: 6rem;
+        }
+
+        .error-title {
+          font-size: 1.4rem;
+        }
+
+        .error-message {
+          font-size: 1rem;
+        }
+
+        .error-links {
+          grid-template-columns: 1fr;
+        }
+
+        .error-section {
+          min-height: calc(100vh - 140px);
         }
       }
     </style>
   </head>
   <body>
-    <div id="message">
-      <h2>404</h2>
-      <h1>Page Not Found</h1>
-      <p>
-        The specified file was not found on this website. Please check the URL
-        for mistakes and try again.
-      </p>
-      <h3>Why am I seeing this?</h3>
-      <p>
-        This page was generated by the Firebase Command-Line Interface. To
-        modify it, edit the <code>404.html</code> file in your project's
-        configured <code>public</code> directory.
-      </p>
-    </div>
+    <!-- Header -->
+    <header>
+      <div class="container header-content">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <img src="images/logo.jpeg" alt="NoteNest Logo" />
+          </span>
+          <span class="logo-text">otesNest</span>
+        </a>
+        <button class="mobile-menu-btn" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="user-guide.html">User Guide</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="bug-report.html">Report Bug</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="delete.html">Delete Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 404 Content -->
+    <section class="error-section">
+      <div class="error-container">
+        <div class="error-icon">
+          <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Oops! This page flew away</h1>
+        <div class="error-divider"></div>
+        <p class="error-message">
+          The page you're looking for doesn't exist or has been moved. Don't
+          worry — let's get you back on track to organizing your notes, tasks,
+          and goals.
+        </p>
+
+        <div class="error-actions">
+          <a href="index.html" class="cta-button">
+            <i class="fas fa-home" style="margin-right: 0.5rem"></i>Back to
+            Home
+          </a>
+          <a href="contact.html" class="cta-button secondary">
+            <i
+              class="fas fa-headset"
+              style="margin-right: 0.5rem"
+            ></i>
+            Get Help
+          </a>
+        </div>
+
+        <div class="error-links">
+          <a href="user-guide.html" class="error-link-card">
+            <i class="fas fa-book"></i>
+            <span>User Guide</span>
+          </a>
+          <a href="feedback.html" class="error-link-card">
+            <i class="fas fa-comment-dots"></i>
+            <span>Send Feedback</span>
+          </a>
+          <a href="bug-report.html" class="error-link-card">
+            <i class="fas fa-bug"></i>
+            <span>Report a Bug</span>
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+            class="error-link-card"
+          >
+            <i class="fab fa-google-play"></i>
+            <span>Download App</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>NoteNest</h3>
+            <p>
+              Your complete productivity hub for managing notes, tasks,
+              reminders, and goals on Android.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="user-guide.html">User Guide</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="bug-report.html">Report Bug</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="delete.html">Delete Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Download</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
+                  >Google Play Store</a
+                >
+              </li>
+              <li><a href="#">Version 3.0.5 (Latest)</a></li>
+            </ul>
+            <h3 style="margin-top: 1.5rem">Resources</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#faq">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="contact.html">Help Center</a></li>
+              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+              <li><a href="bug-report.html">Report a Bug</a></li>
+              <li><a href="feedback.html">Feature Requests</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; <span id="copyright-year">2025</span> NoteNest - Developed by Thogoruchesti Hemanth. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

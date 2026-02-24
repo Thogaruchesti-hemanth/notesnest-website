@@ -16,8 +16,8 @@
       <div class="container header-content">
         <a href="index.html" class="logo">
           <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NoteNest Logo"
-          /></span>
+            <img src="images/logo.jpeg" alt="NoteNest Logo" />
+          </span>
           <span class="logo-text">otesNest</span>
         </a>
         <button class="mobile-menu-btn" id="menu-toggle">
@@ -56,11 +56,16 @@
           <div class="form-container">
             <div id="feedback-message" class="form-message"></div>
             <form id="feedbackForm">
+              <!-- Web3Forms Hidden Fields -->
+              <input type="hidden" name="access_key" value="c86f13a9-35c2-4847-ac79-2a8b6fc44be3">
+              <input type="hidden" name="subject" value="NoteNest - New Feedback">
+              <input type="hidden" name="from_name" value="NoteNest Feedback">
+              <input type="checkbox" name="botcheck" style="display: none;">
               <div class="form-group">
                 <label class="form-label" for="feedback-type"
                   >Feedback Type *</label
                 >
-                <select class="select-control" id="feedback-type" required>
+                <select class="select-control" id="feedback-type" name="Feedback Type" required>
                   <option value="">Select feedback type</option>
                   <option value="feature-request">Feature Request</option>
                   <option value="improvement">Improvement Suggestion</option>
@@ -79,6 +84,7 @@
                   type="text"
                   class="form-control"
                   id="feedback-title"
+                  name="Subject"
                   required
                   placeholder="Brief summary of your feedback"
                 />
@@ -91,6 +97,7 @@
                 <textarea
                   class="form-control"
                   id="feedback-description"
+                  name="Feedback Details"
                   required
                   placeholder="Please share your thoughts, suggestions, or ideas in detail. The more specific you are, the better we can understand and act on your feedback."
                   rows="6"
@@ -105,7 +112,8 @@
                   type="text"
                   class="form-control"
                   id="feedback-app-version"
-                  placeholder="e.g., 3.0.0 (found in Settings > About)"
+                  name="App Version"
+                  placeholder="e.g., 3.0.5 (found in Settings > About)"
                 />
               </div>
 
@@ -117,6 +125,7 @@
                   type="email"
                   class="form-control"
                   id="feedback-email"
+                  name="Email"
                   required
                   placeholder="We may contact you for clarification or updates"
                 />
@@ -355,7 +364,7 @@
                   >Google Play Store</a
                 >
               </li>
-              <li><a href="#">Version 3.0.0 (Latest)</a></li>
+              <li><a href="#">Version 3.0.5 (Latest)</a></li>
             </ul>
             <h3 style="margin-top: 1.5rem">Resources</h3>
             <ul>
@@ -375,7 +384,7 @@
         </div>
         <div class="copyright">
           <p>
-            &copy; 2025 NoteNest - Developed by Thogoruchesti Hemanth. All
+            &copy; <span id="copyright-year">2025</span> NoteNest - Developed by Thogoruchesti Hemanth. All
             rights reserved.
           </p>
         </div>
