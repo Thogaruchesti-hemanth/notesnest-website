@@ -1,26 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TC7ZTHWT');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Send Feedback - NoteNest</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Send Feedback - NotesNest</title>
+    <meta name="description" content="Share your feedback, feature suggestions, or ideas for improvements to help NotesNest evolve and become the best note-taking app." />
+    <meta name="keywords" content="note taking app, productivity app, android notes, task manager, reminder app, to-do list, note organizer, encrypted notes, backup notes, android productivity, material design app, free notes app" />
+    <meta name="author" content="Thogaruchesti Hemanth" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://notesnest-app.web.app/feedback.html" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notesnest-app.web.app/feedback.html" />
+    <meta property="og:title" content="Send Feedback - NotesNest" />
+    <meta property="og:description" content="Share your feedback, feature suggestions, or ideas for improvements to help NotesNest evolve and become the best note-taking app." />
+    <meta property="og:image" content="https://notesnest-app.web.app/images/og-image.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NotesNest App Preview" />
+    <meta property="og:site_name" content="NotesNest" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- X (Twitter) Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://notesnest-app.web.app/feedback.html" />
+    <meta name="twitter:title" content="Send Feedback - NotesNest" />
+    <meta name="twitter:description" content="Share your feedback, feature suggestions, or ideas for improvements to help NotesNest evolve and become the best note-taking app." />
+    <meta name="twitter:image" content="https://notesnest-app.web.app/images/twitter-card.jpg" />
+    <meta name="twitter:image:alt" content="NotesNest App Preview" />
+    <meta name="twitter:creator" content="@lovely_sh_liker" />
+    <meta name="twitter:site" content="@lovely_sh_liker" />
+
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NotesNest" />
+    <meta name="application-name" content="NotesNest" />
+    <meta name="theme-color" content="#2196F3" />
+    <meta name="msapplication-TileColor" content="#2196F3" />
+    <meta name="msapplication-navbutton-color" content="#2196F3" />
+
+    <!-- Favicon - Multiple Sizes for All Devices -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.jpeg" />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png" />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css" />
-      <!-- Google AdSense -->
-      <meta name="google-adsense-account" content="ca-pub-4258152474007475">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258152474007475"
-     crossorigin="anonymous"></script>
+
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-4258152474007475" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258152474007475" crossorigin="anonymous"></script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Send Feedback - NotesNest",
+        "description": "Share your feedback, feature suggestions, or ideas for improvements to help NotesNest evolve and become the best note-taking app.",
+        "url": "https://notesnest-app.web.app/feedback.html",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "NotesNest",
+          "url": "https://notesnest-app.web.app"
+        }
+      }
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC7ZTHWT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
     <header>
       <div class="container header-content">
         <a href="index.html" class="logo">
           <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NoteNest Logo" />
+            <img src="images/logo.jpeg" alt="NotesNest Logo" />
           </span>
           <span class="logo-text">otesNest</span>
         </a>
@@ -50,7 +158,7 @@
 
           <div class="content-block">
             <p>
-              Your feedback drives NoteNest's evolution! Whether you have a
+              Your feedback drives NotesNest's evolution! Whether you have a
               feature suggestion, want to share your experience, or have ideas
               for improvements, we're listening. Every piece of feedback helps
               us build a better productivity app for you.
@@ -62,8 +170,8 @@
             <form id="feedbackForm">
               <!-- Web3Forms Hidden Fields -->
               <input type="hidden" name="access_key" value="c86f13a9-35c2-4847-ac79-2a8b6fc44be3">
-              <input type="hidden" name="subject" value="NoteNest - New Feedback">
-              <input type="hidden" name="from_name" value="NoteNest Feedback">
+              <input type="hidden" name="subject" value="NotesNest - New Feedback">
+              <input type="hidden" name="from_name" value="NotesNest Feedback">
               <input type="checkbox" name="botcheck" style="display: none;">
               <div class="form-group">
                 <label class="form-label" for="feedback-type"
@@ -164,7 +272,7 @@
             </li>
             <li>
               <strong>Evaluation:</strong> We assess feasibility, impact, and
-              alignment with NoteNest's vision
+              alignment with NotesNest's vision
             </li>
             <li>
               <strong>Prioritization:</strong> Popular and impactful suggestions
@@ -280,7 +388,7 @@
               <strong>Note:</strong> While we strive to implement as many
               suggestions as possible, not all feedback can be acted upon
               immediately. Factors like technical feasibility, resource
-              availability, and alignment with NoteNest's core philosophy
+              availability, and alignment with NotesNest's core philosophy
               influence our decisions. We appreciate your understanding and
               patience!
             </p>
@@ -292,7 +400,7 @@
             <li>
               <strong>Email:</strong>
               <span class="highlight">saihemanth225@gmail.com</span> with
-              subject "NoteNest Feedback"
+              subject "NotesNest Feedback"
             </li>
             <li>
               <strong>Play Store Review:</strong> Leave a review on our
@@ -304,14 +412,14 @@
             </li>
             <li>
               <strong>In-App Feedback:</strong> Use the "Send Feedback" option
-              in NoteNest Settings > Support
+              in NotesNest Settings > Support
             </li>
           </ul>
 
           <div class="content-block" style="margin-top: 2rem">
             <h3>Thank You!</h3>
             <p>
-              Your feedback is the foundation of NoteNest's continuous
+              Your feedback is the foundation of NotesNest's continuous
               improvement. Thank you for taking the time to help us build a
               better productivity tool for everyone. We're grateful for users
               like you who care enough to share their thoughts and ideas.
@@ -326,7 +434,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-column">
-            <h3>NoteNest</h3>
+            <h3>NotesNest</h3>
             <p>
               Your complete productivity hub for managing notes, tasks,
               reminders, and goals on Android.
@@ -388,7 +496,7 @@
         </div>
         <div class="copyright">
           <p>
-            &copy; <span id="copyright-year">2025</span> NoteNest - Developed by Thogoruchesti Hemanth. All
+            &copy; <span id="copyright-year">2025</span> NotesNest - Developed by Thogoruchesti Hemanth. All
             rights reserved.
           </p>
         </div>

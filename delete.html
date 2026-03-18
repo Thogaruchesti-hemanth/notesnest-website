@@ -1,90 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TC7ZTHWT');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account Deletion - NoteNest</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .warning-banner {
-        background: #ffebee;
-        border-left: 4px solid #f44336;
-        padding: 1.5rem;
-        margin: 2rem 0;
-        border-radius: 4px;
-      }
-      .warning-banner h3 {
-        color: #c62828;
-        margin-top: 0;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .info-card {
-        background: #f8f9fa;
-        padding: 1.5rem;
-        border-radius: 8px;
-        margin: 1.5rem 0;
-      }
-      .checklist {
-        list-style: none;
-        padding: 0;
-      }
-      .checklist li {
-        padding: 0.75rem 0;
-        padding-left: 2rem;
-        position: relative;
-      }
-      .checklist li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #4caf50;
-        font-weight: bold;
-        font-size: 1.2rem;
-      }
-      .deletion-methods {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
-      }
-      .method-card {
-        background: #fff;
-        border: 2px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 1.5rem;
-        transition: all 0.3s;
-      }
-      .method-card:hover {
-        border-color: #000000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .method-card h3 {
-        color: #f0c03d;
-        margin-top: 0;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
-      <!-- Google AdSense -->
-      <meta name="google-adsense-account" content="ca-pub-4258152474007475">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258152474007475"
-     crossorigin="anonymous"></script>
+    <!-- SEO Meta Tags -->
+    <title>Delete Account - NotesNest</title>
+    <meta name="description" content="Request to delete your NotesNest account and all associated data permanently. We value your privacy and make offboarding simple." />
+    <meta name="keywords" content="note taking app, productivity app, android notes, task manager, reminder app, to-do list, note organizer, encrypted notes, backup notes, android productivity, material design app, free notes app" />
+    <meta name="author" content="Thogaruchesti Hemanth" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="General" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://notesnest-app.web.app/delete.html" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notesnest-app.web.app/delete.html" />
+    <meta property="og:title" content="Delete Account - NotesNest" />
+    <meta property="og:description" content="Request to delete your NotesNest account and all associated data permanently. We value your privacy and make offboarding simple." />
+    <meta property="og:image" content="https://notesnest-app.web.app/images/og-image.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="NotesNest App Preview" />
+    <meta property="og:site_name" content="NotesNest" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- X (Twitter) Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://notesnest-app.web.app/delete.html" />
+    <meta name="twitter:title" content="Delete Account - NotesNest" />
+    <meta name="twitter:description" content="Request to delete your NotesNest account and all associated data permanently. We value your privacy and make offboarding simple." />
+    <meta name="twitter:image" content="https://notesnest-app.web.app/images/twitter-card.jpg" />
+    <meta name="twitter:image:alt" content="NotesNest App Preview" />
+    <meta name="twitter:creator" content="@lovely_sh_liker" />
+    <meta name="twitter:site" content="@lovely_sh_liker" />
+
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NotesNest" />
+    <meta name="application-name" content="NotesNest" />
+    <meta name="theme-color" content="#2196F3" />
+    <meta name="msapplication-TileColor" content="#2196F3" />
+    <meta name="msapplication-navbutton-color" content="#2196F3" />
+
+    <!-- Favicon - Multiple Sizes for All Devices -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.jpeg" />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png" />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-4258152474007475" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258152474007475" crossorigin="anonymous"></script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Delete Account - NotesNest",
+        "description": "Request to delete your NotesNest account and all associated data permanently. We value your privacy and make offboarding simple.",
+        "url": "https://notesnest-app.web.app/delete.html",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "NotesNest",
+          "url": "https://notesnest-app.web.app"
+        }
+      }
+    </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC7ZTHWT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
     <header>
       <div class="container header-content">
         <a href="index.html" class="logo">
           <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NoteNest Logo" />
+            <img src="images/logo.jpeg" alt="NotesNest Logo" />
           </span>
           <span class="logo-text">otesNest</span>
         </a>
@@ -115,7 +159,7 @@
           <div class="content-block">
             <p>
               We're sorry to see you go! This page explains how to permanently
-              delete your NoteNest account and what happens to your data when
+              delete your NotesNest account and what happens to your data when
               you do. We respect your right to control your personal information
               and make the deletion process straightforward and transparent.
             </p>
@@ -138,7 +182,7 @@
 
           <h2>Before You Delete Your Account</h2>
           <p>
-            Before permanently deleting your NoteNest account, please consider
+            Before permanently deleting your NotesNest account, please consider
             the following:
           </p>
 
@@ -164,7 +208,7 @@
                 features (future), cancel any active subscriptions
               </li>
               <li>
-                <strong>Remove Widgets:</strong> Delete NoteNest widgets from
+                <strong>Remove Widgets:</strong> Delete NotesNest widgets from
                 your home screen
               </li>
               <li>
@@ -176,7 +220,7 @@
 
           <h2>What Will Be Deleted</h2>
           <p>
-            When you delete your NoteNest account, the following data will be
+            When you delete your NotesNest account, the following data will be
             permanently removed:
           </p>
           <ul>
@@ -249,12 +293,12 @@
 
           <h2>How to Delete Your Account</h2>
           <p>
-            You have three methods to permanently delete your NoteNest account:
+            You have three methods to permanently delete your NotesNest account:
           </p>
 
           <h3>Method 1: Delete Through the App (Recommended)</h3>
           <ol>
-            <li>Open <strong>NoteNest</strong> on your Android device</li>
+            <li>Open <strong>NotesNest</strong> on your Android device</li>
             <li>
               Tap the <strong>menu icon (☰)</strong> in the top-left corner
             </li>
@@ -292,17 +336,17 @@
                 ><span class="highlight">saihemanth225@gmail.com</span></strong
               >
             </li>
-            <li>Use the email address associated with your NoteNest account</li>
+            <li>Use the email address associated with your NotesNest account</li>
             <li>Subject line: <strong>"Account Deletion Request"</strong></li>
             <li>
               In the email body, include:
               <ul>
-                <li>Your NoteNest account email</li>
+                <li>Your NotesNest account email</li>
                 <li>Your username (if you remember it)</li>
                 <li>Reason for deletion (optional but helpful)</li>
                 <li>
                   Confirmation statement: "I request permanent deletion of my
-                  NoteNest account"
+                  NotesNest account"
                 </li>
               </ul>
             </li>
@@ -327,7 +371,7 @@
 
           <h2>Data Retention Policy</h2>
           <p>
-            After you delete your account, NoteNest follows these data retention
+            After you delete your account, NotesNest follows these data retention
             practices:
           </p>
 
@@ -362,7 +406,7 @@
 
           <h2>What We Do NOT Delete</h2>
           <p>
-            The following items are not controlled by NoteNest and will not be
+            The following items are not controlled by NotesNest and will not be
             automatically deleted:
           </p>
           <ul>
@@ -430,7 +474,7 @@
                 >Once your account is deleted, it cannot be recovered or
                 reactivated.</strong
               >
-              If you want to use NoteNest again after deletion, you will need
+              If you want to use NotesNest again after deletion, you will need
               to:
             </p>
             <ul style="margin-bottom: 0">
@@ -465,7 +509,7 @@
 
           <h2>Feedback Before You Go</h2>
           <p>
-            We're constantly working to improve NoteNest. If you're leaving
+            We're constantly working to improve NotesNest. If you're leaving
             because of an issue or missing feature, we'd love to hear from you:
           </p>
           <ul>
@@ -501,7 +545,7 @@
               <i class="fas fa-heart"></i> We're Sorry to See You Go
             </h3>
             <p style="margin-bottom: 0">
-              Thank you for giving NoteNest a try. We understand that different
+              Thank you for giving NotesNest a try. We understand that different
               apps work for different people. If you ever change your mind, we'd
               be happy to welcome you back. We wish you all the best in your
               productivity journey!
@@ -549,7 +593,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-column">
-            <h3>NoteNest</h3>
+            <h3>NotesNest</h3>
             <p>
               Your complete productivity hub for managing notes, tasks,
               reminders, and goals on Android.
@@ -611,7 +655,7 @@
         </div>
         <div class="copyright">
           <p>
-            &copy; <span id="copyright-year">2025</span> NoteNest - Developed by Thogoruchesti Hemanth. All
+            &copy; <span id="copyright-year">2025</span> NotesNest - Developed by Thogoruchesti Hemanth. All
             rights reserved.
           </p>
         </div>
