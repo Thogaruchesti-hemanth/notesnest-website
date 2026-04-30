@@ -1,65 +1,72 @@
-const fs = require('fs');
+const fs = require("fs");
 
 const files = [
-  'contact.html',
-  'feedback.html',
-  'bug-report.html',
-  'user-guide.html',
-  'terms.html',
-  'privacy.html',
-  'delete.html',
-  '404.html'
+  "public/contact.html",
+  "public/feedback.html",
+  "public/bug-report.html",
+  "public/user-guide.html",
+  "public/terms.html",
+  "public/privacy.html",
+  "public/delete.html",
+  "public/404.html",
 ];
 
 const seoData = {
-  'contact.html': {
-    title: 'Contact Us - NotesNest',
-    description: 'Contact the NotesNest team for support, feature requests, business inquiries, or general questions about our productivity and note-taking app.',
-    url: 'https://notesnest-app.web.app/contact.html',
-    type: 'ContactPage'
+  "contact.html": {
+    title: "Contact Us - NotesNest",
+    description:
+      "Contact the NotesNest team for support, feature requests, business inquiries, or general questions about our productivity and note-taking app.",
+    url: "https://notesnest-app.web.app/contact.html",
+    type: "ContactPage",
   },
-  'feedback.html': {
-    title: 'Send Feedback - NotesNest',
-    description: 'Share your feedback, feature suggestions, or ideas for improvements to help NotesNest evolve and become the best note-taking app.',
-    url: 'https://notesnest-app.web.app/feedback.html',
-    type: 'WebPage'
+  "feedback.html": {
+    title: "Send Feedback - NotesNest",
+    description:
+      "Share your feedback, feature suggestions, or ideas for improvements to help NotesNest evolve and become the best note-taking app.",
+    url: "https://notesnest-app.web.app/feedback.html",
+    type: "WebPage",
   },
-  'bug-report.html': {
-    title: 'Report a Bug - NotesNest',
-    description: 'Found an issue with NotesNest? Report bugs and glitches here to help us improve your note-taking experience.',
-    url: 'https://notesnest-app.web.app/bug-report.html',
-    type: 'WebPage'
+  "bug-report.html": {
+    title: "Report a Bug - NotesNest",
+    description:
+      "Found an issue with NotesNest? Report bugs and glitches here to help us improve your note-taking experience.",
+    url: "https://notesnest-app.web.app/bug-report.html",
+    type: "WebPage",
   },
-  'user-guide.html': {
-    title: 'User Guide & Tutorials - NotesNest',
-    description: 'Comprehensive user guide for NotesNest. Learn how to manage notes, reminders, categories, and maximize your productivity.',
-    url: 'https://notesnest-app.web.app/user-guide.html',
-    type: 'FAQPage'
+  "user-guide.html": {
+    title: "User Guide & Tutorials - NotesNest",
+    description:
+      "Comprehensive user guide for NotesNest. Learn how to manage notes, reminders, categories, and maximize your productivity.",
+    url: "https://notesnest-app.web.app/user-guide.html",
+    type: "FAQPage",
   },
-  'terms.html': {
-    title: 'Terms of Service - NotesNest',
-    description: 'Read the Terms of Service for NotesNest to understand the rules, guidelines, and agreements for using our productivity app.',
-    url: 'https://notesnest-app.web.app/terms.html',
-    type: 'WebPage'
+  "terms.html": {
+    title: "Terms of Service - NotesNest",
+    description:
+      "Read the Terms of Service for NotesNest to understand the rules, guidelines, and agreements for using our productivity app.",
+    url: "https://notesnest-app.web.app/terms.html",
+    type: "WebPage",
   },
-  'privacy.html': {
-    title: 'Privacy Policy - NotesNest',
-    description: 'Learn how NotesNest protects your data. Read our Privacy Policy to understand our secure, privacy-first approach to note-taking.',
-    url: 'https://notesnest-app.web.app/privacy.html',
-    type: 'WebPage'
+  "privacy.html": {
+    title: "Privacy Policy - NotesNest",
+    description:
+      "Learn how NotesNest protects your data. Read our Privacy Policy to understand our secure, privacy-first approach to note-taking.",
+    url: "https://notesnest-app.web.app/privacy.html",
+    type: "WebPage",
   },
-  'delete.html': {
-    title: 'Delete Account - NotesNest',
-    description: 'Request to delete your NotesNest account and all associated data permanently. We value your privacy and make offboarding simple.',
-    url: 'https://notesnest-app.web.app/delete.html',
-    type: 'WebPage'
+  "delete.html": {
+    title: "Delete Account - NotesNest",
+    description:
+      "Request to delete your NotesNest account and all associated data permanently. We value your privacy and make offboarding simple.",
+    url: "https://notesnest-app.web.app/delete.html",
+    type: "WebPage",
   },
-  '404.html': {
-    title: 'Page Not Found - NotesNest',
-    description: 'The page you are looking for cannot be found.',
-    url: 'https://notesnest-app.web.app/404.html',
-    type: 'WebPage'
-  }
+  "404.html": {
+    title: "Page Not Found - NotesNest",
+    description: "The page you are looking for cannot be found.",
+    url: "https://notesnest-app.web.app/404.html",
+    type: "WebPage",
+  },
 };
 
 const buildHead = (data) => `  <head>
@@ -72,8 +79,8 @@ const buildHead = (data) => `  <head>
     <meta name="description" content="${data.description}" />
     <meta name="keywords" content="note taking app, productivity app, android notes, task manager, reminder app, to-do list, note organizer, encrypted notes, backup notes, android productivity, material design app, free notes app" />
     <meta name="author" content="Thogaruchesti Hemanth" />
-    <meta name="robots" content="${data.url.includes('404') ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}" />
-    <meta name="googlebot" content="${data.url.includes('404') ? 'noindex, nofollow' : 'index, follow'}" />
+    <meta name="robots" content="${data.url.includes("404") ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}" />
+    <meta name="googlebot" content="${data.url.includes("404") ? "noindex, nofollow" : "index, follow"}" />
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
     <meta name="rating" content="General" />
@@ -174,17 +181,18 @@ const buildHead = (data) => `  <head>
     </script>
   </head>`;
 
-files.forEach(f => {
-  let content = fs.readFileSync(f, 'utf8');
-  let headStart = content.indexOf('<head>');
-  let headEnd = content.indexOf('</head>') + 7;
-  
+files.forEach((f) => {
+  let content = fs.readFileSync(f, "utf8");
+  let headStart = content.indexOf("<head>");
+  let headEnd = content.indexOf("</head>") + 7;
+
   if (headStart !== -1 && headEnd !== -1 && headStart < headEnd) {
     let newHead = buildHead(seoData[f]);
-    let newContent = content.substring(0, headStart) + newHead + content.substring(headEnd);
+    let newContent =
+      content.substring(0, headStart) + newHead + content.substring(headEnd);
     fs.writeFileSync(f, newContent);
-    console.log('Updated ' + f);
+    console.log("Updated " + f);
   } else {
-    console.log('Could not find head in ' + f);
+    console.log("Could not find head in " + f);
   }
 });

@@ -1,5 +1,5 @@
 /* Google Font - Inter (Premium, modern typeface) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -21,7 +21,15 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    sans-serif;
 }
 
 body {
@@ -125,6 +133,19 @@ nav ul li a.active:after {
   color: var(--background);
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Header CTA Button */
+.header-cta {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+  margin-left: 1.5rem;
+  border: 1px solid var(--primary);
 }
 
 /* Hero Section */
@@ -694,6 +715,21 @@ footer {
   border-left-color: #ff9800;
 }
 
+/* 404 Page Styles */
+.error-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+.error-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.error-code {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--primary);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .mobile-menu-btn {
@@ -702,9 +738,9 @@ footer {
 
   nav {
     position: fixed;
-    top: 64px;
+    top: 68px; /* Adjusted for header padding */
     left: -100%;
-    width: 100%;
+    width: 80%;
     height: calc(100vh - 64px);
     background-color: var(--secondary);
     transition: left 0.3s;
@@ -721,6 +757,10 @@ footer {
 
   nav ul li {
     margin: 1rem 0;
+  }
+
+  .header-cta {
+    display: none; /* Hide header CTA on mobile nav */
   }
 
   .hero h1 {
@@ -933,6 +973,52 @@ footer {
   }
 }
 
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Press Kit Styles */
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.asset-card {
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.asset-card img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
 
 /* Logo image constraints */
 .logo-icon img {

@@ -6,14 +6,14 @@
 
 **Official website and documentation for NoteNest - Your Complete Productivity Hub**
 
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fyour-website-url.com)](https://your-website-url.com)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fnotesnest-app.web.app)](https://notesnest-app.web.app)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Play Store](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.hemanth.NotesNest)
 
-[View Demo](https://your-website-url.com) · [Report Bug](https://github.com/yourusername/notesnest-website/issues) · [Request Feature](https://github.com/yourusername/notesnest-website/issues)
+[View Demo](https://notesnest-app.web.app) · [Report Bug](https://github.com/Thogaruchesti-hemanth/notesnest-website/issues) · [Request Feature](https://github.com/Thogaruchesti-hemanth/notesnest-website/issues)
 
 </div>
 

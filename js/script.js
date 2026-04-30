@@ -138,61 +138,57 @@ document.addEventListener("DOMContentLoaded", function () {
     return { close: closeToast, overlay };
   }
 
+  // Generic Web3Form Handler to reduce code duplication
+  async function handleWeb3Form(form, successTitle, successMessage) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Submitting...";
+    submitBtn.disabled = true;
+
+    const loadingToast = showToast(
+      "loading",
+      "Sending...",
+      "Please wait...",
+      0,
+    );
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(form),
+      });
+      const data = await response.json();
+      loadingToast.close();
+
+      if (data.success) {
+        showToast("success", successTitle, successMessage);
+        form.reset();
+      } else {
+        throw new Error("Submission failed");
+      }
+    } catch (error) {
+      loadingToast.close();
+      showToast(
+        "error",
+        "Submission Failed",
+        'Something went wrong. Please try again or email us directly at <a href="mailto:saihemanth225@gmail.com" style="color: var(--primary); font-weight: 600;">saihemanth225@gmail.com</a>',
+      );
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  }
+
   // Bug Report Form Submission (Web3Forms)
   const bugReportForm = document.getElementById("bugReportForm");
   if (bugReportForm) {
     bugReportForm.addEventListener("submit", async function (e) {
       e.preventDefault();
-
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = "Submitting...";
-      submitBtn.disabled = true;
-
-      // Show loading toast
-      const loadingToast = showToast(
-        "loading",
-        "Sending...",
-        "Please wait while we submit your bug report.",
-        0,
+      handleWeb3Form(
+        this,
+        "Bug Report Sent!",
+        "Thank you for reporting this issue. Our team will investigate and get back to you within 24-48 hours.",
       );
-
-      const formData = new FormData(this);
-
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData,
-        });
-
-        const data = await response.json();
-        loadingToast.close();
-
-        if (data.success) {
-          showToast(
-            "success",
-            "Bug Report Sent!",
-            "Thank you for reporting this issue. Our team will investigate and get back to you within 24-48 hours.",
-          );
-          this.reset();
-        } else {
-          showToast(
-            "error",
-            "Submission Failed",
-            'Something went wrong. Please try again or email us directly at <a href="mailto:saihemanth225@gmail.com" style="color: var(--primary); font-weight: 600;">saihemanth225@gmail.com</a>',
-          );
-        }
-      } catch (error) {
-        loadingToast.close();
-        showToast(
-          "error",
-          "Connection Error",
-          'Please check your internet connection and try again, or email us at <a href="mailto:saihemanth225@gmail.com" style="color: var(--primary); font-weight: 600;">saihemanth225@gmail.com</a>',
-        );
-      } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
     });
   }
 
@@ -201,56 +197,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (feedbackForm) {
     feedbackForm.addEventListener("submit", async function (e) {
       e.preventDefault();
-
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = "Submitting...";
-      submitBtn.disabled = true;
-
-      // Show loading toast
-      const loadingToast = showToast(
-        "loading",
-        "Sending...",
-        "Please wait while we submit your feedback.",
-        0,
+      handleWeb3Form(
+        this,
+        "Feedback Received!",
+        "Thank you for taking the time to share your thoughts. Your feedback helps us make NotesNest even better!",
       );
-
-      const formData = new FormData(this);
-
-      try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData,
-        });
-
-        const data = await response.json();
-        loadingToast.close();
-
-        if (data.success) {
-          showToast(
-            "success",
-            "Feedback Received!",
-            "Thank you for taking the time to share your thoughts. Your feedback helps us make NotesNest even better!",
-          );
-          this.reset();
-        } else {
-          showToast(
-            "error",
-            "Submission Failed",
-            'Something went wrong. Please try again or email us directly at <a href="mailto:saihemanth225@gmail.com" style="color: var(--primary); font-weight: 600;">saihemanth225@gmail.com</a>',
-          );
-        }
-      } catch (error) {
-        loadingToast.close();
-        showToast(
-          "error",
-          "Connection Error",
-          'Please check your internet connection and try again, or email us at <a href="mailto:saihemanth225@gmail.com" style="color: var(--primary); font-weight: 600;">saihemanth225@gmail.com</a>',
-        );
-      } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
     });
   }
 
@@ -263,4 +214,23 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("active");
     }
   });
+
+  // Back to Top Button
+  const backToTopButton = document.querySelector(".back-to-top");
+  if (backToTopButton) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add("visible");
+      } else {
+        backToTopButton.classList.remove("visible");
+      }
+    });
+
+    backToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 });
