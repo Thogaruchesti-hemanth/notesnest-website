@@ -1,14 +1,14 @@
 const fs = require("fs");
 
 const files = [
-  "public/contact.html",
-  "public/feedback.html",
-  "public/bug-report.html",
-  "public/user-guide.html",
-  "public/terms.html",
-  "public/privacy.html",
-  "public/delete.html",
-  "public/404.html",
+  "contact.html",
+  "feedback.html",
+  "bug-report.html",
+  "user-guide.html",
+  "terms.html",
+  "privacy.html",
+  "delete.html",
+  "404.html",
 ];
 
 const seoData = {
@@ -79,8 +79,8 @@ const buildHead = (data) => `  <head>
     <meta name="description" content="${data.description}" />
     <meta name="keywords" content="note taking app, productivity app, android notes, task manager, reminder app, to-do list, note organizer, encrypted notes, backup notes, android productivity, material design app, free notes app" />
     <meta name="author" content="Thogaruchesti Hemanth" />
-    <meta name="robots" content="${data.url.includes("404") ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}" />
-    <meta name="googlebot" content="${data.url.includes("404") ? "noindex, nofollow" : "index, follow"}" />
+    <meta name="robots" content="${data.url.includes("404") || data.url.includes("delete") || data.url.includes("feedback") || data.url.includes("bug-report") ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}" />
+    <meta name="googlebot" content="${data.url.includes("404") || data.url.includes("delete") || data.url.includes("feedback") || data.url.includes("bug-report") ? "noindex, follow" : "index, follow"}" />
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
     <meta name="rating" content="General" />
