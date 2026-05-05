@@ -9,6 +9,9 @@ const files = [
   "privacy.html",
   "delete.html",
   "404.html",
+  "blog.html",
+  "article-productivity-tips.html",
+  "article-secure-notes.html",
 ];
 
 const seoData = {
@@ -66,6 +69,24 @@ const seoData = {
     description: "The page you are looking for cannot be found.",
     url: "https://notesnest-app.web.app/404.html",
     type: "WebPage",
+  },
+  "blog.html": {
+    title: "Blog & Resources - NotesNest",
+    description: "Read our latest articles on productivity, note-taking strategies, and mobile security for Android users.",
+    url: "https://notesnest-app.web.app/blog.html",
+    type: "Blog",
+  },
+  "article-productivity-tips.html": {
+    title: "Top 5 Productivity Tips for Android Users in 2026 - NotesNest",
+    description: "Discover the best strategies to transform your Android device into a powerhouse of productivity using apps like NotesNest.",
+    url: "https://notesnest-app.web.app/article-productivity-tips.html",
+    type: "BlogPosting",
+  },
+  "article-secure-notes.html": {
+    title: "Why Encrypted Notes Are Essential for Mobile Security - NotesNest",
+    description: "Understand the risks of plain-text note apps and why local encryption matters for your mobile privacy.",
+    url: "https://notesnest-app.web.app/article-secure-notes.html",
+    type: "BlogPosting",
   },
 };
 
