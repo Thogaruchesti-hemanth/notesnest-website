@@ -98,7 +98,7 @@ const buildHead = (data) => `  <head>
     <!-- SEO Meta Tags -->
     <title>${data.title}</title>
     <meta name="description" content="${data.description}" />
-    <meta name="keywords" content="note taking app, productivity app, android notes, task manager, reminder app, to-do list, note organizer, encrypted notes, backup notes, android productivity, material design app, free notes app" />
+    <meta name="keywords" content="secure encrypted notes app for android, free ad-free task manager, best android productivity tools 2026, offline sqlite note backup, to-do list with reminders, private note organizer android, secure cloud sync notes" />
     <meta name="author" content="Thogaruchesti Hemanth" />
     <meta name="robots" content="${data.url.includes("404") || data.url.includes("delete") || data.url.includes("feedback") || data.url.includes("bug-report") ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}" />
     <meta name="googlebot" content="${data.url.includes("404") || data.url.includes("delete") || data.url.includes("feedback") || data.url.includes("bug-report") ? "noindex, follow" : "index, follow"}" />
