@@ -78,6 +78,27 @@
     <meta name="google-adsense-account" content="ca-pub-4258152474007475" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258152474007475" crossorigin="anonymous"></script>
 
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://notesnest-app.web.app/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://notesnest-app.web.app/blog.html"
+          }
+        ]
+      }
+    </script>
     <!-- WebPage Schema -->
     <script type="application/ld+json">
       {
@@ -104,10 +125,7 @@
     <header>
       <div class="container header-content">
         <a href="index.html" class="logo">
-          <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NotesNest Logo" />
-          </span>
-          <span class="logo-text">otesNest</span>
+          <span class="logo-text">NotesNest</span>
         </a>
         <button class="mobile-menu-btn" id="menu-toggle">
           <i class="fas fa-bars"></i>
@@ -118,11 +136,6 @@
             <li><a href="user-guide.html">User Guide</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="bug-report.html">Report Bug</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="delete.html">Delete Account</a></li>
           </ul>
         </nav>
       </div>
@@ -132,111 +145,228 @@
     <main>
       <section class="page-content">
         <div class="container">
-          <h1><i class="fas fa-blog"></i> NotesNest Blog & Resources</h1>
-          <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
-            Read our latest articles on productivity, note-taking strategies, and mobile security.
-          </p>
+          <!-- Centered Blog Hero Section -->
+          <div class="blog-hero">
+            <span class="hero-badge">RESOURCES & INSIGHTS</span>
+            <h1 class="blog-title">NotesNest Blog <span class="title-ampersand">&</span> Resources</h1>
+            <p class="blog-subtitle">
+              Deep dives into high-performance note-taking, Android-first productivity workflows, and advanced digital organization techniques.
+            </p>
+          </div>
 
-          <div class="feature-grid" style="grid-template-columns: 1fr;">
-            <!-- Article 1 -->
-            <div class="feature-box" style="text-align: left; padding: 2rem;">
-              <h2 style="margin-top: 0;"><a href="article-productivity-tips.html" style="color: #2196F3; text-decoration: none;">Top 5 Productivity Tips for Android Users in 2026</a></h2>
-              <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;"><i class="fas fa-calendar-alt"></i> January 15, 2026 | <i class="fas fa-user"></i> Editorial Team</p>
-              <p>
-                Discover the best strategies to transform your Android device into a powerhouse of productivity. From leveraging widgets to mastering to-do lists, learn how you can reclaim your time and get more done every single day.
+          <!-- Featured Article Card -->
+          <div class="featured-card">
+            <div class="featured-image-col">
+              <span class="featured-badge">FEATURED ARTICLE</span>
+              <img src="images/blog_featured_tablet.png" alt="Mastering Dynamic Widgets Tablet Showcase" />
+            </div>
+            <div class="featured-content-col">
+              <div class="featured-meta">
+                <span class="meta-item"><i class="far fa-calendar-alt"></i> Jan 24, 2026</span>
+                <span class="meta-separator">•</span>
+                <span class="meta-item"><i class="far fa-user"></i> Editorial Team</span>
+              </div>
+              <h2 class="featured-title">Mastering Dynamic Widgets: The Ultimate Productivity Hack for Android in 2026</h2>
+              <p class="featured-excerpt">
+                Learn how to leverage the new dynamic interaction engine in NotesNest to create a personalized dashboard that lives on your home screen. Optimize your daily workflow.
               </p>
-              <a href="article-productivity-tips.html" class="cta-button" style="padding: 0.5rem 1rem; font-size: 1rem; margin-top: 1rem; display: inline-block;">Read Article</a>
+              <a href="article-productivity-tips.html" class="featured-cta">READ FULL CASE STUDY <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- Recent Insights Header and Filters -->
+          <div class="insights-header-wrapper">
+            <div class="insights-title-block">
+              <h2 class="insights-section-title">Recent Insights</h2>
+              <p class="insights-subtitle">Explore our latest thoughts on digital organization.</p>
+            </div>
+            <div class="insights-filter-tags">
+              <button class="filter-tag active" data-filter="all">All</button>
+              <button class="filter-tag" data-filter="productivity">Productivity</button>
+              <button class="filter-tag" data-filter="security">Security</button>
+              <button class="filter-tag" data-filter="updates">Updates</button>
+            </div>
+          </div>
+
+          <!-- Blog Posts Card Grid -->
+          <div class="blog-cards-grid">
+            
+            <!-- Card 1 (Security) -->
+            <div class="blog-post-card" data-category="security">
+              <div class="card-image-wrapper">
+                <img src="images/blog_post_security.png" alt="Why Encrypted Notes Are Essential" />
+              </div>
+              <div class="card-body">
+                <div class="card-badge-row">
+                  <span class="card-category-badge">Security</span>
+                  <span class="card-read-time">10 min read</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="article-secure-notes.html">Why Encrypted Notes Are Essential for Mobile Security</a>
+                </h3>
+                <p class="card-excerpt">
+                  In an era of frequent data breaches, keeping your personal thoughts and sensitive data secure is more important than ever. Understand the risks...
+                </p>
+                <div class="card-footer">
+                  <div class="author-block">
+                    <div class="author-avatar avatar-security">JD</div>
+                    <div class="author-info">
+                      <span class="author-name">Security Team</span>
+                      <span class="post-date">Jan 10, 2026</span>
+                    </div>
+                  </div>
+                  <a href="article-secure-notes.html" class="card-link-icon" aria-label="Read Article"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
             </div>
 
-            <!-- Article 2 -->
-            <div class="feature-box" style="text-align: left; padding: 2rem;">
-              <h2 style="margin-top: 0;"><a href="article-secure-notes.html" style="color: #2196F3; text-decoration: none;">Why Encrypted Notes Are Essential for Mobile Security</a></h2>
-              <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;"><i class="fas fa-calendar-alt"></i> January 10, 2026 | <i class="fas fa-user"></i> Security Team</p>
-              <p>
-                In an era of frequent data breaches and privacy concerns, keeping your personal thoughts and sensitive data secure is more important than ever. Understand the risks of plain-text note apps and why local encryption matters.
-              </p>
-              <a href="article-secure-notes.html" class="cta-button" style="padding: 0.5rem 1rem; font-size: 1rem; margin-top: 1rem; display: inline-block;">Read Article</a>
+            <!-- Card 2 (Productivity) -->
+            <div class="blog-post-card" data-category="productivity">
+              <div class="card-image-wrapper">
+                <img src="images/blog_post_productivity.png" alt="Top 5 Productivity Tips" />
+              </div>
+              <div class="card-body">
+                <div class="card-badge-row">
+                  <span class="card-category-badge">Productivity</span>
+                  <span class="card-read-time">8 min read</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="article-productivity-tips.html">Top 5 Productivity Tips for Android Users in 2026</a>
+                </h3>
+                <p class="card-excerpt">
+                  Discover the best strategies to transform your device into a powerhouse of productivity. From widgets to organization, learn how you can reclaim...
+                </p>
+                <div class="card-footer">
+                  <div class="author-block">
+                    <div class="author-avatar avatar-productivity">AS</div>
+                    <div class="author-info">
+                      <span class="author-name">Anna Smith</span>
+                      <span class="post-date">Jan 15, 2026</span>
+                    </div>
+                  </div>
+                  <a href="article-productivity-tips.html" class="card-link-icon" aria-label="Read Article"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
             </div>
+
+            <!-- Card 3 (Updates) -->
+            <div class="blog-post-card" data-category="updates">
+              <div class="card-image-wrapper">
+                <img src="images/blog_post_updates.png" alt="NotesNest v4.2 Update" />
+              </div>
+              <div class="card-body">
+                <div class="card-badge-row">
+                  <span class="card-category-badge">Updates</span>
+                  <span class="card-read-time">5 min read</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="#">NotesNest v4.2: Better Sync, Faster Indexing</a>
+                </h3>
+                <p class="card-excerpt">
+                  Our latest update brings significant performance improvements to search and cloud synchronization across all your Android devices and backup modules...
+                </p>
+                <div class="card-footer">
+                  <div class="author-block">
+                    <div class="author-avatar avatar-updates">NN</div>
+                    <div class="author-info">
+                      <span class="author-name">Product Team</span>
+                      <span class="post-date">Feb 01, 2026</span>
+                    </div>
+                  </div>
+                  <a href="#" class="card-link-icon" aria-label="Read Article"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Load More Section -->
+          <div class="load-more-wrapper">
+            <button class="load-more-btn">
+              LOAD MORE ARTICLES <i class="fas fa-chevron-down"></i>
+            </button>
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>NotesNest</h3>
+        <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container footer-grid">
+          <div class="footer-col brand-col">
+            <h2>NotesNest</h2>
             <p>
-              Your complete productivity hub for managing notes, tasks,
-              reminders, and goals on Android.
+              The most focused note-taking experience for the Android ecosystem.
+              Built for performance, designed for privacy.
             </p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/Lovelyshliker08" aria-label="Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="https://x.com/lovely_sh_liker" aria-label="X (formerly Twitter)"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-              <a href="https://www.instagram.com/indian_mobile_developer" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/thogaruchesti-hemanth/" aria-label="LinkedIn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
           </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
+          <div class="footer-col">
+            <h3>PRODUCT</h3>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="user-guide.html">User Guide</a></li>
               <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>SUPPORT</h3>
+            <ul>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="feedback.html">Feedback</a></li>
               <li><a href="bug-report.html">Report Bug</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>LEGAL</h3>
+            <ul>
               <li><a href="privacy.html">Privacy Policy</a></li>
               <li><a href="terms.html">Terms of Service</a></li>
               <li><a href="delete.html">Delete Account</a></li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h3>Download</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
-                  >Google Play Store</a
-                >
-              </li>
-              <li><a href="#">Version 3.0.5 (Latest)</a></li>
-            </ul>
-            <h3 style="margin-top: 1.5rem">Resources</h3>
-            <ul>
-              <li><a href="index.html#features">Features</a></li>
-              <li><a href="index.html#faq">FAQs</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Support</h3>
-            <ul>
-              <li><a href="contact.html">Help Center</a></li>
-              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-              <li><a href="bug-report.html">Report a Bug</a></li>
-              <li><a href="feedback.html">Feature Requests</a></li>
-            </ul>
-          </div>
         </div>
-        <div class="copyright">
-          <p>
-            &copy; <span id="copyright-year">2026</span> NotesNest - Developed by Thogoruchesti Hemanth. All
-            rights reserved.
-          </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+          <div class="footer-bottom-logo">
+            <span>NotesNest</span>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; <span id="copyright-year">2026</span> NotesNest. Designed with precision for Android users.</p>
+          </div>
+          <div class="footer-social-icons">
+            <a href="https://github.com/Thogaruchesti-hemanth" aria-label="Developer Profile" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" aria-label="Download App" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i></a>
+            <a href="https://thogaruchesti-hemanth.web.app/" aria-label="Developer Portfolio" target="_blank" rel="noopener noreferrer"><i class="fas fa-user"></i></a>
+          </div>
         </div>
       </div>
     </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterTags = document.querySelectorAll(".filter-tag");
+        const blogCards = document.querySelectorAll(".blog-post-card");
+
+        filterTags.forEach((tag) => {
+          tag.addEventListener("click", function () {
+            filterTags.forEach((t) => t.classList.remove("active"));
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+            blogCards.forEach((card) => {
+              if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
+                card.style.display = "";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

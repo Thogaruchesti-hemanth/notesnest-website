@@ -94,6 +94,28 @@
         }
       }
     </script>
+  
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://notesnest-app.web.app/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Feedback",
+            "item": "https://notesnest-app.web.app/feedback.html"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -104,10 +126,7 @@
     <header>
       <div class="container header-content">
         <a href="index.html" class="logo">
-          <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NotesNest Logo" />
-          </span>
-          <span class="logo-text">otesNest</span>
+          <span class="logo-text">NotesNest</span>
         </a>
         <button class="mobile-menu-btn" id="menu-toggle">
           <i class="fas fa-bars"></i>
@@ -118,11 +137,6 @@
             <li><a href="user-guide.html">User Guide</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="feedback.html" class="active">Feedback</a></li>
-            <li><a href="bug-report.html">Report Bug</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="delete.html">Delete Account</a></li>
           </ul>
         </nav>
       </div>
@@ -130,20 +144,16 @@
 
     <!-- Main Content -->
     <main>
-      <section class="page-content">
-        <div class="container">
-          <h1>Share Your Feedback</h1>
-
-          <div class="content-block">
-            <p>
-              Your feedback drives NotesNest's evolution! Whether you have a
-              feature suggestion, want to share your experience, or have ideas
-              for improvements, we're listening. Every piece of feedback helps
-              us build a better productivity app for you.
-            </p>
+      <section class="page-content feedback-page-section">
+        <div class="container feedback-container">
+          <div class="feedback-hero">
+            <h1 class="feedback-title">Share Your Feedback</h1>
+            <div class="feedback-note-box">
+              Your feedback drives NotesNest's evolution! Whether you have a feature suggestion, want to share your experience, or have ideas for improvements, we're listening. Every piece of feedback helps us build a better productivity app for you.
+            </div>
           </div>
 
-          <div class="form-container">
+          <div class="feedback-form-card">
             <div id="feedback-message" class="form-message"></div>
             <form id="feedbackForm">
               <!-- Web3Forms Hidden Fields -->
@@ -151,333 +161,379 @@
               <input type="hidden" name="subject" value="NotesNest - New Feedback">
               <input type="hidden" name="from_name" value="NotesNest Feedback">
               <input type="checkbox" name="botcheck" style="display: none;">
-              <div class="form-group">
-                <label class="form-label" for="feedback-type"
-                  >Feedback Type *</label
-                >
-                <select class="select-control" id="feedback-type" name="Feedback Type" required>
-                  <option value="">Select feedback type</option>
-                  <option value="feature-request">Feature Request</option>
-                  <option value="improvement">Improvement Suggestion</option>
-                  <option value="compliment">
-                    Compliment / Positive Feedback
-                  </option>
-                  <option value="ui-ux">UI/UX Feedback</option>
-                  <option value="performance">Performance Related</option>
-                  <option value="general">General Feedback</option>
-                </select>
+              
+              <!-- Row 1: Feedback Type & Subject -->
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label class="form-label" for="feedback-type">Feedback Type *</label>
+                  <div class="select-wrapper">
+                    <select class="select-control" id="feedback-type" name="Feedback Type" required>
+                      <option value="">Select feedback type</option>
+                      <option value="feature-request">Feature Request</option>
+                      <option value="improvement">Improvement Suggestion</option>
+                      <option value="compliment">Compliment / Positive Feedback</option>
+                      <option value="ui-ux">UI/UX Feedback</option>
+                      <option value="performance">Performance Related</option>
+                      <option value="general">General Feedback</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="feedback-title">Subject *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="feedback-title"
+                    name="Subject"
+                    required
+                    placeholder="Brief summary of your feedback"
+                  />
+                </div>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="feedback-title">Subject *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="feedback-title"
-                  name="Subject"
-                  required
-                  placeholder="Brief summary of your feedback"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="feedback-description"
-                  >Your Feedback *</label
-                >
+              <!-- Row 2: Your Feedback -->
+              <div class="form-group full-width">
+                <label class="form-label" for="feedback-description">Your Feedback *</label>
                 <textarea
                   class="form-control"
                   id="feedback-description"
                   name="Feedback Details"
                   required
-                  placeholder="Please share your thoughts, suggestions, or ideas in detail. The more specific you are, the better we can understand and act on your feedback."
+                  placeholder="Please share your thoughts, suggestions, or ideas in detail. The more specific you are, the better we can understand and action your feedback."
                   rows="6"
                 ></textarea>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="feedback-app-version"
-                  >App Version (optional)</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="feedback-app-version"
-                  name="App Version"
-                  placeholder="e.g., 3.0.5 (found in Settings > About)"
-                />
+              <!-- Row 3: App Version & Your Email -->
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label class="form-label" for="feedback-app-version">App Version (optional)</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="feedback-app-version"
+                    name="App Version"
+                    placeholder="e.g., 3.0.5 (found in Settings > About)"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="feedback-email">Your Email *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="feedback-email"
+                    name="Email"
+                    required
+                    placeholder="We may contact you for clarification or updates"
+                  />
+                </div>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="feedback-email"
-                  >Your Email *</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="feedback-email"
-                  name="Email"
-                  required
-                  placeholder="We may contact you for clarification or updates"
-                />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label">Contact Preferences</label>
-                <div class="checkbox-group">
+              <!-- Row 4: Contact Preferences -->
+              <div class="form-group checkbox-form-group">
+                <label class="form-label checkbox-section-label">Contact Preferences</label>
+                <div class="checkbox-wrapper-row">
                   <input
                     type="checkbox"
                     id="contact-permission"
                     name="contact-permission"
                     checked
                   />
-                  <label for="contact-permission"
-                    >Yes, you may contact me about this feedback or to notify me
-                    when it's implemented</label
+                  <label for="contact-permission" class="checkbox-label-text"
+                    >Yes, you may contact me about this feedback or to notify me when it's implemented</label
                   >
                 </div>
               </div>
 
-              <button type="submit" class="cta-button">Submit Feedback</button>
+              <!-- Row 5: Submit button -->
+              <div class="submit-container">
+                <button type="submit" class="submit-feedback-btn">Submit Feedback</button>
+              </div>
             </form>
           </div>
 
-          <h2>How We Use Your Feedback</h2>
-          <p>Every piece of feedback is valuable to us. Here's our process:</p>
-          <ol>
-            <li>
-              <strong>Review:</strong> We read and categorize all feedback
-              within 24-48 hours
-            </li>
-            <li>
-              <strong>Evaluation:</strong> We assess feasibility, impact, and
-              alignment with NotesNest's vision
-            </li>
-            <li>
-              <strong>Prioritization:</strong> Popular and impactful suggestions
-              are added to our development roadmap
-            </li>
-            <li>
-              <strong>Implementation:</strong> Selected features are developed
-              and released in future updates
-            </li>
-            <li>
-              <strong>Communication:</strong> We notify you when your suggestion
-              is implemented (if you opted in)
-            </li>
-          </ol>
+          <!-- Bottom 2x2 Grid of Cards -->
+          <div class="feedback-info-grid">
+            
+            <!-- Card 1: How We Use Your Feedback (Slate Card) -->
+            <div class="info-card slate-card">
+              <h2 class="info-card-title">How We Use Your Feedback</h2>
+              <p class="info-card-subtitle">Every piece of feedback is valuable to us. Here's our process:</p>
+              
+              <ul class="process-list">
+                <li class="process-item">
+                  <span class="process-number">1</span>
+                  <div class="process-content">
+                    <strong class="process-title">Review</strong>
+                    <p class="process-desc">We read and categorize all feedback within 24-48 hours</p>
+                  </div>
+                </li>
+                <li class="process-item">
+                  <span class="process-number">2</span>
+                  <div class="process-content">
+                    <strong class="process-title">Evaluation</strong>
+                    <p class="process-desc">We assess feasibility, impact, and alignment with NotesNest's vision</p>
+                  </div>
+                </li>
+                <li class="process-item">
+                  <span class="process-number">3</span>
+                  <div class="process-content">
+                    <strong class="process-title">Prioritization</strong>
+                    <p class="process-desc">Popular and impactful suggestions are added to our development roadmap</p>
+                  </div>
+                </li>
+                <li class="process-item">
+                  <span class="process-number">4</span>
+                  <div class="process-content">
+                    <strong class="process-title">Implementation</strong>
+                    <p class="process-desc">Selected features are developed and released in future updates</p>
+                  </div>
+                </li>
+                <li class="process-item">
+                  <span class="process-number">5</span>
+                  <div class="process-content">
+                    <strong class="process-title">Communication</strong>
+                    <p class="process-desc">We notify you when your suggestion is implemented (if you opted in)</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-          <div
-            class="content-block"
-            style="
-              background: #f0f8ff;
-              padding: 1.5rem;
-              border-radius: 8px;
-              margin: 2rem 0;
-            "
-          >
-            <h3 style="margin-top: 0; color: #1976d2">
-              Recent Features from User Feedback
-            </h3>
-            <ul style="margin-bottom: 0">
-              <li>
-                <strong>Home Screen Widgets:</strong> Added in v3.0.0 - Highly
-                requested for quick note access
-              </li>
-              <li>
-                <strong>Export Options (PDF, Text, Image):</strong> Implemented
-                in v3.0.0 based on user needs
-              </li>
-              <li>
-                <strong>Backup & Restore:</strong> Local and cloud backup added
-                in v3.0.0 after multiple requests
-              </li>
-              <li>
-                <strong>Dark/Light Theme Toggle:</strong> Enhanced in v2.0.0
-                with smooth transitions
-              </li>
-              <li>
-                <strong>Categories & Tags System:</strong> Introduced in v2.0.0
-                for better organization
-              </li>
-              <li>
-                <strong>Google Sign-In:</strong> Added in v2.0.0 for easier
-                authentication
-              </li>
-              <li>
-                <strong>Drag & Drop Reordering:</strong> Implemented in v2.0.0
-                for note organization
-              </li>
-              <li>
-                <strong>Forget Password Feature:</strong> Added in v2.0.0 for
-                user convenience
-              </li>
-            </ul>
+            <!-- Card 2: Recent Features from User Feedback (Cream Card) -->
+            <div class="info-card cream-card">
+              <h2 class="info-card-title">Recent Features from User Feedback</h2>
+              
+              <ul class="feature-star-list">
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Home Screen Widgets:</strong> Added in v3.0.0 - Highly requested for quick note access
+                  </div>
+                </li>
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Export Options (PDF, Text, Image):</strong> Implemented in v3.0.0 based on user needs
+                  </div>
+                </li>
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Backup & Restore:</strong> Local and cloud backup added in v3.0.0 after multiple requests
+                  </div>
+                </li>
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Dark/Light Theme Toggle:</strong> Enhanced in v2.0.0 with smooth transitions
+                  </div>
+                </li>
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Categories & Tags System:</strong> Introduced in v2.0.0 for better organization
+                  </div>
+                </li>
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Google Sign-In:</strong> Added in v2.0.0 for easier authentication
+                  </div>
+                </li>
+                <li class="feature-star-item">
+                  <i class="fa-regular fa-star star-icon"></i>
+                  <div class="feature-star-content">
+                    <strong>Drag & Drop Reordering:</strong> Implemented in v2.0.0 for note organization
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Card 3: Feature Request Guidelines (White Card) -->
+            <div class="info-card white-border-card">
+              <h2 class="info-card-title">Feature Request Guidelines</h2>
+              <p class="info-card-subtitle italic-desc">To help us understand and evaluate your feature requests better, please consider including:</p>
+              
+              <ul class="guidelines-list">
+                <li class="guideline-item">
+                  <i class="fa-regular fa-circle-question guideline-icon"></i>
+                  <div class="guideline-content">
+                    <strong>Use Case</strong>
+                    <p class="guideline-desc">Describe the problem or need this feature would solve</p>
+                  </div>
+                </li>
+                <li class="guideline-item">
+                  <i class="fa-solid fa-link guideline-icon"></i>
+                  <div class="guideline-content">
+                    <strong>Expected Behavior</strong>
+                    <p class="guideline-desc">How should the feature work?</p>
+                  </div>
+                </li>
+                <li class="guideline-item">
+                  <i class="fa-regular fa-user guideline-icon"></i>
+                  <div class="guideline-content">
+                    <strong>User Benefit</strong>
+                    <p class="guideline-desc">Who would benefit and how?</p>
+                  </div>
+                </li>
+                <li class="guideline-item">
+                  <i class="fa-solid fa-exclamation guideline-icon" style="padding-left: 0.2rem;"></i>
+                  <div class="guideline-content" style="padding-left: 0.2rem;">
+                    <strong>Priority</strong>
+                    <p class="guideline-desc">How important is this feature to your workflow?</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Card 4: What We're Currently Working On (Charcoal Card) -->
+            <div class="info-card charcoal-card">
+              <h2 class="info-card-title">What We're Currently Working On</h2>
+              <p class="info-card-subtitle">Based on user feedback and our roadmap, here are some areas we're actively exploring:</p>
+              
+              <ul class="roadmap-list">
+                <li class="roadmap-item">
+                  <i class="fa-solid fa-shield-halved roadmap-icon"></i>
+                  <div class="roadmap-content">
+                    Premium features with enhanced storage limits
+                  </div>
+                </li>
+                <li class="roadmap-item">
+                  <i class="fa-solid fa-cloud-arrow-up roadmap-icon"></i>
+                  <div class="roadmap-content">
+                    Advanced cloud synchronization capabilities
+                  </div>
+                </li>
+                <li class="roadmap-item">
+                  <i class="fa-solid fa-user-group roadmap-icon"></i>
+                  <div class="roadmap-content">
+                    Collaboration features for shared notes
+                  </div>
+                </li>
+                <li class="roadmap-item">
+                  <i class="fa-solid fa-table-cells-large roadmap-icon"></i>
+                  <div class="roadmap-content">
+                    Additional widget types and customization options
+                  </div>
+                </li>
+                <li class="roadmap-item">
+                  <i class="fa-solid fa-tablet-screen-button roadmap-icon"></i>
+                  <div class="roadmap-content">
+                    Enhanced tablet and landscape mode support
+                  </div>
+                </li>
+                <li class="roadmap-item">
+                  <i class="fa-solid fa-file-export roadmap-icon"></i>
+                  <div class="roadmap-content">
+                    More export format options
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
           </div>
 
-          <h2>Feature Request Guidelines</h2>
-          <p>
-            To help us understand and evaluate your feature requests better,
-            please consider including:
-          </p>
-          <ul>
-            <li>
-              <strong>Use Case:</strong> Describe the problem or need this
-              feature would solve
-            </li>
-            <li>
-              <strong>Expected Behavior:</strong> How should the feature work?
-            </li>
-            <li><strong>User Benefit:</strong> Who would benefit and how?</li>
-            <li>
-              <strong>Priority:</strong> How important is this feature to your
-              workflow?
-            </li>
-            <li>
-              <strong>Similar Apps:</strong> Have you seen this feature
-              implemented elsewhere? How did it work?
-            </li>
-          </ul>
-
-          <h2>What We're Currently Working On</h2>
-          <p>
-            Based on user feedback and our roadmap, here are some areas we're
-            actively exploring:
-          </p>
-          <ul>
-            <li>Premium features with enhanced storage limits</li>
-            <li>Advanced cloud synchronization capabilities</li>
-            <li>Collaboration features for shared notes</li>
-            <li>Additional widget types and customization options</li>
-            <li>Enhanced tablet and landscape mode support</li>
-            <li>More export format options</li>
-            <li>Rich text formatting enhancements</li>
-          </ul>
-
-          <div
-            class="content-block"
-            style="
-              background: #fff9e6;
-              border-left: 4px solid #ffc107;
-              padding: 1rem;
-              margin: 2rem 0;
-            "
-          >
-            <p style="margin: 0">
-              <strong>Note:</strong> While we strive to implement as many
-              suggestions as possible, not all feedback can be acted upon
-              immediately. Factors like technical feasibility, resource
-              availability, and alignment with NotesNest's core philosophy
-              influence our decisions. We appreciate your understanding and
-              patience!
+          <!-- Bottom Warning Banner -->
+          <div class="feedback-warning-banner">
+            <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+            <p class="warning-text">
+              <strong>Note:</strong> While we strive to implement as many suggestions as possible, not all feedback can be acted upon immediately. Factors like technical feasibility, resource availability, and alignment with NotesNest's core philosophy influence our decisions. We appreciate your understanding and patience!
             </p>
           </div>
 
-          <h2>Alternative Ways to Share Feedback</h2>
-          <p>Prefer a different method? You can also reach us through:</p>
-          <ul>
-            <li>
-              <strong>Email:</strong>
-              <span class="highlight">saihemanth225@gmail.com</span> with
-              subject "NotesNest Feedback"
-            </li>
-            <li>
-              <strong>Play Store Review:</strong> Leave a review on our
-              <a
-                href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
-                target="_blank"
-                >Google Play listing</a
-              >
-            </li>
-            <li>
-              <strong>In-App Feedback:</strong> Use the "Send Feedback" option
-              in NotesNest Settings > Support
-            </li>
-          </ul>
+          <!-- Bottom Footer 2-Column Row -->
+          <div class="feedback-footer-row">
+            
+            <!-- Left Column: Alternative Ways to Share Feedback -->
+            <div class="alt-feedback-column">
+              <h2 class="alt-feedback-title">Alternative Ways to Share Feedback</h2>
+              <p class="alt-feedback-desc">Prefer a different method? You can also reach us through:</p>
+              
+              <div class="alt-feedback-list">
+                <div class="alt-feedback-item">
+                  <i class="fa-regular fa-envelope alt-icon"></i>
+                  <span class="alt-item-text"><strong>Email:</strong> <a href="mailto:saihemanth225@gmail.com" class="alt-link">saihemanth225@gmail.com</a></span>
+                </div>
+                <div class="alt-feedback-item">
+                  <i class="fa-solid fa-play alt-icon"></i>
+                  <span class="alt-item-text"><strong>Play Store:</strong> Leave a review on our <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" target="_blank" rel="noopener noreferrer" class="alt-link">Google Play listing</a></span>
+                </div>
+                <div class="alt-feedback-item">
+                  <i class="fa-solid fa-gear alt-icon"></i>
+                  <span class="alt-item-text"><strong>In-App Feedback:</strong> Use the "Send Feedback" option in NotesNest Settings &gt; Support</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="content-block" style="margin-top: 2rem">
-            <h3>Thank You!</h3>
-            <p>
-              Your feedback is the foundation of NotesNest's continuous
-              improvement. Thank you for taking the time to help us build a
-              better productivity tool for everyone. We're grateful for users
-              like you who care enough to share their thoughts and ideas.
-            </p>
+            <!-- Right Column: Thank You Card -->
+            <div class="thank-you-card-column">
+              <div class="thank-you-card">
+                <i class="fa-solid fa-heart heart-icon"></i>
+                <h2 class="thank-you-title">Thank You!</h2>
+                <p class="thank-you-desc">
+                  Your feedback is the foundation of NotesNest's continuous improvement. Thank you for taking the time to help us build a better productivity tool for everyone. We're grateful for users like you who care enough to share their thoughts and ideas.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>NotesNest</h3>
+        <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container footer-grid">
+          <div class="footer-col brand-col">
+            <h2>NotesNest</h2>
             <p>
-              Your complete productivity hub for managing notes, tasks,
-              reminders, and goals on Android.
+              The most focused note-taking experience for the Android ecosystem.
+              Built for performance, designed for privacy.
             </p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/Lovelyshliker08" aria-label="Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="https://x.com/lovely_sh_liker" aria-label="X (formerly Twitter)"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-              <a href="https://www.instagram.com/indian_mobile_developer" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/thogaruchesti-hemanth/" aria-label="LinkedIn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
           </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
+          <div class="footer-col">
+            <h3>PRODUCT</h3>
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="user-guide.html">User Guide</a></li>
               <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>SUPPORT</h3>
+            <ul>
               <li><a href="contact.html">Contact</a></li>
               <li><a href="feedback.html">Feedback</a></li>
               <li><a href="bug-report.html">Report Bug</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>LEGAL</h3>
+            <ul>
               <li><a href="privacy.html">Privacy Policy</a></li>
               <li><a href="terms.html">Terms of Service</a></li>
               <li><a href="delete.html">Delete Account</a></li>
             </ul>
           </div>
-          <div class="footer-column">
-            <h3>Download</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest"
-                  >Google Play Store</a
-                >
-              </li>
-              <li><a href="#">Version 3.0.5 (Latest)</a></li>
-            </ul>
-            <h3 style="margin-top: 1.5rem">Resources</h3>
-            <ul>
-              <li><a href="index.html#features">Features</a></li>
-              <li><a href="index.html#faq">FAQs</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Support</h3>
-            <ul>
-              <li><a href="contact.html">Help Center</a></li>
-              <li><a href="index.html#faq">Frequently Asked Questions</a></li>
-              <li><a href="bug-report.html">Report a Bug</a></li>
-              <li><a href="feedback.html">Feature Requests</a></li>
-            </ul>
-          </div>
         </div>
-        <div class="copyright">
-          <p>
-            &copy; <span id="copyright-year">2025</span> NotesNest - Developed by Thogoruchesti Hemanth. All
-            rights reserved.
-          </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+          <div class="footer-bottom-logo">
+            <span>NotesNest</span>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; <span id="copyright-year">2026</span> NotesNest. Designed with precision for Android users.</p>
+          </div>
+          <div class="footer-social-icons">
+            <a href="https://github.com/Thogaruchesti-hemanth" aria-label="Developer Profile" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" aria-label="Download App" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i></a>
+            <a href="https://thogaruchesti-hemanth.web.app/" aria-label="Developer Portfolio" target="_blank" rel="noopener noreferrer"><i class="fas fa-user"></i></a>
+          </div>
         </div>
       </div>
     </footer>
