@@ -78,19 +78,58 @@
     <meta name="google-adsense-account" content="ca-pub-4258152474007475" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258152474007475" crossorigin="anonymous"></script>
 
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://notesnest-app.web.app/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://notesnest-app.web.app/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Top 5 Productivity Tips",
+            "item": "https://notesnest-app.web.app/article-productivity-tips.html"
+          }
+        ]
+      }
+    </script>
     <!-- WebPage Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "name": "Top 5 Productivity Tips for Android Users in 2026 - NotesNest",
+        "headline": "Top 5 Productivity Tips for Android Users in 2026",
         "description": "Discover the best strategies to transform your Android device into a powerhouse of productivity using apps like NotesNest.",
-        "url": "https://notesnest-app.web.app/article-productivity-tips.html",
-        "inLanguage": "en-US",
-        "isPartOf": {
-          "@type": "WebSite",
+        "image": "https://notesnest-app.web.app/images/og-image.jpeg",
+        "author": {
+          "@type": "Organization",
+          "name": "NotesNest Editorial Team"
+        },
+        "publisher": {
+          "@type": "Organization",
           "name": "NotesNest",
-          "url": "https://notesnest-app.web.app"
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://notesnest-app.web.app/images/logo.jpeg"
+          }
+        },
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-01-15",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://notesnest-app.web.app/article-productivity-tips.html"
         }
       }
     </script>
@@ -104,10 +143,7 @@
     <header>
       <div class="container header-content">
         <a href="index.html" class="logo">
-          <span class="logo-icon">
-            <img src="images/logo.jpeg" alt="NotesNest Logo" />
-          </span>
-          <span class="logo-text">otesNest</span>
+          <span class="logo-text">NotesNest</span>
         </a>
         <button class="mobile-menu-btn" id="menu-toggle">
           <i class="fas fa-bars"></i>
@@ -118,11 +154,6 @@
             <li><a href="user-guide.html">User Guide</a></li>
             <li><a href="blog.html" class="active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="bug-report.html">Report Bug</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="delete.html">Delete Account</a></li>
           </ul>
         </nav>
       </div>
@@ -132,6 +163,13 @@
     <main>
       <section class="page-content">
         <div class="container" style="max-width: 800px;">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><span>Productivity Tips</span></li>
+            </ul>
+          </nav>
           <h1 style="margin-bottom: 0.5rem;">Top 5 Productivity Tips for Android Users in 2026</h1>
           <p style="color: #888; font-size: 0.9rem; margin-bottom: 2rem;"><i class="fas fa-calendar-alt"></i> January 15, 2026 | <i class="fas fa-user"></i> Editorial Team</p>
 
@@ -139,7 +177,7 @@
             <p>In today's fast-paced digital world, your smartphone can either be a massive distraction or your ultimate productivity tool. If you are an Android user looking to get more done in less time, mastering your device's capabilities is step one. Here are the top 5 productivity strategies for Android users to maximize efficiency and minimize screen time.</p>
 
             <h2 style="margin-top: 2rem; color: #222;">1. Master the Art of To-Do Lists</h2>
-            <p>Keeping a mental checklist is a surefire way to forget crucial tasks. The most productive people rely on digital to-do lists to offload mental strain. By using a robust app like NotesNest, you can create dedicated lists for work, personal errands, and long-term goals. The key is to break down large projects into small, actionable steps. Instead of writing "Launch marketing campaign," write "Draft email copy for Monday." Checking off these smaller tasks creates a psychological momentum that propels you forward.</p>
+            <p>Keeping a mental checklist is a surefire way to forget crucial tasks. The most productive people rely on digital to-do lists to offload mental strain. By using a robust app like <a href="index.html">NotesNest</a>, you can create dedicated lists for work, personal errands, and long-term goals. The key is to break down large projects into small, actionable steps. Instead of writing "Launch marketing campaign," write "Draft email copy for Monday." Checking off these smaller tasks creates a psychological momentum that propels you forward.</p>
 
             <h2 style="margin-top: 2rem; color: #222;">2. Leverage Home Screen Widgets</h2>
             <p>Android's biggest advantage over other operating systems is its widget ecosystem. Why open an app when you can have your tasks and notes right on your home screen? Setting up a Quick Add widget or a Note Preview widget ensures that your priorities are the first thing you see when you unlock your phone. This drastically reduces the friction of capturing spontaneous ideas or reviewing your daily schedule.</p>
@@ -160,29 +198,56 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-column">
-            <h3>NotesNest</h3>
+        <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container footer-grid">
+          <div class="footer-col brand-col">
+            <h2>NotesNest</h2>
             <p>
-              Your complete productivity hub for managing notes, tasks,
-              reminders, and goals on Android.
+              The most focused note-taking experience for the Android ecosystem.
+              Built for performance, designed for privacy.
             </p>
           </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
+          <div class="footer-col">
+            <h3>PRODUCT</h3>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
               <li><a href="user-guide.html">User Guide</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>SUPPORT</h3>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><a href="bug-report.html">Report Bug</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>LEGAL</h3>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="delete.html">Delete Account</a></li>
             </ul>
           </div>
         </div>
-        <div class="copyright">
-          <p>
-            &copy; <span id="copyright-year">2026</span> NotesNest - Developed by Thogoruchesti Hemanth. All rights reserved.
-          </p>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+          <div class="footer-bottom-logo">
+            <span>NotesNest</span>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; <span id="copyright-year">2026</span> NotesNest. Designed with precision for Android users.</p>
+          </div>
+          <div class="footer-social-icons">
+            <a href="https://github.com/Thogaruchesti-hemanth" aria-label="Developer Profile" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.hemanth.NotesNest" aria-label="Download App" target="_blank" rel="noopener noreferrer"><i class="fas fa-download"></i></a>
+            <a href="https://thogaruchesti-hemanth.web.app/" aria-label="Developer Portfolio" target="_blank" rel="noopener noreferrer"><i class="fas fa-user"></i></a>
+          </div>
         </div>
       </div>
     </footer>
