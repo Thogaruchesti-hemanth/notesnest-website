@@ -146,157 +146,84 @@
     <main>
       <section class="page-content">
         <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><span>Contact Us</span></li>
-            </ul>
-          </nav>
-          <h1>Contact Us</h1>
-
-          <div class="content-block">
-            <p>
-              Have questions about NotesNest or need assistance? We're here to
-              help! Whether you need technical support, want to share feedback,
-              or have general inquiries, feel free to reach out to us.
+          <!-- Centered Contact Header -->
+          <div class="contact-hero">
+            <h1 class="contact-title">Contact <span class="title-us">Us</span></h1>
+            <p class="contact-subtitle">
+              Have questions about NotesNest or need assistance? We're here to help! Whether you need technical support, want to share feedback, or have general inquiries, feel free to reach out to us.
             </p>
           </div>
 
-          <h2>Developer Contact</h2>
-          <p>Email: <span class="highlight">saihemanth225@gmail.com</span></p>
-          <p>Developer: Thogoruchesti Hemanth</p>
-          <p>
-            Response time: We typically respond within 24-48 hours during
-            business days.
-          </p>
+          <!-- 3-Column Contact Cards Grid -->
+          <div class="contact-cards-grid">
+            
+            <!-- Card 1: Developer -->
+            <div class="contact-card">
+              <div class="card-icon-wrapper">
+                <i class="far fa-user"></i>
+              </div>
+              <h2 class="card-heading">Developer</h2>
+              
+              <div class="card-section">
+                <span class="section-label">Email Address</span>
+                <span class="section-value value-email">saihemanth225@gmail.com</span>
+              </div>
+              
+              <div class="card-section">
+                <span class="section-label">Name</span>
+                <span class="section-value">Thogaruchesti Hemanth</span>
+              </div>
+              
+              <div class="card-section">
+                <span class="section-label">Social</span>
+                <div class="social-icons-row">
+                  <a href="https://thogaruchesti-hemanth.web.app/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio"><i class="fas fa-briefcase"></i></a>
+                  <a href="https://github.com/Thogaruchesti-hemanth" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fas fa-code"></i></a>
+                  <a href="https://www.instagram.com/indian_mobile_developer" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fas fa-camera"></i></a>
+                  <a href="https://www.linkedin.com/in/thogaruchesti-hemanth/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fas fa-share-nodes"></i></a>
+                </div>
+              </div>
+              
+              <div class="card-footer-note">
+                Typical response time: 24-48 hours during business days.
+              </div>
+            </div>
 
-          <h2>Technical Support</h2>
-          <p>
-            Experiencing issues with NotesNest? For faster resolution, please
-            include the following details in your email:
-          </p>
-          <ul>
-            <li>Your device model and Android version</li>
-            <li>NotesNest app version (found in Settings > About)</li>
-            <li>Detailed description of the issue you're experiencing</li>
-            <li>Steps to reproduce the problem</li>
-            <li>Screenshots or error messages (if applicable)</li>
-            <li>
-              Whether the issue occurs with reminders, notes, backups, widgets,
-              or other features
-            </li>
-          </ul>
+            <!-- Card 2: Support -->
+            <div class="contact-card">
+              <div class="card-icon-wrapper">
+                <i class="far fa-life-ring"></i>
+              </div>
+              <h2 class="card-heading">Support</h2>
+              
+              <p class="support-intro">
+                For technical issues, please include in your email:
+              </p>
+              
+              <ul class="support-bullets">
+                <li><span class="bullet-slash">/</span> Device model & Android OS</li>
+                <li><span class="bullet-slash">/</span> App version (Settings &gt; About)</li>
+                <li><span class="bullet-slash">/</span> Steps to reproduce</li>
+              </ul>
+            </div>
 
-          <h2>Common Issues</h2>
-          <p>
-            Before contacting support, check if your issue matches these common
-            scenarios:
-          </p>
-          <ul>
-            <li>
-              <strong>Reminders not working:</strong> Some devices (Xiaomi MIUI,
-              Vivo, Oppo) have aggressive battery optimization. Disable battery
-              optimization for NotesNest in your device settings.
-            </li>
-            <li>
-              <strong>Widget not updating:</strong> Some OEM launchers may delay
-              widget updates. Try removing and re-adding the widget.
-            </li>
-            <li>
-              <strong>Backup issues:</strong> Ensure you have sufficient storage
-              space and necessary permissions enabled.
-            </li>
-            <li>
-              <strong>Google Sign-In delays:</strong> First-time token refresh
-              may take a moment. Wait 10-15 seconds and try again.
-            </li>
-          </ul>
+            <!-- Card 3: Business -->
+            <div class="contact-card">
+              <div class="card-icon-wrapper">
+                <i class="far fa-handshake"></i>
+              </div>
+              <h2 class="card-heading">Business</h2>
+              
+              <p class="business-intro">
+                For collaboration or media inquiries, please use the subject line <strong class="subject-highlight">"Business Inquiry"</strong>.
+              </p>
+              
+              <div class="card-section line-section">
+                <span class="section-label">Direct Line</span>
+                <span class="section-value value-email">saihemanth225@gmail.com</span>
+              </div>
+            </div>
 
-          <h2>Feature Requests & Feedback</h2>
-          <p>
-            Want to suggest a new feature or improvement? We love hearing from
-            our users! Please use our
-            <a href="feedback.html">Feedback Form</a> to share your ideas. Your
-            input helps shape the future of NotesNest.
-          </p>
-
-          <h2>Bug Reports</h2>
-          <p>
-            Found a bug? Help us improve NotesNest by reporting it through our
-            <a href="bug-report.html">Bug Report Form</a>. We actively monitor
-            crash reports via Firebase Crashlytics, but your detailed reports
-            help us fix issues faster.
-          </p>
-
-          <h2>Connect With Us</h2>
-          <p>Follow NotesNest development and stay updated:</p>
-          <ul>
-            <li>
-              GitHub:
-              <a
-                href="https://github.com/Thogaruchesti-hemanth"
-                class="highlight"
-                >Thogaruchesti-hemanth</a
-              >
-            </li>
-            <li>
-              LinkedIn:
-              <a
-                href="https://www.linkedin.com/in/thogaruchesti-hemanth/"
-                class="highlight"
-                >Connect with the developer</a
-              >
-            </li>
-            <li>
-              Instagram:
-              <a
-                href="https://www.instagram.com/indian_mobile_developer"
-                class="highlight"
-                >Follow on Instagram</a
-              >
-            </li>
-            <li>
-              Facebook:
-              <a
-                href="https://www.facebook.com/Lovelyshliker08"
-                class="highlight"
-                >Like on Facebook</a
-              >
-            </li>
-            <li>
-              X (formerly Twitter):
-              <a
-                href="https://x.com/lovely_sh_liker"
-                class="highlight"
-                >Follow on X</a
-              >
-            </li>
-          </ul>
-
-          <h2>Business & Partnership Inquiries</h2>
-          <p>
-            For collaboration opportunities, partnership proposals, or media
-            inquiries, please email us at
-            <span class="highlight">saihemanth225@gmail.com</span> with subject
-            line "Business Inquiry".
-          </p>
-
-          <div
-            class="content-block"
-            style="
-              margin-top: 2rem;
-              padding: 1.5rem;
-              background: #f8f9fa;
-              border-radius: 8px;
-            "
-          >
-            <h3 style="margin-top: 0">Privacy & Security</h3>
-            <p style="margin-bottom: 0">
-              Your privacy is important to us. When you contact us, we only use
-              your information to respond to your inquiry. We never share your
-              contact details with third parties. For more information, please
-              review our <a href="privacy.html">Privacy Policy</a>.
-            </p>
           </div>
         </div>
       </section>
