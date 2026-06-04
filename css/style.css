@@ -3935,4 +3935,196 @@ h2.section-title i {
   }
 }
 
+/* ===== Common Issues Card Redesign ===== */
+.common-issues-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 4.5rem 4rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.common-issues-card .issues-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.common-issues-card .issues-subtitle {
+  font-size: 1.05rem;
+  color: #718096;
+  font-weight: 500;
+  margin-bottom: 3.5rem;
+}
+
+.issues-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+}
+
+.issues-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.issue-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.issue-item-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a202c;
+  display: flex;
+  align-items: center;
+}
+
+.issue-item-title .bullet-dash {
+  color: #ffd000;
+  font-weight: 900;
+  margin-right: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.issue-item-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+  padding-left: 1.2rem; /* Indent the description below title */
+}
+
+/* Feature Requests & Bug Reports CTA cards */
+.contact-cta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.cta-card-half {
+  border-radius: 20px;
+  padding: 4.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 280px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.cta-card-half:hover {
+  transform: translateY(-4px);
+}
+
+.cta-card-half .cta-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.cta-card-half .cta-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-action-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-action-btn:active {
+  transform: scale(0.97);
+}
+
+/* Yellow card variations */
+.yellow-cta {
+  background-color: #ffd000;
+  color: #000000;
+}
+
+.yellow-cta:hover {
+  box-shadow: 0 10px 25px rgba(255, 208, 0, 0.25);
+}
+
+.yellow-cta .cta-action-btn.black-btn {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.yellow-cta .cta-action-btn.black-btn:hover {
+  background-color: #1a1a1a;
+}
+
+/* Black card variations */
+.black-cta {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.black-cta:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.black-cta .cta-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.black-cta .cta-action-btn.white-btn {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.black-cta .cta-action-btn.white-btn:hover {
+  background-color: #f7fafc;
+}
+
+/* Responsive configurations for Troubleshooting and CTA Row */
+@media (max-width: 992px) {
+  .issues-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .common-issues-card {
+    padding: 3rem 2rem;
+  }
+  
+  .common-issues-card .issues-subtitle {
+    margin-bottom: 2.5rem;
+  }
+  
+  .contact-cta-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .cta-card-half {
+    padding: 3rem 2rem;
+    min-height: auto;
+  }
+}
+
 
