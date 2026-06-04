@@ -174,26 +174,117 @@
             </div>
           </div>
 
-          <div class="feature-grid" style="grid-template-columns: 1fr;">
-            <!-- Article 1 -->
-            <div class="feature-box" style="text-align: left; padding: 2rem;">
-              <h2 style="margin-top: 0;"><a href="article-productivity-tips.html" style="color: #2196F3; text-decoration: none;">Top 5 Productivity Tips for Android Users in 2026</a></h2>
-              <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;"><i class="fas fa-calendar-alt"></i> January 15, 2026 | <i class="fas fa-user"></i> Editorial Team</p>
-              <p>
-                Discover the best strategies to transform your Android device into a powerhouse of productivity. From leveraging widgets to mastering to-do lists, learn how you can reclaim your time and get more done every single day.
-              </p>
-              <a href="article-productivity-tips.html" class="cta-button" style="padding: 0.5rem 1rem; font-size: 1rem; margin-top: 1rem; display: inline-block;">Read Article</a>
+          <!-- Recent Insights Header and Filters -->
+          <div class="insights-header-wrapper">
+            <div class="insights-title-block">
+              <h2 class="insights-section-title">Recent Insights</h2>
+              <p class="insights-subtitle">Explore our latest thoughts on digital organization.</p>
+            </div>
+            <div class="insights-filter-tags">
+              <button class="filter-tag active" data-filter="all">All</button>
+              <button class="filter-tag" data-filter="productivity">Productivity</button>
+              <button class="filter-tag" data-filter="security">Security</button>
+              <button class="filter-tag" data-filter="updates">Updates</button>
+            </div>
+          </div>
+
+          <!-- Blog Posts Card Grid -->
+          <div class="blog-cards-grid">
+            
+            <!-- Card 1 (Security) -->
+            <div class="blog-post-card" data-category="security">
+              <div class="card-image-wrapper">
+                <img src="images/blog_post_security.png" alt="Why Encrypted Notes Are Essential" />
+              </div>
+              <div class="card-body">
+                <div class="card-badge-row">
+                  <span class="card-category-badge">Security</span>
+                  <span class="card-read-time">10 min read</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="article-secure-notes.html">Why Encrypted Notes Are Essential for Mobile Security</a>
+                </h3>
+                <p class="card-excerpt">
+                  In an era of frequent data breaches, keeping your personal thoughts and sensitive data secure is more important than ever. Understand the risks...
+                </p>
+                <div class="card-footer">
+                  <div class="author-block">
+                    <div class="author-avatar avatar-security">JD</div>
+                    <div class="author-info">
+                      <span class="author-name">Security Team</span>
+                      <span class="post-date">Jan 10, 2026</span>
+                    </div>
+                  </div>
+                  <a href="article-secure-notes.html" class="card-link-icon" aria-label="Read Article"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
             </div>
 
-            <!-- Article 2 -->
-            <div class="feature-box" style="text-align: left; padding: 2rem;">
-              <h2 style="margin-top: 0;"><a href="article-secure-notes.html" style="color: #2196F3; text-decoration: none;">Why Encrypted Notes Are Essential for Mobile Security</a></h2>
-              <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;"><i class="fas fa-calendar-alt"></i> January 10, 2026 | <i class="fas fa-user"></i> Security Team</p>
-              <p>
-                In an era of frequent data breaches and privacy concerns, keeping your personal thoughts and sensitive data secure is more important than ever. Understand the risks of plain-text note apps and why local encryption matters.
-              </p>
-              <a href="article-secure-notes.html" class="cta-button" style="padding: 0.5rem 1rem; font-size: 1rem; margin-top: 1rem; display: inline-block;">Read Article</a>
+            <!-- Card 2 (Productivity) -->
+            <div class="blog-post-card" data-category="productivity">
+              <div class="card-image-wrapper">
+                <img src="images/blog_post_productivity.png" alt="Top 5 Productivity Tips" />
+              </div>
+              <div class="card-body">
+                <div class="card-badge-row">
+                  <span class="card-category-badge">Productivity</span>
+                  <span class="card-read-time">8 min read</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="article-productivity-tips.html">Top 5 Productivity Tips for Android Users in 2026</a>
+                </h3>
+                <p class="card-excerpt">
+                  Discover the best strategies to transform your device into a powerhouse of productivity. From widgets to organization, learn how you can reclaim...
+                </p>
+                <div class="card-footer">
+                  <div class="author-block">
+                    <div class="author-avatar avatar-productivity">AS</div>
+                    <div class="author-info">
+                      <span class="author-name">Anna Smith</span>
+                      <span class="post-date">Jan 15, 2026</span>
+                    </div>
+                  </div>
+                  <a href="article-productivity-tips.html" class="card-link-icon" aria-label="Read Article"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
             </div>
+
+            <!-- Card 3 (Updates) -->
+            <div class="blog-post-card" data-category="updates">
+              <div class="card-image-wrapper">
+                <img src="images/blog_post_updates.png" alt="NotesNest v4.2 Update" />
+              </div>
+              <div class="card-body">
+                <div class="card-badge-row">
+                  <span class="card-category-badge">Updates</span>
+                  <span class="card-read-time">5 min read</span>
+                </div>
+                <h3 class="card-title">
+                  <a href="#">NotesNest v4.2: Better Sync, Faster Indexing</a>
+                </h3>
+                <p class="card-excerpt">
+                  Our latest update brings significant performance improvements to search and cloud synchronization across all your Android devices and backup modules...
+                </p>
+                <div class="card-footer">
+                  <div class="author-block">
+                    <div class="author-avatar avatar-updates">NN</div>
+                    <div class="author-info">
+                      <span class="author-name">Product Team</span>
+                      <span class="post-date">Feb 01, 2026</span>
+                    </div>
+                  </div>
+                  <a href="#" class="card-link-icon" aria-label="Read Article"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Load More Section -->
+          <div class="load-more-wrapper">
+            <button class="load-more-btn">
+              LOAD MORE ARTICLES <i class="fas fa-chevron-down"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -254,6 +345,28 @@
       </div>
     </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterTags = document.querySelectorAll(".filter-tag");
+        const blogCards = document.querySelectorAll(".blog-post-card");
+
+        filterTags.forEach((tag) => {
+          tag.addEventListener("click", function () {
+            filterTags.forEach((t) => t.classList.remove("active"));
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+            blogCards.forEach((card) => {
+              if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
+                card.style.display = "";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
