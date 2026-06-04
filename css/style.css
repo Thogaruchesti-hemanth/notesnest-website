@@ -4127,4 +4127,662 @@ h2.section-title i {
   }
 }
 
+/* ===== Feedback Page Redesign ===== */
+.feedback-page-section {
+  background-color: #fbfbfa;
+  padding: 5rem 0 7rem;
+}
+
+.feedback-container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.feedback-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.feedback-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -1px;
+  margin-bottom: 1.8rem;
+}
+
+.feedback-note-box {
+  background-color: #fffde6;
+  border-left: 6px solid #ffd000;
+  border-radius: 4px;
+  padding: 1.8rem 2.2rem;
+  text-align: left;
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.feedback-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e8e6e2;
+  border-radius: 16px;
+  padding: 4rem 3.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.feedback-form-card .form-row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.feedback-form-card .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.8rem;
+}
+
+.feedback-form-card .form-row-grid .form-group {
+  margin-bottom: 0; /* Let grid handle vertical gap */
+}
+
+.feedback-form-card .form-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.7rem;
+}
+
+.feedback-form-card .form-control,
+.feedback-form-card .select-control {
+  background-color: #f5f4f0;
+  border: 1px solid #e2e1dd;
+  border-radius: 8px;
+  padding: 0.95rem 1.2rem;
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.feedback-form-card .form-control::placeholder {
+  color: #8c8b88;
+  font-weight: 400;
+}
+
+.feedback-form-card .form-control:focus,
+.feedback-form-card .select-control:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #ffd000;
+  box-shadow: 0 0 0 3px rgba(255, 208, 0, 0.15);
+}
+
+/* Custom Select Arrow Dropdown Wrapper */
+.feedback-form-card .select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.feedback-form-card .select-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 2.8rem;
+}
+
+.feedback-form-card .select-wrapper::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+  pointer-events: none;
+  font-size: 0.85rem;
+}
+
+/* Textarea resizing */
+.feedback-form-card textarea.form-control {
+  resize: vertical;
+  min-height: 140px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+/* Checkbox specific layout */
+.feedback-form-card .checkbox-form-group {
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.feedback-form-card .checkbox-section-label {
+  margin-bottom: 0.8rem;
+}
+
+.feedback-form-card .checkbox-wrapper-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.feedback-form-card .checkbox-wrapper-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  accent-color: #000000;
+}
+
+.feedback-form-card .checkbox-label-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a5568;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Submit Section alignment */
+.feedback-form-card .submit-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.feedback-form-card .submit-feedback-btn {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-form-card .submit-feedback-btn:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feedback-form-card .submit-feedback-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive configurations for feedback page */
+@media (max-width: 768px) {
+  .feedback-page-section {
+    padding: 3rem 0 5rem;
+  }
+
+  .feedback-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .feedback-note-box {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .feedback-form-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .feedback-form-card .form-row-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-bottom: 0;
+  }
+
+  .feedback-form-card .form-row-grid .form-group {
+    margin-bottom: 1.8rem;
+  }
+}
+
+/* ===== Bottom Info Cards Grid ===== */
+.feedback-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.info-card {
+  padding: 4rem 3.5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 10px 15px -3px rgba(0, 0, 0, 0.02);
+}
+
+/* Card Heading & Intro */
+.info-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+}
+
+.info-card-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+}
+
+.info-card-subtitle.italic-desc {
+  font-style: italic;
+  color: #718096;
+}
+
+/* Card 1: Slate Card Theme */
+.slate-card {
+  background-color: #4e5460;
+  color: #ffffff;
+}
+
+.slate-card .info-card-title {
+  color: #ffffff;
+}
+
+.slate-card .info-card-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Card 2: Cream Card Theme */
+.cream-card {
+  background-color: #f0ede9;
+  color: #1a1a1a;
+}
+
+.cream-card .info-card-title {
+  color: #1a1a1a;
+}
+
+/* Card 3: White Border Card Theme */
+.white-border-card {
+  background-color: #ffffff;
+  border: 1px solid #e8e6e2;
+  color: #1a1a1a;
+}
+
+.white-border-card .info-card-title {
+  color: #1a1a1a;
+}
+
+/* Card 4: Charcoal Card Theme */
+.charcoal-card {
+  background-color: #18181b;
+  color: #ffffff;
+}
+
+.charcoal-card .info-card-title {
+  color: #ffffff;
+}
+
+.charcoal-card .info-card-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Lists and Items */
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.info-card li {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+/* Process Items (Slate Card) */
+.process-list .process-number {
+  background-color: #ffd000;
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 800;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.process-list .process-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-list .process-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.process-list .process-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Star Bullet Items (Cream Card) */
+.feature-star-list .star-icon {
+  color: #ffd000;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.feature-star-list .feature-star-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.feature-star-list .feature-star-content strong {
+  font-weight: 700;
+}
+
+/* Guidelines Bullet Items (White Card) */
+.guidelines-list .guideline-icon {
+  color: #b58d10;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  text-align: center;
+  width: 24px;
+}
+
+.guidelines-list .guideline-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.guidelines-list .guideline-content strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.guidelines-list .guideline-desc {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Roadmap Bullet Items (Charcoal Card) */
+.roadmap-list .roadmap-icon {
+  color: #ffd000;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  text-align: center;
+  width: 24px;
+}
+
+.roadmap-list .roadmap-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness for Bottom Grid */
+@media (max-width: 768px) {
+  .feedback-info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 3rem;
+  }
+
+  .info-card {
+    padding: 3rem 2rem;
+    border-radius: 16px;
+  }
+
+  .info-card-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .info-card-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .info-card ul {
+    gap: 1.5rem;
+  }
+}
+
+/* ===== Bottom Warning Banner & Footer Section ===== */
+.feedback-warning-banner {
+  background-color: #fffde6;
+  border: 1.5px solid #ffd000;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.feedback-warning-banner .warning-icon {
+  color: #b58d10;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.feedback-warning-banner .warning-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
+  font-weight: 500;
+}
+
+.feedback-warning-banner .warning-text strong {
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.feedback-footer-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+/* Left Column: Alternative feedback */
+.alt-feedback-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.alt-feedback-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.alt-feedback-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #718096;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.alt-feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alt-feedback-item {
+  background-color: #f5f4f0;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.alt-feedback-item:hover {
+  background-color: #eeebe7;
+  transform: translateY(-2px);
+}
+
+.alt-feedback-item .alt-icon {
+  color: #b58d10;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.alt-feedback-item .alt-item-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.alt-feedback-item .alt-item-text strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.alt-feedback-item .alt-link {
+  color: #b58d10;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.alt-feedback-item .alt-link:hover {
+  border-color: #b58d10;
+}
+
+/* Right Column: Thank You Card */
+.thank-you-card-column {
+  display: flex;
+}
+
+.thank-you-card {
+  background-color: #eeebe7;
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.thank-you-card .heart-icon {
+  color: #b58d10;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: heartbeat 2s infinite ease-in-out;
+  display: inline-block;
+}
+
+.thank-you-card .thank-you-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.thank-you-card .thank-you-desc {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4a5568;
+  max-width: 320px;
+  font-weight: 500;
+  margin: 0;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.12); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.12); }
+  70% { transform: scale(1); }
+}
+
+/* Responsive configurations for bottom sections */
+@media (max-width: 768px) {
+  .feedback-warning-banner {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .feedback-footer-row {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .alt-feedback-title {
+    font-size: 1.7rem;
+  }
+
+  .alt-feedback-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .thank-you-card {
+    padding: 3rem 1.8rem;
+  }
+
+  .thank-you-card .thank-you-title {
+    font-size: 1.8rem;
+  }
+}
+
 
