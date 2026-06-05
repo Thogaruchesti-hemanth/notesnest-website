@@ -396,6 +396,229 @@
         }
       }
       
+      /* Acceptable Use Card Styles */
+      .acceptable-card {
+        background-color: #f6f5f3;
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+      }
+      
+      .acceptable-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000000 !important;
+        margin-top: 0 !important;
+        margin-bottom: 2rem !important;
+        border: none !important;
+        padding: 0 !important;
+        display: block !important;
+        text-align: center !important;
+      }
+      
+      .acceptable-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      
+      .acceptable-inner-card {
+        background-color: rgba(255, 255, 255, 0.65);
+        border-radius: 8px;
+        padding: 1.8rem;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+        border-top: 3px solid #dc2626; /* Red top accent */
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: left;
+      }
+      
+      .acceptable-inner-card i {
+        color: #dc2626;
+        font-size: 1.25rem;
+        margin-bottom: 0.2rem;
+      }
+      
+      .acceptable-inner-card h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #000000 !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
+        text-transform: none;
+        letter-spacing: normal;
+      }
+      
+      .acceptable-inner-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin: 0 !important;
+      }
+      
+      @media (max-width: 992px) {
+        .acceptable-grid {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+        .acceptable-card {
+          padding: 1.8rem;
+        }
+      }
+      
+      /* Payments Card Styles */
+      .payments-card {
+        background-color: #f6f5f3;
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+      }
+      
+      .payments-card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+        text-align: left;
+      }
+      
+      .payments-card-left {
+        flex: 1.8;
+      }
+      
+      .payments-category-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        font-weight: 700;
+        color: #856d1a;
+        margin-bottom: 0.4rem;
+        text-transform: uppercase;
+        display: block;
+      }
+      
+      .payments-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000000 !important;
+        margin: 0 0 1rem 0 !important;
+        border: none !important;
+        padding: 0 !important;
+        line-height: 1.2;
+      }
+      
+      .payments-subtext {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+      }
+      
+      .payments-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      
+      .payments-bullets li {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 0.92rem;
+        color: #1a1a1a;
+        font-weight: 600;
+      }
+      
+      .payments-bullets li i {
+        color: #4b5563;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      
+      .payments-graphic-container {
+        flex: 0.8;
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      .payments-mock-card {
+        width: 65px;
+        height: 200px;
+        background-color: #ffffff;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+      }
+      
+      .payments-mock-top {
+        width: 100%;
+        height: 4px;
+        background-color: #e5e7eb;
+        border-radius: 2px;
+        margin-bottom: 16px;
+      }
+      
+      .payments-mock-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .payments-mock-line {
+        height: 4px;
+        background-color: #f3f4f6;
+        border-radius: 2px;
+        width: 100%;
+      }
+      
+      .payments-mock-line.short {
+        width: 55%;
+      }
+      
+      .payments-mock-line.medium {
+        width: 75%;
+      }
+      
+      .payments-mock-bottom {
+        width: 100%;
+        height: 12px;
+        background-color: #000000;
+        border-radius: 6px;
+      }
+      
+      @media (max-width: 992px) {
+        .payments-card-content {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2rem;
+        }
+        
+        .payments-graphic-container {
+          width: 100%;
+          justify-content: center;
+        }
+        
+        .payments-mock-card {
+          width: 80px;
+          height: 180px;
+        }
+        
+        .payments-card {
+          padding: 1.8rem;
+        }
+      }
+      
       /* Hero Section */
       .terms-hero {
         background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
@@ -997,7 +1220,28 @@
 
               <!-- Section 4 -->
               <div class="terms-section" id="acceptable-use">
-                <h2>4. Acceptable Use</h2>
+                
+                <div class="acceptable-card">
+                  <h2>4. Acceptable Use Policy</h2>
+                  <div class="acceptable-grid">
+                    <div class="acceptable-inner-card">
+                      <i class="fa-solid fa-ban"></i>
+                      <h4>No Illegal Content</h4>
+                      <p>Prohibition of storing or sharing illegal, harmful, or offensive materials.</p>
+                    </div>
+                    <div class="acceptable-inner-card">
+                      <i class="fa-solid fa-bug"></i>
+                      <h4>No Hacking</h4>
+                      <p>Attempting to breach security or disrupt service operations is strictly forbidden.</p>
+                    </div>
+                    <div class="acceptable-inner-card">
+                      <i class="fa-solid fa-bullhorn"></i>
+                      <h4>No Spamming</h4>
+                      <p>The service may not be used for unsolicited mass communication or botting.</p>
+                    </div>
+                  </div>
+                </div>
+
                 <h3>4.1 Permitted Use</h3>
                 <p>
                   NotesNest is intended for personal, non-commercial productivity purposes, organizing personal notes, tasks, reminders, and educational content.
@@ -1014,7 +1258,43 @@
 
               <!-- Section 5 -->
               <div class="terms-section" id="payments">
-                <h2>5. Premium & Payments</h2>
+                
+                <div class="payments-card">
+                  <div class="payments-card-content">
+                    <div class="payments-card-left">
+                      <span class="payments-category-label">Subscription</span>
+                      <h2>5. Premium Features & Payments</h2>
+                      <p class="payments-subtext">
+                        Some aspects of the Service are provided for a fee or other charge. If you elect to use paid features, you agree to the pricing and payment terms, as we may update them from time to time.
+                      </p>
+                      <ul class="payments-bullets">
+                        <li>
+                          <i class="fa-regular fa-circle-check"></i>
+                          <span>Automatic renewals unless cancelled</span>
+                        </li>
+                        <li>
+                          <i class="fa-regular fa-circle-check"></i>
+                          <span>30-day refund policy for annual plans</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="payments-graphic-container">
+                      <div class="payments-mock-card" aria-hidden="true">
+                        <div class="payments-mock-top"></div>
+                        <div class="payments-mock-body">
+                          <div class="payments-mock-line medium"></div>
+                          <div class="payments-mock-line short"></div>
+                          <div class="payments-mock-line"></div>
+                          <div class="payments-mock-line short"></div>
+                          <div class="payments-mock-line medium"></div>
+                          <div class="payments-mock-line"></div>
+                        </div>
+                        <div class="payments-mock-bottom"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <h3>5.1 Free Version</h3>
                 <p>
                   NotesNest is currently offered free of charge with all core features available to all users.
