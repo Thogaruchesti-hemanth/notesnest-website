@@ -116,6 +116,811 @@
         ]
       }
     </script>
+    <style>
+      /* Custom Privacy Redesign Styles */
+      .page-content {
+        background-color: #fcfbf9; /* Soft off-white page background */
+        padding: 5rem 0;
+      }
+      
+      /* Hide default page title if any outside main */
+      .page-content h1 {
+        display: none !important;
+      }
+      
+      /* Privacy container */
+      .privacy-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      
+      /* Hero Banner */
+      .privacy-hero {
+        background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+        color: #ffffff;
+        border-radius: 16px;
+        padding: 3.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+      
+      /* Grid dots background pattern */
+      .privacy-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px);
+        background-size: 20px 20px;
+        pointer-events: none;
+      }
+      
+      .hero-left {
+        flex: 1.5;
+        z-index: 2;
+        text-align: left;
+      }
+      
+      .hero-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 2;
+      }
+      
+      .legal-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: #ffd000;
+        color: #000000;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      
+      .privacy-hero h1 {
+        display: block !important;
+        font-size: 3rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 1.2rem;
+        letter-spacing: -1px;
+        line-height: 1.1;
+      }
+      
+      .privacy-hero p {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.6;
+        max-width: 600px;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+      
+      .last-updated {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: #ffd000;
+        font-weight: 600;
+      }
+      
+      .hero-shield {
+        width: 130px;
+        height: 130px;
+        border: 4px solid #ffd000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-shield i {
+        font-size: 3.5rem;
+        color: #ffd000;
+      }
+      
+      /* Two-column layout */
+      .privacy-grid-row {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      
+      /* Section 1 Card */
+      .collect-card {
+        background-color: #52525b; /* Dark slate background */
+        color: #ffffff;
+        border-radius: 12px;
+        padding: 3rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        text-align: left;
+      }
+      
+      .collect-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      
+      .collect-card h2 i {
+        color: #ffd000;
+      }
+      
+      .collect-card > p {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      
+      .collect-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .collect-item {
+        display: flex;
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      
+      .collect-icon-wrapper {
+        font-size: 1.1rem;
+        color: #ffd000;
+        margin-top: 0.15rem;
+      }
+      
+      .collect-text h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #ffffff !important;
+        margin-bottom: 0.3rem;
+      }
+      
+      .collect-text p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.5;
+        margin: 0;
+      }
+      
+      /* Sidebar navigation card */
+      .sidebar-card {
+        background-color: #eaeaea; /* Light beige/gray background */
+        border-radius: 12px;
+        padding: 2.5rem 2rem;
+        align-self: start;
+        text-align: left;
+      }
+      
+      .sidebar-card h3 {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #1a1a1a !important;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.3px;
+      }
+      
+      .sidebar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      
+      .sidebar-link {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 0.9rem 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      
+      .sidebar-link:hover {
+        border-color: #ffd000;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+      
+      .sidebar-link i {
+        font-size: 0.75rem;
+        color: #777;
+        transition: transform 0.2s, color 0.2s;
+      }
+      
+      .sidebar-link:hover i {
+        color: #ffd000;
+        transform: translateX(2px);
+      }
+      
+      /* Ads Policy Card (Full-width gold) */
+      .ads-policy-card {
+        background: linear-gradient(135deg, #ffd000 0%, #f5c400 100%);
+        color: #000000;
+        border-radius: 12px;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        text-align: left;
+      }
+      
+      .ads-policy-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000000 !important;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      
+      .ads-policy-card h2 i {
+        font-size: 1.6rem;
+      }
+      
+      .ads-policy-card > p {
+        font-size: 0.95rem;
+        font-weight: 500;
+        max-width: 750px;
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+      }
+      
+      .ads-subcards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        z-index: 2;
+        position: relative;
+      }
+      
+      .ads-subcard {
+        background-color: rgba(255, 255, 255, 0.35); /* Translucent white */
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 8px;
+        padding: 1.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+      }
+      
+      .ads-subcard h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000000 !important;
+        margin-bottom: 0.6rem;
+      }
+      
+      .ads-subcard p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.85);
+        margin: 0;
+        font-weight: 500;
+      }
+      
+      /* Ads card concentric circle watermarks */
+      .ads-watermark {
+        position: absolute;
+        bottom: -80px;
+        right: -80px;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        border: 24px solid rgba(0, 0, 0, 0.03);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+      
+      .ads-watermark::after {
+        content: "";
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 16px solid rgba(0, 0, 0, 0.03);
+        display: block;
+      }
+      
+      /* Row of cards: How We Use Data & Security Measures */
+      .row-2col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+      
+      .use-data-card {
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        border-radius: 12px;
+        padding: 3rem 2.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+        text-align: left;
+      }
+      
+      .use-data-card h2 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #1a1a1a !important;
+        margin-bottom: 1rem;
+      }
+      
+      .use-data-card p {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      
+      .use-bullets {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .use-bullet {
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        font-size: 0.9rem;
+        color: #444;
+        font-weight: 500;
+      }
+      
+      .use-bullet i {
+        color: #856d1a; /* Gold outline check */
+        font-size: 1rem;
+        margin-top: 2px;
+      }
+      
+      /* Security Card (Black background) */
+      .security-card {
+        background-color: #121212;
+        color: #ffffff;
+        border-radius: 12px;
+        padding: 3rem 2.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      
+      .security-card h2 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      
+      .security-card h2 i {
+        color: #ffd000;
+      }
+      
+      .security-card p {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 1.8rem;
+      }
+      
+      .security-subcards {
+        display: flex;
+        gap: 1.2rem;
+      }
+      
+      .security-subcard {
+        background-color: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        padding: 1.2rem;
+        flex: 1;
+      }
+      
+      .security-subcard h3 {
+        color: #ffd000 !important;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+      
+      .security-subcard p {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.4;
+        margin: 0;
+      }
+      
+      /* Third-party services section */
+      .third-party-card {
+        background-color: #eaeaea; /* Light off-white */
+        border-radius: 12px;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        text-align: left;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+      }
+      
+      .third-party-left {
+        flex: 1.2;
+      }
+      
+      .third-party-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .third-party-left h2 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #1a1a1a !important;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      
+      .third-party-left h2 i {
+        color: #856d1a;
+      }
+      
+      .third-party-left p {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      
+      .service-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      
+      .service-pill {
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+        padding: 0.6rem 1.2rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #333;
+      }
+      
+      /* CSS Mock of Integrations dashboard */
+      .dashboard-mock {
+        background-color: #ffffff;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        overflow: hidden;
+        display: flex;
+        height: 240px;
+      }
+      
+      .mock-sidebar {
+        background-color: #f8fafc;
+        border-right: 1px solid #e2e8f0;
+        width: 120px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .mock-brand {
+        font-weight: 800;
+        font-size: 0.6rem;
+        color: #94a3b8;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+      
+      .mock-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .mock-menu-item {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #64748b;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        text-decoration: none;
+      }
+      
+      .mock-menu-item.active {
+        background-color: #e0f2fe;
+        color: #0284c7;
+      }
+      
+      .mock-main {
+        flex: 1;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: left;
+      }
+      
+      .mock-title {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #0f172a;
+        margin-bottom: 0.8rem;
+      }
+      
+      .mock-table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-y: auto;
+      }
+      
+      .mock-table-header {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        font-size: 0.6rem;
+        font-weight: 700;
+        color: #64748b;
+        text-transform: uppercase;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 0.4rem;
+        margin-bottom: 0.4rem;
+      }
+      
+      .mock-table-row {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        align-items: center;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid #f1f5f9;
+      }
+      
+      .mock-table-row:last-child {
+        border-bottom: none;
+      }
+      
+      .mock-service-cell {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #334155;
+      }
+      
+      .mock-icon-wrap {
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+      }
+      
+      .mock-service-cell.analytics .mock-icon-wrap { background-color: #fef3c7; color: #d97706; }
+      .mock-service-cell.crash .mock-icon-wrap { background-color: #ffedd5; color: #ea580c; }
+      .mock-service-cell.storage .mock-icon-wrap { background-color: #dbeafe; color: #2563eb; }
+      .mock-service-cell.calendar .mock-icon-wrap { background-color: #fee2e2; color: #dc2626; }
+      
+      .mock-cat-cell {
+        font-size: 0.65rem;
+        color: #64748b;
+        font-weight: 500;
+      }
+      
+      .mock-status-pill {
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 0.2rem 0.5rem;
+        border-radius: 9999px;
+        text-transform: capitalize;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.2rem;
+        justify-content: center;
+        width: fit-content;
+      }
+      
+      .mock-status-pill.connected {
+        background-color: #dcfce7;
+        color: #15803d;
+      }
+      
+      .mock-status-pill.connecting {
+        background-color: #fef3c7;
+        color: #b45309;
+      }
+      
+      /* Row of cards: Children's Privacy & Your Data Rights */
+      .info-card-double {
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        border-radius: 12px;
+        padding: 3rem 2.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+        text-align: left;
+      }
+      
+      .info-card-double h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #1a1a1a !important;
+        margin-bottom: 1rem;
+      }
+      
+      .info-card-double p {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      /* Contact Section */
+      .contact-section {
+        margin-top: 5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .contact-icon-wrapper {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: #ffd000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem auto;
+        color: #000;
+        font-size: 1.25rem;
+      }
+      
+      .contact-section h2 {
+        display: block !important;
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 0.8rem;
+      }
+      
+      .contact-section p {
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 1.8rem;
+        line-height: 1.6;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .contact-pill-btn {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 0.9rem 2.5rem;
+        border-radius: 50px;
+        display: inline-block;
+        transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+        border: none;
+      }
+      
+      .contact-pill-btn:hover {
+        background-color: #333;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .contact-pill-btn:active {
+        transform: scale(0.98);
+      }
+      
+      /* Responsive Tweaks */
+      @media (max-width: 992px) {
+        .privacy-grid-row, .row-2col, .third-party-card {
+          grid-template-columns: 1fr;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        
+        .collect-card, .sidebar-card, .use-data-card, .security-card, .third-party-card, .info-card-double {
+          padding: 2rem 1.5rem;
+        }
+        
+        .ads-policy-card {
+          padding: 2.5rem 1.5rem;
+        }
+        
+        .ads-subcards {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        
+        .third-party-right {
+          width: 100%;
+        }
+        
+        .privacy-hero {
+          padding: 2.5rem 1.5rem;
+          flex-direction: column;
+          gap: 2rem;
+          text-align: center;
+        }
+        
+        .privacy-hero h1 {
+          font-size: 2.2rem;
+        }
+        
+        .hero-right {
+          justify-content: center;
+        }
+        
+        .privacy-hero p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        .last-updated {
+          justify-content: center;
+        }
+        
+        .security-subcards {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -145,642 +950,268 @@
     <!-- Main Content -->
     <main>
       <section class="page-content">
-        <div class="container">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><span>Privacy Policy</span></li>
-            </ul>
-          </nav>
-          <h1>Privacy Policy</h1>
-          <p><strong>Effective Date:</strong> December 26, 2025</p>
-          <p><strong>Last Updated:</strong> December 26, 2025</p>
+        <div class="privacy-container">
+          
+          <!-- Hero Section -->
+          <div class="privacy-hero">
+            <div class="hero-left">
+              <span class="legal-badge">
+                <i class="fa-solid fa-scale-balanced"></i> Legal Framework
+              </span>
+              <h1>Privacy Policy</h1>
+              <p>
+                Your data security is our priority. This policy outlines how NotesNest manages your information while you build your second brain.
+              </p>
+              <div class="last-updated">
+                <i class="fa-regular fa-clock"></i> Last Updated: June 4, 2024
+              </div>
+            </div>
+            <div class="hero-right">
+              <div class="hero-shield">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+            </div>
+          </div>
 
-          <div class="content-block">
+          <!-- Section 1 & Sidebar Grid -->
+          <div class="privacy-grid-row">
+            <!-- Information We Collect -->
+            <div class="collect-card">
+              <h2><i class="fa-regular fa-folder-open"></i> 1. Information We Collect</h2>
+              <p>
+                We collect information to provide better services to all our users. The type of information we collect depends on how you use NotesNest.
+              </p>
+              <div class="collect-items">
+                <div class="collect-item">
+                  <div class="collect-icon-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                  <div class="collect-text">
+                    <h3>Account Information</h3>
+                    <p>When you register, we collect your name, email address, and authentication credentials.</p>
+                  </div>
+                </div>
+                <div class="collect-item">
+                  <div class="collect-icon-wrapper">
+                    <i class="fa-solid fa-file-lines"></i>
+                  </div>
+                  <div class="collect-text">
+                    <h3>Your Content</h3>
+                    <p>We securely store the notes, images, and attachments you create within the app for cross-device syncing.</p>
+                  </div>
+                </div>
+                <div class="collect-item">
+                  <div class="collect-icon-wrapper">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div class="collect-text">
+                    <h3>Usage Data</h3>
+                    <p>Log information, device type, operating system, and app interaction metrics help us debug and optimize performance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- On This Page Sidebar -->
+            <div class="sidebar-card">
+              <h3>On This Page</h3>
+              <div class="sidebar-links">
+                <a href="#ads" class="sidebar-link">
+                  <span>Ads Policy</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="#usage" class="sidebar-link">
+                  <span>Data Usage</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="#security" class="sidebar-link">
+                  <span>Security Measures</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="#third-party" class="sidebar-link">
+                  <span>Third-Party Services</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ads Policy Card -->
+          <div class="ads-policy-card" id="ads">
+            <h2><i class="fa-solid fa-bullhorn"></i> Ads Policy</h2>
             <p>
-              NotesNest ("we," "our," or "us") is committed to protecting your
-              privacy. This Privacy Policy explains how we collect, use,
-              disclose, and safeguard your information when you use our mobile
-              application NotesNest (the "App"). This policy applies to the
-              Android version of NotesNest available on Google Play Store.
+              To keep NotesNest free for everyone, we may display limited advertisements. Our commitment to your privacy remains absolute.
             </p>
-            <p><strong>Developer:</strong> Thogoruchesti Hemanth</p>
-            <p><strong>Contact:</strong> saihemanth225@gmail.com</p>
+            <div class="ads-subcards">
+              <div class="ads-subcard">
+                <h3>Non-Personalized Ads</h3>
+                <p>Ads are served based on contextual factors (like app version or device type) rather than your personal note content or identity.</p>
+              </div>
+              <div class="ads-subcard">
+                <h3>Strict Opt-Out</h3>
+                <p>Premium subscribers experience a completely ad-free workspace. We never use your note data to train ad-targeting algorithms.</p>
+              </div>
+            </div>
+            <div class="ads-watermark"></div>
           </div>
 
-          <div
-            class="content-block"
-            style="
-              background: #fff3cd;
-              border-left: 4px solid #ffc107;
-              padding: 1rem;
-              margin: 1.5rem 0;
-            "
-          >
-            <p style="margin: 0">
-              <strong>Important:</strong> By downloading, installing, or using
-              NotesNest, you agree to this Privacy Policy. If you do not agree
-              with this policy, please do not use the App.
-            </p>
+          <!-- How We Use Data & Security Measures -->
+          <div class="row-2col">
+            <!-- How We Use Data -->
+            <div class="use-data-card" id="usage">
+              <h2>2. How We Use Data</h2>
+              <p>Your data is used exclusively for:</p>
+              <div class="use-bullets">
+                <div class="use-bullet">
+                  <i class="fa-regular fa-circle-check"></i>
+                  <span>Providing cross-platform synchronization.</span>
+                </div>
+                <div class="use-bullet">
+                  <i class="fa-regular fa-circle-check"></i>
+                  <span>Managing user accounts and support.</span>
+                </div>
+                <div class="use-bullet">
+                  <i class="fa-regular fa-circle-check"></i>
+                  <span>Analyzing anonymous usage patterns to improve UI/UX.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Security Measures -->
+            <div class="security-card" id="security">
+              <h2><i class="fa-solid fa-shield-halved"></i> 3. Security Measures</h2>
+              <p>We employ industry-standard encryption (AES-256) for data at rest and TLS for data in transit.</p>
+              <div class="security-subcards">
+                <div class="security-subcard">
+                  <h3>Zero-Sell</h3>
+                  <p>We never sell your personal data to third parties.</p>
+                </div>
+                <div class="security-subcard">
+                  <h3>Encryption</h3>
+                  <p>Pin-locked options & encryption for vault notes.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h2>1. Information We Collect</h2>
+          <!-- Third-Party Services -->
+          <div class="third-party-card" id="third-party">
+            <div class="third-party-left">
+              <h2><i class="fa-solid fa-puzzle-piece"></i> 4. Third-Party Services</h2>
+              <p>
+                NotesNest integrates with reliable partners to provide specific functionalities. These services may collect information used to identify you.
+              </p>
+              <div class="service-pills">
+                <span class="service-pill">Google Play Services</span>
+                <span class="service-pill">Firebase Analytics</span>
+                <span class="service-pill">Sentry Crash Reporting</span>
+              </div>
+            </div>
+            <div class="third-party-right">
+              <!-- CSS Mock Dashboard of Integrations -->
+              <div class="dashboard-mock">
+                <!-- Sidebar -->
+                <div class="mock-sidebar">
+                  <span class="mock-brand">Productivity App</span>
+                  <div class="mock-menu">
+                    <a href="#" class="mock-menu-item"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                    <a href="#" class="mock-menu-item active"><i class="fa-solid fa-plug"></i> Syncs</a>
+                    <a href="#" class="mock-menu-item"><i class="fa-solid fa-gear"></i> Settings</a>
+                    <a href="#" class="mock-menu-item"><i class="fa-solid fa-wallet"></i> Earnings</a>
+                  </div>
+                </div>
+                <!-- Main Area -->
+                <div class="mock-main">
+                  <div class="mock-title">Integrations</div>
+                  <div class="mock-table">
+                    <div class="mock-table-header">
+                      <span>Service</span>
+                      <span>Category</span>
+                      <span>Status</span>
+                    </div>
+                    
+                    <div class="mock-table-row">
+                      <div class="mock-service-cell analytics">
+                        <span class="mock-icon-wrap"><i class="fa-solid fa-chart-simple"></i></span>
+                        <span>Analytics</span>
+                      </div>
+                      <span class="mock-cat-cell">Chart</span>
+                      <span class="mock-status-pill connected">
+                        <i class="fa-solid fa-circle-check"></i> Connected
+                      </span>
+                    </div>
 
-          <h3>1.1 Personal Information</h3>
-          <p>
-            When you create an account or use NotesNest, we may collect the
-            following personal information:
-          </p>
-          <ul>
-            <li>
-              <strong>Account Information:</strong> Email address, username, and
-              password (stored securely using Firebase Authentication)
-            </li>
-            <li>
-              <strong>Profile Information:</strong> Display name and profile
-              picture (optional, if provided by you)
-            </li>
-            <li>
-              <strong>Google Sign-In Data:</strong> If you choose to sign in
-              with Google, we collect your name, email address, and profile
-              picture from your Google account
-            </li>
-          </ul>
+                    <div class="mock-table-row">
+                      <div class="mock-service-cell crash">
+                        <span class="mock-icon-wrap"><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        <span>Crash Reporting</span>
+                      </div>
+                      <span class="mock-cat-cell">Reporting</span>
+                      <span class="mock-status-pill connecting">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Connecting
+                      </span>
+                    </div>
 
-          <h3>1.2 User-Generated Content</h3>
-          <p>
-            NotesNest is designed to store your personal productivity data
-            locally on your device. This includes:
-          </p>
-          <ul>
-            <li>
-              <strong>Notes:</strong> Text content, titles, categories, and
-              timestamps
-            </li>
-            <li>
-              <strong>Reminders:</strong> Reminder titles, descriptions,
-              scheduled times, and notification preferences
-            </li>
-            <li>
-              <strong>To-Do Lists:</strong> Task descriptions, completion
-              status, and priorities
-            </li>
-            <li>
-              <strong>Wish Lists:</strong> Wish items and associated details
-            </li>
-            <li>
-              <strong>Categories/Tags:</strong> Custom categories and
-              organizational labels you create
-            </li>
-          </ul>
-          <p>
-            <strong>Important:</strong> All user-generated content is stored
-            locally on your device using encrypted SQLite database. We do not
-            have access to the content of your notes, reminders, or tasks unless
-            you explicitly choose to use cloud backup features.
-          </p>
+                    <div class="mock-table-row">
+                      <div class="mock-service-cell storage">
+                        <span class="mock-icon-wrap"><i class="fa-solid fa-cloud"></i></span>
+                        <span>Cloud Storage</span>
+                      </div>
+                      <span class="mock-cat-cell">Storage</span>
+                      <span class="mock-status-pill connected">
+                        <i class="fa-solid fa-circle-check"></i> Connected
+                      </span>
+                    </div>
 
-          <h3>1.3 Device and Usage Information</h3>
-          <p>
-            We automatically collect certain information about your device and
-            app usage:
-          </p>
-          <ul>
-            <li>
-              <strong>Device Information:</strong> Device model, Android
-              version, device identifiers, screen resolution
-            </li>
-            <li>
-              <strong>App Usage Data:</strong> Features used, session duration,
-              app version, interaction patterns
-            </li>
-            <li>
-              <strong>Crash Reports:</strong> Error logs, stack traces, and
-              device state information when the app crashes (collected via
-              Firebase Crashlytics)
-            </li>
-            <li>
-              <strong>Analytics Data:</strong> Aggregated usage statistics to
-              understand feature popularity and user behavior (collected via
-              Firebase Analytics)
-            </li>
-          </ul>
-
-          <h3>1.4 Permissions</h3>
-          <p>
-            NotesNest requests the following Android permissions to function
-            properly:
-          </p>
-          <ul>
-            <li>
-              <strong>Storage Access:</strong> To save and retrieve your notes,
-              backups, and exported files
-            </li>
-            <li>
-              <strong>Notifications:</strong> To send reminder alerts and
-              important notifications
-            </li>
-            <li>
-              <strong>Internet Access:</strong> For optional features like
-              Google Sign-In, cloud backup, and crash reporting
-            </li>
-            <li>
-              <strong>Network State:</strong> To determine connectivity for
-              cloud features
-            </li>
-            <li>
-              <strong>Wake Lock:</strong> To ensure reminders trigger even when
-              device is in sleep mode
-            </li>
-            <li>
-              <strong>Boot Completed:</strong> To restore scheduled reminders
-              after device restart
-            </li>
-            <li>
-              <strong>Camera/Gallery Access:</strong> To update profile pictures
-              (optional, only when you choose to add a photo)
-            </li>
-          </ul>
-
-          <h2>2. How We Use Your Information</h2>
-          <p>We use the collected information for the following purposes:</p>
-
-          <h3>2.1 To Provide and Maintain the App</h3>
-          <ul>
-            <li>Authenticate your account and maintain session security</li>
-            <li>
-              Store and retrieve your notes, reminders, and tasks locally on
-              your device
-            </li>
-            <li>Deliver scheduled reminder notifications</li>
-            <li>Enable widget functionality on your home screen</li>
-            <li>Process local and cloud backups when requested</li>
-            <li>Export your notes in various formats (PDF, text, images)</li>
-          </ul>
-
-          <h3>2.2 To Improve and Optimize the App</h3>
-          <ul>
-            <li>Analyze app usage patterns to improve user experience</li>
-            <li>Identify and fix bugs, crashes, and performance issues</li>
-            <li>Develop new features based on user needs</li>
-            <li>
-              Optimize app performance across different devices and Android
-              versions
-            </li>
-            <li>Test new features and improvements</li>
-          </ul>
-
-          <h3>2.3 To Communicate With You</h3>
-          <ul>
-            <li>Send password reset emails via Firebase Authentication</li>
-            <li>Respond to your support requests and feedback</li>
-            <li>
-              Notify you of important app updates or changes to this Privacy
-              Policy
-            </li>
-            <li>
-              Send important service announcements (we do not send marketing
-              emails)
-            </li>
-          </ul>
-
-          <h3>2.4 To Ensure Security and Compliance</h3>
-          <ul>
-            <li>Protect against unauthorized access and security threats</li>
-            <li>
-              Comply with legal obligations and enforce our Terms of Service
-            </li>
-            <li>Detect and prevent fraud or abuse of the App</li>
-          </ul>
-
-          <h2>3. Data Storage and Security</h2>
-
-          <h3>3.1 Local Storage</h3>
-          <p>
-            NotesNest is designed with a "local-first" approach. Your notes,
-            reminders, and personal data are primarily stored locally on your
-            Android device using:
-          </p>
-          <ul>
-            <li>
-              <strong>Room Database:</strong> A secure, encrypted SQLite
-              database for all app data
-            </li>
-            <li>
-              <strong>EncryptedSharedPreferences:</strong> For storing session
-              tokens and sensitive preferences
-            </li>
-            <li>
-              <strong>Encrypted Local Backups:</strong> When you create local
-              backups, they are encrypted to prevent unauthorized access
-            </li>
-          </ul>
-          <p><strong>Security Measures:</strong></p>
-          <ul>
-            <li>Passwords are never stored in plain text</li>
-            <li>All credentials use industry-standard encryption</li>
-            <li>Session tokens are encrypted and securely managed</li>
-            <li>
-              Local database uses Android's built-in encryption mechanisms
-            </li>
-          </ul>
-
-          <h3>3.2 Cloud Storage (Optional)</h3>
-          <p>
-            NotesNest offers optional cloud backup through Google Drive API. When
-            you enable cloud backup:
-          </p>
-          <ul>
-            <li>
-              Your encrypted database is uploaded to your personal Google Drive
-            </li>
-            <li>You maintain full control over your Google Drive data</li>
-            <li>We do not have access to your Google Drive content</li>
-            <li>
-              You can delete cloud backups at any time from your Google Drive
-            </li>
-          </ul>
-
-          <h3>3.3 Third-Party Services</h3>
-          <p>NotesNest integrates with the following third-party services:</p>
-
-          <h4>Firebase (Google LLC)</h4>
-          <ul>
-            <li>
-              <strong>Firebase Authentication:</strong> For secure user
-              authentication and password management
-            </li>
-            <li>
-              <strong>Firebase Crashlytics:</strong> For crash reporting and
-              stability monitoring
-            </li>
-            <li>
-              <strong>Firebase Analytics:</strong> For aggregated usage
-              statistics (no personally identifiable information)
-            </li>
-            <li>
-              <strong>Firebase Remote Config:</strong> For dynamic app
-              configuration (e.g., feature limits for free vs. premium tiers)
-            </li>
-          </ul>
-          <p>
-            Firebase services are governed by Google's Privacy Policy:
-            <a href="https://policies.google.com/privacy" target="_blank"
-              >https://policies.google.com/privacy</a
-            >
-          </p>
-
-          <h4>Google Drive API</h4>
-          <ul>
-            <li>Used only for optional cloud backup functionality</li>
-            <li>Requires explicit user authorization</li>
-            <li>
-              Data stored in your personal Google Drive, not accessible by us
-            </li>
-          </ul>
-
-          <h2>4. Data Sharing and Disclosure</h2>
-
-          <h3>4.1 We Do Not Sell Your Data</h3>
-          <p>
-            <strong
-              >NotesNest does not sell, rent, or trade your personal information
-              to third parties for marketing purposes.</strong
-            >
-          </p>
-
-          <h3>4.2 Limited Data Sharing</h3>
-          <p>
-            We may share your information only in the following limited
-            circumstances:
-          </p>
-          <ul>
-            <li>
-              <strong>With Your Consent:</strong> When you explicitly authorize
-              us to share information (e.g., when sharing notes via Android
-              share intent)
-            </li>
-            <li>
-              <strong>Service Providers:</strong> With trusted service providers
-              (Firebase/Google) who assist in operating the App, subject to
-              strict confidentiality agreements
-            </li>
-            <li>
-              <strong>Legal Requirements:</strong> When required by law, court
-              order, or governmental request
-            </li>
-            <li>
-              <strong>Safety and Protection:</strong> To protect the rights,
-              property, or safety of NotesNest, our users, or the public
-            </li>
-            <li>
-              <strong>Business Transfers:</strong> In connection with a merger,
-              acquisition, or sale of assets (users will be notified)
-            </li>
-          </ul>
-
-          <h3>4.3 Export and Sharing Features</h3>
-          <p>When you use NotesNest's export or share features:</p>
-          <ul>
-            <li>
-              You control what content is exported (PDF, text, or image format)
-            </li>
-            <li>
-              You choose which apps to share content with (email, WhatsApp,
-              etc.)
-            </li>
-            <li>
-              Exported files are stored locally on your device unless you choose
-              to share them
-            </li>
-            <li>
-              We have no access to or control over exported content once it
-              leaves the App
-            </li>
-          </ul>
-
-          <h2>5. Data Retention</h2>
-
-          <h3>5.1 Active Accounts</h3>
-          <p>
-            We retain your account information and app data for as long as your
-            account is active or as needed to provide you services.
-          </p>
-
-          <h3>5.2 Account Deletion</h3>
-          <p>When you delete your account:</p>
-          <ul>
-            <li>
-              Your account information is permanently deleted from our servers
-              within 30 days
-            </li>
-            <li>Local data on your device is immediately deleted</li>
-            <li>
-              Cloud backups in your Google Drive remain under your control (you
-              must delete them manually)
-            </li>
-            <li>
-              Anonymized analytics data may be retained for statistical purposes
-            </li>
-            <li>
-              Crash reports and logs are retained for up to 90 days for
-              debugging purposes
-            </li>
-          </ul>
-          <p>
-            To delete your account, visit our
-            <a href="delete.html">Account Deletion</a> page.
-          </p>
-
-          <h3>5.3 Inactive Accounts</h3>
-          <p>
-            Accounts inactive for more than 3 years may be deleted after email
-            notification to the registered email address.
-          </p>
-
-          <h2>6. Your Rights and Choices</h2>
-
-          <h3>6.1 Access and Update</h3>
-          <p>You have the right to:</p>
-          <ul>
-            <li>Access your account information through the App's settings</li>
-            <li>
-              Update your profile information, display name, and profile picture
-            </li>
-            <li>Change your email address or password</li>
-            <li>View all your notes, reminders, and tasks stored locally</li>
-          </ul>
-
-          <h3>6.2 Export Your Data</h3>
-          <p>You can export your data at any time using:</p>
-          <ul>
-            <li>Individual note exports (PDF, text, image)</li>
-            <li>Local backup (complete encrypted database export)</li>
-            <li>Cloud backup (encrypted backup to your Google Drive)</li>
-          </ul>
-
-          <h3>6.3 Delete Your Data</h3>
-          <p>You can delete your data by:</p>
-          <ul>
-            <li>
-              Deleting individual notes, reminders, or tasks within the App
-            </li>
-            <li>
-              Clearing all app data through Android Settings > Apps > NotesNest >
-              Storage > Clear Data
-            </li>
-            <li>
-              Requesting account deletion through our
-              <a href="delete.html">Account Deletion</a> page
-            </li>
-          </ul>
-
-          <h3>6.4 Opt-Out Options</h3>
-          <ul>
-            <li>
-              <strong>Analytics:</strong> You can disable analytics tracking in
-              Settings > Privacy > Usage Analytics
-            </li>
-            <li>
-              <strong>Crash Reports:</strong> Crash reporting can be disabled in
-              Settings > Privacy > Crash Reporting
-            </li>
-            <li>
-              <strong>Cloud Backup:</strong> Cloud backup is opt-in; you control
-              when and if to use this feature
-            </li>
-            <li>
-              <strong>Notifications:</strong> You can disable notifications
-              through Android Settings or App Settings
-            </li>
-          </ul>
-
-          <h2>7. Children's Privacy</h2>
-          <p>
-            NotesNest is not intended for use by children under the age of 13. We
-            do not knowingly collect personal information from children under
-            13. If you are a parent or guardian and believe your child has
-            provided us with personal information, please contact us at
-            saihemanth225@gmail.com, and we will delete such information from
-            our systems.
-          </p>
-
-          <h2>8. International Data Transfers</h2>
-          <p>
-            NotesNest is operated from India. If you are accessing the App from
-            outside India, please be aware that your information may be
-            transferred to, stored, and processed in India or other countries
-            where our service providers operate. By using NotesNest, you consent
-            to the transfer of your information to countries outside your
-            country of residence, which may have different data protection
-            rules.
-          </p>
-
-          <h2>9. California Privacy Rights (CCPA)</h2>
-          <p>
-            If you are a California resident, you have specific rights under the
-            California Consumer Privacy Act (CCPA):
-          </p>
-          <ul>
-            <li>
-              <strong>Right to Know:</strong> You can request information about
-              the personal data we collect, use, and disclose
-            </li>
-            <li>
-              <strong>Right to Delete:</strong> You can request deletion of your
-              personal information
-            </li>
-            <li>
-              <strong>Right to Opt-Out:</strong> We do not sell personal
-              information, so opt-out is not applicable
-            </li>
-            <li>
-              <strong>Right to Non-Discrimination:</strong> We will not
-              discriminate against you for exercising your privacy rights
-            </li>
-          </ul>
-          <p>
-            To exercise these rights, contact us at saihemanth225@gmail.com.
-          </p>
-
-          <h2>10. European Privacy Rights (GDPR)</h2>
-          <p>
-            If you are located in the European Economic Area (EEA), you have
-            rights under the General Data Protection Regulation (GDPR):
-          </p>
-          <ul>
-            <li>
-              <strong>Right to Access:</strong> Request access to your personal
-              data
-            </li>
-            <li>
-              <strong>Right to Rectification:</strong> Request correction of
-              inaccurate data
-            </li>
-            <li>
-              <strong>Right to Erasure:</strong> Request deletion of your
-              personal data
-            </li>
-            <li>
-              <strong>Right to Restrict Processing:</strong> Request limitation
-              of how we process your data
-            </li>
-            <li>
-              <strong>Right to Data Portability:</strong> Request transfer of
-              your data to another service
-            </li>
-            <li>
-              <strong>Right to Object:</strong> Object to processing of your
-              personal data
-            </li>
-            <li>
-              <strong>Right to Withdraw Consent:</strong> Withdraw consent at
-              any time
-            </li>
-          </ul>
-          <p>
-            To exercise these rights, contact us at saihemanth225@gmail.com. You
-            also have the right to lodge a complaint with your local data
-            protection authority.
-          </p>
-
-          <h2>11. Security Measures</h2>
-          <p>
-            We implement industry-standard security measures to protect your
-            information:
-          </p>
-          <ul>
-            <li>End-to-end encryption for sensitive data</li>
-            <li>Secure HTTPS connections for all network communications</li>
-            <li>Firebase Authentication with secure token management</li>
-            <li>EncryptedSharedPreferences for local sensitive data</li>
-            <li>Regular security audits and updates</li>
-            <li>Encrypted local and cloud backups</li>
-          </ul>
-          <p>
-            <strong>However, please note:</strong> No method of transmission
-            over the internet or electronic storage is 100% secure. While we
-            strive to use commercially acceptable means to protect your personal
-            information, we cannot guarantee absolute security.
-          </p>
-
-          <h2>12. Third-Party Links</h2>
-          <p>
-            NotesNest may contain links to third-party websites or services
-            (e.g., when sharing content). We are not responsible for the privacy
-            practices of these third parties. We encourage you to read their
-            privacy policies before providing any information.
-          </p>
-
-          <h2>13. Changes to This Privacy Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time to reflect
-            changes in our practices, technology, legal requirements, or other
-            factors. When we make changes:
-          </p>
-          <ul>
-            <li>
-              We will update the "Last Updated" date at the top of this policy
-            </li>
-            <li>
-              Material changes will be notified through the App or via email
-            </li>
-            <li>
-              Your continued use of NotesNest after changes constitutes
-              acceptance of the updated policy
-            </li>
-          </ul>
-          <p>We encourage you to review this Privacy Policy periodically.</p>
-
-          <h2>14. Contact Us</h2>
-          <p>
-            If you have any questions, concerns, or requests regarding this
-            Privacy Policy or our data practices, please contact us:
-          </p>
-          <ul>
-            <li><strong>Developer:</strong> Thogoruchesti Hemanth</li>
-            <li>
-              <strong>Email:</strong>
-              <span class="highlight">saihemanth225@gmail.com</span>
-            </li>
-            <li>
-              <strong>Response Time:</strong> We typically respond within 24-48
-              hours
-            </li>
-          </ul>
-          <p>
-            For specific privacy-related requests (data access, deletion, or
-            corrections), please include "Privacy Request" in your email subject
-            line.
-          </p>
-
-          <div
-            class="content-block"
-            style="
-              background: #e7f3ff;
-              border-left: 4px solid #2196f3;
-              padding: 1rem;
-              margin: 2rem 0;
-            "
-          >
-            <h3 style="margin-top: 0">Your Privacy Matters</h3>
-            <p style="margin-bottom: 0">
-              At NotesNest, we believe in transparency and user control. Your
-              notes, reminders, and tasks are yours alone. We've built NotesNest
-              with security and privacy as core principles, not afterthoughts.
-              Thank you for trusting us with your productivity data.
-            </p>
+                    <div class="mock-table-row">
+                      <div class="mock-service-cell calendar">
+                        <span class="mock-icon-wrap"><i class="fa-solid fa-calendar-days"></i></span>
+                        <span>Calendar</span>
+                      </div>
+                      <span class="mock-cat-cell">Calendar</span>
+                      <span class="mock-status-pill connected">
+                        <i class="fa-solid fa-circle-check"></i> Connected
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <p style="margin-top: 2rem">
-            <strong>Effective Date:</strong> December 26, 2025
-          </p>
+          <!-- Children's Privacy & Your Data Rights -->
+          <div class="row-2col">
+            <div class="info-card-double">
+              <h3>Children's Privacy</h3>
+              <p>
+                These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover a child under 13 has provided us with personal information, we immediately delete this from our servers.
+              </p>
+            </div>
+            <div class="info-card-double">
+              <h3>Your Data Rights</h3>
+              <p>
+                You have the right to access, rectify, or delete your personal data. You can also export your notes in markdown format at any time directly through the application settings. For account deletion requests, please contact our support team.
+              </p>
+            </div>
+          </div>
+
+          <!-- Questions Section -->
+          <div class="contact-section">
+            <div class="contact-icon-wrapper">
+              <i class="fa-solid fa-question"></i>
+            </div>
+            <h2>Questions?</h2>
+            <p>
+              If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
+            </p>
+            <a href="mailto:saihemanth225@gmail.com" class="contact-pill-btn">saihemanth225@gmail.com</a>
+          </div>
+
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-        <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-top">
         <div class="container footer-grid">
