@@ -201,6 +201,105 @@
         margin: 0;
       }
       
+      /* Accounts Card Styles */
+      .accounts-card {
+        background-color: #f6f5f3; /* Light beige/gray as mockup */
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+      }
+      
+      .accounts-header {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .accounts-icon-box {
+        background-color: #ffd000;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      
+      .accounts-icon-box i {
+        color: #000000;
+        font-size: 1.1rem;
+      }
+      
+      .accounts-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000000 !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+      
+      .accounts-subtext {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #1a1a1a;
+        margin-bottom: 2rem;
+      }
+      
+      .accounts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 2.5rem;
+      }
+      
+      .accounts-grid-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .accounts-item-title-row {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      
+      .accounts-item-title-row i {
+        color: #856d1a;
+        font-size: 1rem;
+      }
+      
+      .accounts-item-title-row h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #000000 !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
+        text-transform: none;
+        letter-spacing: normal;
+      }
+      
+      .accounts-grid-item p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin: 0 !important;
+      }
+      
+      @media (max-width: 768px) {
+        .accounts-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        .accounts-card {
+          padding: 1.8rem;
+        }
+      }
+      
       /* Hero Section */
       .terms-hero {
         background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
@@ -675,7 +774,53 @@
 
               <!-- Section 2 -->
               <div class="terms-section" id="accounts">
-                <h2>2. User Accounts</h2>
+                
+                <div class="accounts-card">
+                  <div class="accounts-header">
+                    <span class="accounts-icon-box">
+                      <i class="fa-solid fa-id-badge"></i>
+                    </span>
+                    <h2>2. User Accounts & Responsibilities</h2>
+                  </div>
+                  <p class="accounts-subtext">
+                    To use certain features of the Service, you must register for an account. You agree to provide accurate, current, and complete information during the registration process.
+                  </p>
+                  
+                  <div class="accounts-grid">
+                    <div class="accounts-grid-item">
+                      <div class="accounts-item-title-row">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Account Security</h4>
+                      </div>
+                      <p>You are responsible for safeguarding your password and any activities under your account.</p>
+                    </div>
+                    
+                    <div class="accounts-grid-item">
+                      <div class="accounts-item-title-row">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <h4>Unauthorized Use</h4>
+                      </div>
+                      <p>Notify NotesNest immediately of any unauthorized use or security breach.</p>
+                    </div>
+                    
+                    <div class="accounts-grid-item">
+                      <div class="accounts-item-title-row">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <h4>Termination</h4>
+                      </div>
+                      <p>We reserve the right to suspend or terminate accounts that violate these terms.</p>
+                    </div>
+                    
+                    <div class="accounts-grid-item">
+                      <div class="accounts-item-title-row">
+                        <i class="fa-solid fa-id-card"></i>
+                        <h4>Age Requirement</h4>
+                      </div>
+                      <p>Users must be at least 13 years of age (or 16 in certain jurisdictions).</p>
+                    </div>
+                  </div>
+                </div>
+
                 <h3>2.1 Description of NotesNest Features</h3>
                 <p>
                   NotesNest is a comprehensive productivity application for Android devices that provides users with tools to create, edit, organize, and delete notes, manage tasks, wish lists, set reminders, cloud backups, customize layouts, and export notes in multiple formats.
