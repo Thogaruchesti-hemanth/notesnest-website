@@ -300,6 +300,102 @@
         }
       }
       
+      /* Ownership Card Styles */
+      .ownership-card {
+        background-color: #f6f5f3; /* Light beige/gray as mockup */
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+      }
+      
+      .ownership-header {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .ownership-icon-box {
+        background-color: #ffd000;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      
+      .ownership-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000000 !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+      
+      .ownership-subtext {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #1a1a1a;
+        margin-bottom: 2rem;
+      }
+      
+      .ownership-split {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      
+      .ownership-inner-card {
+        background-color: rgba(255, 255, 255, 0.65);
+        border-radius: 8px;
+        padding: 1.8rem;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+      }
+      
+      .ownership-inner-header {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .ownership-inner-header i {
+        color: #856d1a;
+        font-size: 1rem;
+      }
+      
+      .ownership-inner-header h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #000000 !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
+        text-transform: none;
+        letter-spacing: normal;
+      }
+      
+      .ownership-inner-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin: 0 !important;
+      }
+      
+      @media (max-width: 768px) {
+        .ownership-split {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+        .ownership-card {
+          padding: 1.8rem;
+        }
+      }
+      
       /* Hero Section */
       .terms-hero {
         background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
@@ -844,7 +940,40 @@
 
               <!-- Section 3 -->
               <div class="terms-section" id="content">
-                <h2>3. Content & Data</h2>
+                
+                <div class="ownership-card">
+                  <div class="ownership-header">
+                    <span class="ownership-icon-box">
+                      <span style="position: relative; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-cloud" style="color: #000000; font-size: 1.25rem;"></i>
+                        <i class="fa-solid fa-check" style="position: absolute; color: #ffd000; font-size: 0.55rem; font-weight: 900; margin-top: 2px;"></i>
+                      </span>
+                    </span>
+                    <h2>3. Content & Data Ownership</h2>
+                  </div>
+                  <p class="ownership-subtext">
+                    "User Content" means any text, graphics, photos, or other materials uploaded or stored by users on the Service. You retain full ownership of your content.
+                  </p>
+                  
+                  <div class="ownership-split">
+                    <div class="ownership-inner-card">
+                      <div class="ownership-inner-header">
+                        <i class="fa-solid fa-key"></i>
+                        <h4>What You Keep</h4>
+                      </div>
+                      <p>Your intellectual property remains yours. We do not claim ownership of any content you create or upload.</p>
+                    </div>
+                    
+                    <div class="ownership-inner-card">
+                      <div class="ownership-inner-header">
+                        <i class="fa-solid fa-lock"></i>
+                        <h4>What We Need</h4>
+                      </div>
+                      <p>A limited license to host, store, and display your content to provide the service as intended.</p>
+                    </div>
+                  </div>
+                </div>
+
                 <h3>3.1 Ownership of Your Content</h3>
                 <p>
                   You retain all ownership rights to the content you create, store, or manage in NotesNest, including notes, reminders, task descriptions, tags, files, images, and exported content in any format.
