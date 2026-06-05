@@ -129,6 +129,78 @@
         padding: 0 1.5rem;
       }
       
+      /* Acceptance Card Styles */
+      .acceptance-card {
+        background-color: #f6f5f3; /* Light beige/gray as mockup */
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+      }
+      
+      .acceptance-header {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .acceptance-icon-box {
+        background-color: #ffd000;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      
+      .acceptance-icon-box i {
+        color: #000000;
+        font-size: 1.1rem;
+      }
+      
+      .acceptance-card h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000000 !important;
+        margin: 0 !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+      
+      .acceptance-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #1a1a1a;
+        margin-bottom: 1.5rem;
+      }
+      
+      /* Important Notice Block Quote */
+      .notice-blockquote {
+        border-left: 3px solid #856d1a;
+        padding-left: 1.2rem;
+        margin: 1.8rem 0 0 0;
+      }
+      
+      .notice-blockquote h4 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #856d1a;
+        margin-top: 0;
+        margin-bottom: 0.4rem;
+        text-transform: none;
+        letter-spacing: normal;
+      }
+      
+      .notice-blockquote p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin: 0;
+      }
+      
       /* Hero Section */
       .terms-hero {
         background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
@@ -563,11 +635,26 @@
             <div class="guide-main">
               <!-- Section 1 -->
               <div class="terms-section" id="acceptance">
-                <h2>1. Acceptance of Terms</h2>
-                <h3>1.1 Agreement to Terms</h3>
-                <p>
-                  By creating an account, downloading, installing, accessing, or using NotesNest in any way, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.
-                </p>
+                
+                <div class="acceptance-card">
+                  <div class="acceptance-header">
+                    <span class="acceptance-icon-box">
+                      <span style="position: relative; display: inline-flex; align-items: center; justify-content: center;">
+                        <i class="fa-solid fa-certificate" style="color: #000000; font-size: 1.3rem;"></i>
+                        <i class="fa-solid fa-check" style="position: absolute; color: #ffd000; font-size: 0.65rem; font-weight: 900; margin-top: 1px;"></i>
+                      </span>
+                    </span>
+                    <h2>1. Acceptance of Terms</h2>
+                  </div>
+                  <p>
+                    By accessing or using the NotesNest platform, websites, or services (collectively, the "Service"), you agree to be bound by these Terms of Service. If you are using the Service on behalf of an organization, you are agreeing to these Terms for that organization and promising that you have the authority to bind that organization to these terms.
+                  </p>
+                  <div class="notice-blockquote">
+                    <h4>Important Notice</h4>
+                    <p>If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.</p>
+                  </div>
+                </div>
+
                 <h3>1.2 Eligibility</h3>
                 <p>
                   You must be at least 13 years of age to use NotesNest. If you are between 13 and 18 years old (or the age of majority in your jurisdiction), you may only use NotesNest under the supervision of a parent or legal guardian who agrees to these Terms. By using NotesNest, you represent and warrant that you meet these eligibility requirements.
