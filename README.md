@@ -1,19 +1,19 @@
-# 🪶 NoteNest Website
-
+# 🪶 NotesNest Website
+ 
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/c7c5a72b-6a97-4e57-9970-bde9f61d174a" width="1920" height="500" alt="NoteNest Banner" />
+<img src="https://github.com/user-attachments/assets/c7c5a72b-6a97-4e57-9970-bde9f61d174a" width="100%" alt="NotesNest Banner" />
 
-**Official website and documentation for NoteNest - Your Complete Productivity Hub**
+**Official Website & Documentation Hub for NotesNest — The Ultimate Android Productivity Platform**
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fnotesnest-app.web.app)](https://notesnest-app.web.app)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Play Store](https://img.shields.io/badge/Google_Play-414141?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.hemanth.NotesNest)
 
-[View Demo](https://notesnest-app.web.app) · [Report Bug](https://github.com/Thogaruchesti-hemanth/notesnest-website/issues) · [Request Feature](https://github.com/Thogaruchesti-hemanth/notesnest-website/issues)
+[Explore Portal](https://notesnest-app.web.app) · [Report an Issue](https://github.com/Thogaruchesti-hemanth/notesnest-website/issues) · [Suggest a Feature](https://github.com/Thogaruchesti-hemanth/notesnest-website/issues)
 
 </div>
 
@@ -21,61 +21,46 @@
 
 ## 📖 About The Project
 
-This repository contains the official website for **NoteNest**, a comprehensive Android productivity application designed to help users efficiently manage notes, tasks, reminders, and personal planning activities. The website serves as the primary web presence for the app, providing documentation, support resources, and legal compliance pages required for Google Play Store.
+This repository hosts the official static website and legal documentation platform for **NotesNest**, a comprehensive productivity application for Android devices. NotesNest is designed to help users capture thoughts, track daily checklists, structure future targets, and manage reminders with ease. 
 
-### 🎯 Purpose
+This portal serves as the primary landing presence for NotesNest, offering deep product documentation, support pipelines, and high-fidelity regulatory policy pages (Privacy, Terms, Deletion) required by the Google Play Console for privacy disclosures.
 
-- **Showcase** the app's features and benefits to potential users
-- **Document** comprehensive user guides and tutorials
-- **Provide** legal compliance pages (Privacy Policy, Terms of Service)
-- **Support** users with contact forms, bug reports, and feedback channels
-- **Facilitate** account management and deletion requests
+### 🎯 Key Objectives
+* **Aesthetic Presentation**: Introduce the Android app's clean features to visitors using premium, modern UI cards and layouts.
+* **Documentation Hub**: Offer a fully interactive, mobile-optimized User Guide for app operations.
+* **Compliance Assurance**: Display GDPR/CCPA-compliant privacy statements and terms with a highly readable visual hierarchy.
+* **Interactive Pipelines**: Empower users to file structured bug reports, suggest feature additions, or initiate secure account deletion.
 
 ---
 
-## ✨ Features
+## ✨ Features & Architecture
 
-### 📄 Pages Included
+The portal has been developed using vanilla HTML5, CSS3, and modern Javascript, implementing professional-grade UI components:
 
-- **Home (`index.html`)** - Hero section, features showcase, testimonials, and FAQ
-- **User Guide (`user-guide.html`)** - Comprehensive documentation for all app features
-- **Contact (`contact.html`)** - Support contact information and help resources
-- **Feedback (`feedback.html`)** - User feedback and feature request form
-- **Bug Report (`bug-report.html`)** - Detailed bug reporting system with known issues
-- **Privacy Policy (`privacy.html`)** - GDPR/CCPA compliant privacy documentation
-- **Terms of Service (`terms.html`)** - Legal terms and conditions for app usage
-- **Account Deletion (`delete.html`)** - Account deletion process and data retention policy
+### 📄 Core Pages Included
+* **Home (`index.html`)** — Premium landing viewport with side-by-side CTA controls, LCP-optimized hero image loading (`fetchpriority="high"`), responsive cards grids, and interactive FAQ accordions.
+* **User Guide (`user-guide.html`)** — Fully indexed product user guide. Features sticky horizontal navigation pills on tablets, and a sliding drawer menu triggered via a floating action button on mobile screens.
+* **Privacy Policy (`privacy.html`)** — Premium legal breakdown containing a frosted glassmorphism Ads Policy card (`backdrop-filter: blur(4px)`) and a pure HTML/CSS live status dashboard simulating third-party integration points.
+* **Terms of Service (`terms.html`)** — Edge-to-edge dark hero banner with golden accents, layered badge seals (gold check on black certificate), notice blockquotes, and highly structured, custom grid summaries for Sections 2 through 9.
+* **Account Deletion (`delete.html`)** — A clean multi-step decommissioning funnel with warning headers, white card pre-deletion checklists, detailed data deletion matrices, and a gold-bordered Primary Action Card.
+* **Bug Report (`bug-report.html`)** — A fully structured form for reporting app defects, featuring a center-aligned workflow grid on desktop.
+* **Feedback & Contact (`feedback.html`, `contact.html`)** — Interactive input controls and clean grid resources.
 
-### 🎨 Design Features
-
-- ✅ Fully responsive design (mobile, tablet, desktop)
-- ✅ Modern Material Design 3 aesthetics
-- ✅ Smooth animations and transitions
-- ✅ Accessible navigation with hamburger menu
-- ✅ SEO optimized meta tags
-- ✅ Fast loading times
-- ✅ Cross-browser compatibility
-- ✅ Font Awesome icon integration
-
-### 🔒 Compliance
-
-- ✅ Google Play Store policy compliant
-- ✅ GDPR (EU) compliant privacy policy
-- ✅ CCPA (California) compliant
-- ✅ Professional legal documentation
-- ✅ Data protection and user rights outlined
+### 🎨 Visual & Performance Engineering
+* **Premium Theme**: Tailored using a curated, custom color system (vibrant gold `#ffd000`, dark-brown accents `#856d1a`, charcoal backgrounds, and light warm gray cards `#f6f5f3`).
+* **Micro-Animations**: Features smooth transition triggers on hover states, accordion toggles, and drawer sliders.
+* **UX Safety**: Secure outbound links (`target="_blank" rel="noopener"`) configured project-wide to mitigate reverse tabnabbing and secure session navigation.
+* **Responsiveness**: Re-engineered page grids, navigation, and tables to guarantee 100% fluid layouts from small viewport mobile screens up to wide desktop monitors.
 
 ---
 
 ## 🛠️ Built With
 
-This website is built using modern web technologies:
-
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Styling, animations, and responsive design
-- **JavaScript** - Interactive components and form handling
-- **Font Awesome 6.4.0** - Icon library
-- **Google Fonts** - Typography (if used)
+* **HTML5** — Semantic content structure and metadata definitions
+* **CSS3** — Custom layout grid systems, flexboxes, and animations
+* **JavaScript** — Interactive menus, accordion drawers, and scroll observers
+* **Font Awesome v6.6.0** — High-fidelity vector iconography
+* **Google Fonts** — Inter, Outfit, and Roboto typography integrations
 
 ---
 
@@ -84,23 +69,23 @@ This website is built using modern web technologies:
 ```
 notesnest-website/
 ├── index.html              # Homepage
-├── user-guide.html         # Comprehensive user documentation
-├── contact.html            # Contact and support page
+├── user-guide.html         # Documentation Portal
+├── contact.html            # Help & Contact details
 ├── feedback.html           # Feedback submission form
 ├── bug-report.html         # Bug reporting system
 ├── privacy.html            # Privacy Policy (GDPR/CCPA compliant)
-├── terms.html              # Terms of Service
-├── delete.html             # Account deletion information
+├── terms.html              # Terms of Service (Section Cards Redesign)
+├── delete.html             # Account deletion process
 ├── css/
-│   └── style.css           # Main stylesheet
+│   └── style.css           # Core styling stylesheet
 ├── js/
-│   └── script.js           # JavaScript functionality
+│   └── script.js           # Main JavaScript functionality
 ├── images/
-│   ├── logo.jpeg           # App logo
-│   ├── banner.png          # Website banner
-│   ├── screenshot.png      # App screenshots
+│   ├── logo.jpeg           # Brand identity logo
+│   ├── favicon.svg         # SVG vector favicon
+│   ├── favicon-96x96.png   # PNG icon asset
 │   └── google-play-badge.png
-└── README.md               # This file
+└── README.md               # Project documentation
 ```
 
 ---
@@ -108,203 +93,106 @@ notesnest-website/
 ## 🚀 Getting Started
 
 ### Prerequisites
+To review or run the website locally, all you need is a modern web browser. 
 
-No special prerequisites needed! This is a static website that runs on any modern web browser.
-
-### Installation
+### Local Run & Development
 
 1. **Clone the repository**
-
-```bash
+   ```bash
    git clone https://github.com/Thogaruchesti-hemanth/notesnest-website.git
-```
+   ```
 
-2. **Navigate to the project directory**
-
-```bash
+2. **Enter directory**
+   ```bash
    cd notesnest-website
-```
+   ```
 
-3. **Open in browser**
+3. **Launch Dev Server**
+   Choose one of the following commands based on your local environment:
+   * **Python 3**:
+     ```bash
+     python -m http.server 8000
+     ```
+   * **NodeJS (Local Dev)**:
+     ```bash
+     npx http-server
+     ```
+   * **PHP Server**:
+     ```bash
+     php -S localhost:8000
+     ```
 
-```bash
-   # Simply open index.html in your preferred browser
-   open index.html  # macOS
-   start index.html # Windows
-   xdg-open index.html # Linux
-```
-
-Or use a local development server:
-
-```bash
-   # Using Python 3
-   python -m http.server 8000
-
-   # Using Node.js (http-server)
-   npx http-server
-
-   # Using PHP
-   php -S localhost:8000
-```
-
-4. **View the website**
-
-```
-   Open http://localhost:8000 in your browser
-```
+4. **Open Portal**
+   Navigate to `http://localhost:8000` (or the port specified by your tool) in your web browser.
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment & Hosting
 
-This static website can be deployed on various platforms:
+### Firebase Hosting (Current Production)
+The live production website is hosted using Google Firebase. To deploy new updates:
+1. Initialize Firebase in the repository:
+   ```bash
+   firebase init hosting
+   ```
+2. Deploy the static assets:
+   ```bash
+   firebase deploy --only hosting
+   ```
 
-### GitHub Pages (Recommended)
-
-1. Go to repository **Settings** > **Pages**
-2. Select **main** branch as source
-3. Save and your site will be live at `https://Thogaruchesti-hemanth.github.io/notesnest-website/`
-
-### Netlify
-
-1. Connect your GitHub repository to Netlify
-2. Set build command to: (none - static site)
-3. Set publish directory to: `/` (root)
-4. Deploy!
-
-### Vercel
-
-```bash
-npm i -g vercel
-vercel
-```
-
-### Other Platforms
-
-Compatible with: Firebase Hosting, AWS S3, Azure Static Web Apps, Cloudflare Pages, etc.
+### GitHub Pages Alternative
+1. Navigate to **Settings** > **Pages** inside your fork.
+2. Select the source branch (e.g. `main` or a feature branch) and folder `/ (root)`.
+3. Save and wait for deployment to complete at `https://Thogaruchesti-hemanth.github.io/notesnest-website/`.
 
 ---
 
-## 📱 About NoteNest App
+## 📱 About NotesNest Android App
 
-NoteNest is a comprehensive Android productivity application that offers:
+NotesNest is a fully optimized, private productivity platform offering a distraction-free space to capture and review data:
+* 📝 **Robust Notes**: Easily compose and format note blocks.
+* ⏰ **Reminders**: Schedule local alarms with custom recurrence.
+* ✅ **Tasks**: Integrate checklist items and strike off targets.
+* 🔒 **Local Security**: Encrypted database files (SQLite/Room) and local parameter locks (EncryptedSharedPreferences).
+* 💾 **Secure Backups**: Back up encrypted files locally or export backups to a personal Google Drive account.
+* 🌙 **Theming**: Integrated system matching for light and dark environments.
 
-- 📝 **Notes Management** - Create, edit, organize with categories
-- ⏰ **Reminders** - Schedule notifications with repeat options
-- ✅ **To-Do Lists** - Track tasks and boost productivity
-- 🎯 **Wish Lists** - Save goals and aspirations
-- 🏠 **Widgets** - Quick access from home screen
-- 💾 **Backup & Restore** - Local and Google Drive backup
-- 📤 **Export** - PDF, text, and image formats
-- 🔒 **Security** - Encrypted storage and authentication
-- 🌙 **Themes** - Light, dark, and auto modes
-
-**Current Version:** 3.0.5  
-**Platform:** Android 10.0+  
-**Developer:** Thogoruchesti Hemanth
-
-[![Download on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.hemanth.NotesNest)
+**Developer:** Thogaruchesti Hemanth  
+**Download Platform:** [Google Play Store](https://play.google.com/store/apps/details?id=com.hemanth.NotesNest)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are what make the open-source community amazing! Any contributions you make are **greatly appreciated**.
+Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **highly valued**.
 
-### How to Contribute
-
-1. **Fork** the Project
-2. **Create** your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the Branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### Contribution Guidelines
-
-- Follow existing code style and structure
-- Test thoroughly on multiple browsers and devices
-- Update documentation if needed
-- Write clear, descriptive commit messages
-- Ensure responsive design is maintained
-
----
-
-## 🐛 Bug Reports & Feature Requests
-
-Found a bug or have a feature suggestion? We'd love to hear from you!
-
-- **Bug Reports:** [Open an issue](https://github.com/yourusername/notesnest-website/issues) with detailed steps to reproduce
-- **Feature Requests:** [Open an issue](https://github.com/yourusername/notesnest-website/issues) describing your idea
-- **Security Issues:** Email directly to saihemanth225@gmail.com
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request on the main repository.
 
 ---
 
 ## 📝 License
 
-## Distributed under the MIT License. See `LICENSE` file for more information.
-
-## 📞 Contact & Support
-
-**Developer:** Thogoruchesti Hemanth  
-**Email:** saihemanth225@gmail.com  
-**GitHub:** [@yourusername](https://github.com/yourusername)  
-**LinkedIn:** [Your LinkedIn](https://linkedin.com/in/yourprofile)
-
-**App Support:**
-
-- Website: [NoteNest Website](https://notesnest-app.web.app/)
-- Email: saihemanth225@gmail.com
-- Response Time: 24-48 hours
+Distributed under the MIT License. See the `LICENSE` file for more details.
 
 ---
 
-## 🙏 Acknowledgments
+## 📞 Support & Developer Info
 
-- [Font Awesome](https://fontawesome.com) - Icon library
-- [Google Fonts](https://fonts.google.com) - Typography
-- [Material Design](https://material.io) - Design inspiration
-- [Shields.io](https://shields.io) - README badges
-- All contributors and users who provided feedback
-
----
-
-## 📊 Project Status
-
-- ✅ **Active Development** - Regular updates and maintenance
-- ✅ **Production Ready** - Stable and deployed
-- ✅ **Open for Contributions** - PRs welcome
-- ✅ **Maintained** - Issues responded within 48 hours
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Add blog section for app updates and tips
-- [ ] Implement dark mode toggle for website
-- [ ] Add multi-language support (Hindi, Spanish, French)
-- [ ] Create video tutorials section
-- [ ] Add live chat support widget
-- [ ] Implement search functionality across documentation
-- [ ] Add comparison page (NoteNest vs competitors)
-- [ ] Create press kit and media resources page
-
----
-
-## 📈 Stats
-
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/notesnest-website)
-![GitHub contributors](https://img.shields.io/github/contributors/yourusername/notesnest-website)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/notesnest-website?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/notesnest-website?style=social)
+* **Developer Portfolio**: [Thogaruchesti Hemanth](https://thogaruchesti-hemanth.web.app/)
+* **GitHub Profile**: [@Thogaruchesti-hemanth](https://github.com/Thogaruchesti-hemanth)
+* **Email Contact**: [saihemanth225@gmail.com](mailto:saihemanth225@gmail.com)
+* **App Play Store Link**: [Get NotesNest on Google Play](https://play.google.com/store/apps/details?id=com.hemanth.NotesNest)
 
 ---
 
 <div align="center">
 
-**⭐ Star this repo if you find it helpful!**
+**⭐ Star this repository if you find the designs or app helpful!**
 
-Made with ❤️ by [Thogoruchesti Hemanth](https://github.com/yourusername)
-
-[Website](https://notesnest-app.web.app/) · [App on Play Store](https://play.google.com/store/apps/details?id=com.hemanth.NotesNest) · [Report Issue](https://github.com/yourusername/notesnest-website/issues)
+Made with ❤️ by [Thogaruchesti Hemanth](https://github.com/Thogaruchesti-hemanth)
 
 </div>
